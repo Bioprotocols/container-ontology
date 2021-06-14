@@ -1,0 +1,260 @@
+@prefix : <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cont: <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sbol: <http://sbols.org/v3#> .
+@base <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology> .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology> rdf:type owl:Ontology ;
+                                                                       owl:imports <http://sbols.org/v3> ,
+                                                                                   <http://www.ontology-of-units-of-measure.org/resource/om-2> ;
+                                                                       <http://www.ontology-of-units-of-measure.org/resource/om-2/abbreviation> "cont:" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#centrifugeResistance
+cont:centrifugeResistance rdf:type owl:ObjectProperty ;
+                          rdfs:domain cont:Container ;
+                          rdfs:range [ owl:intersectionOf ( <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure>
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty cont:measureType ;
+                                                              owl:allValuesFrom <http://www.ontology-of-units-of-measure.org/resource/om-2/Force>
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                          rdfs:comment "What is the maximum force the container can (or must) resist (for the assay/protocol if this is defined there)."^^xsd:string .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#coating
+cont:coating rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain cont:Container ;
+             rdfs:range cont:CoatingMaterial .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatibleCentrifuges
+cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf cont:compatibleLabEquipment ;
+                           rdfs:domain cont:Container ;
+                           rdfs:comment "Centrifuge TYPES with which this container is compatible."^^xsd:string .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatibleLabEquipment
+cont:compatibleLabEquipment rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatiblePlateReaders
+cont:compatiblePlateReaders rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf cont:compatibleLabEquipment .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#diameter
+cont:diameter rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf cont:geometricProperty ;
+              rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/hasQuantity> ;
+                           owl:allValuesFrom <http://www.ontology-of-units-of-measure.org/resource/om-2/Diameter>
+                         ] .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#geometricProperty
+cont:geometricProperty rdf:type owl:ObjectProperty ;
+                       rdfs:domain cont:Container .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasCatalogEntry
+cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain cont:LabEquipment ;
+                     rdfs:range cont:CatalogEntry .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasVendorFirm
+cont:hasVendorFirm rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( cont:CatalogEntry
+                                               cont:LabEquipment
+                                             )
+                               ] ;
+                   rdfs:range cont:VendorFirm .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#height
+cont:height rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf cont:geometricProperty ;
+            rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure> .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#measureType
+cont:measureType rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure> ;
+                 rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#volume
+cont:volume rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf cont:geometricProperty .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellDepth
+cont:wellDepth rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf cont:geometricProperty .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellShape
+cont:wellShape rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf cont:geometricProperty .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain cont:LabEquipment ;
+                      rdfs:range cont:CatalogEntry .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#catalogNumber
+cont:catalogNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain cont:CatalogEntry ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#containerDataProperty
+cont:containerDataProperty rdf:type owl:DatatypeProperty ;
+                           rdfs:domain cont:Container .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#isOpticallyTransparent
+cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf cont:containerDataProperty ;
+                            rdfs:domain cont:Container ;
+                            rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#isStackable
+cont:isStackable rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf cont:containerDataProperty ;
+                 rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#vendorName
+cont:vendorName rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( cont:LabEquipment
+                                            cont:VendorFirm
+                                          )
+                            ] ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellCount
+cont:wellCount rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf cont:containerDataProperty ;
+               rdfs:domain cont:Plate ;
+               rdfs:range xsd:positiveInteger .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#CatalogEntry
+cont:CatalogEntry rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Centrifuge
+cont:Centrifuge rdf:type owl:Class ;
+                rdfs:subClassOf cont:LabMachinery .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#CoatingMaterial
+cont:CoatingMaterial rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Container
+cont:Container rdf:type owl:Class ;
+               rdfs:subClassOf cont:LabEquipment .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#LabEquipment
+cont:LabEquipment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#LabMachinery
+cont:LabMachinery rdf:type owl:Class ;
+                  rdfs:subClassOf cont:LabEquipment ;
+                  rdfs:comment "This is likely a poor name, but it is intended to refer to items of equipment that act upon containers and/or their contents." .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Plate
+cont:Plate rdf:type owl:Class ;
+           rdfs:subClassOf cont:Container .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#PlateReader
+cont:PlateReader rdf:type owl:Class ;
+                 rdfs:subClassOf cont:LabMachinery .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#PunningClasses
+cont:PunningClasses rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#VendorFirm
+cont:VendorFirm rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Well
+cont:Well rdf:type owl:Class ;
+          rdfs:subClassOf cont:Container .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Centrifuge
+cont:Centrifuge rdf:type owl:NamedIndividual ,
+                         cont:PunningClasses .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#PlateReader
+cont:PlateReader rdf:type owl:NamedIndividual ,
+                          cont:PunningClasses .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+cont:Centrifuge rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
+
+
+cont:PlateReader rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( cont:height
+                cont:volume
+                cont:wellDepth
+                cont:wellShape
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
