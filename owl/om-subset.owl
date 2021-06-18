@@ -1,0 +1,208 @@
+@prefix : <http://www.semanticweb.org/rpg/ontologies/2021/5/om-subset#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/rpg/ontologies/2021/5/om-subset> .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/5/om-subset> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol
+<http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/symbol
+<http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/hasDimension
+<http://www.ontology-of-units-of-measure.org/resource/om-2/hasDimension> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/hasPrefix
+<http://www.ontology-of-units-of-measure.org/resource/om-2/hasPrefix> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit
+<http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( <http://www.ontology-of-units-of-measure.org/resource/om-2/IntervalScale>
+                                                                                                <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure>
+                                                                                                <http://www.ontology-of-units-of-measure.org/resource/om-2/PrefixedUnit>
+                                                                                                <http://www.ontology-of-units-of-measure.org/resource/om-2/RatioScale>
+                                                                                                <http://www.ontology-of-units-of-measure.org/resource/om-2/SingularUnit>
+                                                                                                <http://www.ontology-of-units-of-measure.org/resource/om-2/UnitMultiple>
+                                                                                              )
+                                                                                ] ;
+                                                                    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Unit> ;
+                                                                    rdfs:label "has unit"@en ,
+                                                                               "単位を持つ"@ja .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue
+<http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue
+<http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:domain [ rdf:type owl:Class ;
+                                                                                            owl:unionOf ( <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure>
+                                                                                                          <http://www.ontology-of-units-of-measure.org/resource/om-2/Point>
+                                                                                                        )
+                                                                                          ] ;
+                                                                              rdfs:label "has numerical value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Depth
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Depth> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.ontology-of-units-of-measure.org/resource/om-2/Length> ;
+                                                                  <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "d" ;
+                                                                  rdfs:label "depth"@en ,
+                                                                             "diepte"@nl .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Diameter
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Diameter> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.ontology-of-units-of-measure.org/resource/om-2/Length> ;
+                                                                     <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "d" ;
+                                                                     rdfs:label "diameter"@en ,
+                                                                                "diameter"@nl ,
+                                                                                "直径"@zh .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Height
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Height> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.ontology-of-units-of-measure.org/resource/om-2/Length> ;
+                                                                   <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "h" ;
+                                                                   rdfs:label "height"@en ,
+                                                                              "hoogte"@nl .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/IntervalScale
+<http://www.ontology-of-units-of-measure.org/resource/om-2/IntervalScale> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Length
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue> ;
+                                                                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit> ;
+                                                                                                         owl:allValuesFrom <http://www.ontology-of-units-of-measure.org/resource/om-2/LengthUnit>
+                                                                                                       ]
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/hasDimension> ;
+                                                                                     owl:hasValue <http://www.ontology-of-units-of-measure.org/resource/om-2/length-Dimension>
+                                                                                   ] ;
+                                                                   <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "L" ;
+                                                                   <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "l" ;
+                                                                   rdfs:comment "Length is the amount of space between two geographical points along a curve. It is a base quantity in the International System of Units and other systems of units. Length is speed times time. The metre, a base unit of length in the International System of Units, is defined in terms of speed of light during a certain time interval."@en ;
+                                                                   rdfs:label "lengte"@nl ,
+                                                                              "length"@en ,
+                                                                              "长度"@zh .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/LengthUnit
+<http://www.ontology-of-units-of-measure.org/resource/om-2/LengthUnit> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Measure
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Measure> rdf:type owl:Class ;
+                                                                    rdfs:comment "A measure combines a number to a unit of measure. For example, \"3 m\" is a measure."@en ;
+                                                                    rdfs:label "measure"@en .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Point
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Point> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/PrefixedUnit
+<http://www.ontology-of-units-of-measure.org/resource/om-2/PrefixedUnit> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/RatioScale
+<http://www.ontology-of-units-of-measure.org/resource/om-2/RatioScale> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/SingularUnit
+<http://www.ontology-of-units-of-measure.org/resource/om-2/SingularUnit> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Thickness
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Thickness> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.ontology-of-units-of-measure.org/resource/om-2/Length> ;
+                                                                      <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "δ" ;
+                                                                      <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "d" ;
+                                                                      rdfs:label "dikte"@nl ,
+                                                                                 "thickness"@en .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Unit
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Unit> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/UnitMultiple
+<http://www.ontology-of-units-of-measure.org/resource/om-2/UnitMultiple> rdf:type owl:Class .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Width
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Width> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.ontology-of-units-of-measure.org/resource/om-2/Length> ;
+                                                                  <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "w" ;
+                                                                  rdfs:label "breedte"@nl ,
+                                                                             "width"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/length-Dimension
+<http://www.ontology-of-units-of-measure.org/resource/om-2/length-Dimension> rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/metre
+<http://www.ontology-of-units-of-measure.org/resource/om-2/metre> rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/milli
+<http://www.ontology-of-units-of-measure.org/resource/om-2/milli> rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.ontology-of-units-of-measure.org/resource/om-2/PrefixedUnit> ;
+                                                                       <http://www.ontology-of-units-of-measure.org/resource/om-2/hasDimension> <http://www.ontology-of-units-of-measure.org/resource/om-2/length-Dimension> ;
+                                                                       <http://www.ontology-of-units-of-measure.org/resource/om-2/hasPrefix> <http://www.ontology-of-units-of-measure.org/resource/om-2/milli> ;
+                                                                       <http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metre> ;
+                                                                       <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "mm" ;
+                                                                       rdfs:comment "The millimetre is a unit of length defined as 1.0e-3 metre."@en ;
+                                                                       rdfs:label "millimeter"@nl ,
+                                                                                  "millimetre"@en ,
+                                                                                  "毫米"@zh .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
