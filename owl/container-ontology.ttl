@@ -1,29 +1,43 @@
 @prefix : <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix cont: <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sbol: <http://sbols.org/v3#> .
+@prefix sbol: <https://sbols.org/v3#> .
 @base <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology> .
 
 <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology> rdf:type owl:Ontology ;
-                                                                       owl:imports <http://sbols.org/v3> ,
-                                                                                   <http://www.ontology-of-units-of-measure.org/resource/om-2> ;
-                                                                       <http://www.ontology-of-units-of-measure.org/resource/om-2/abbreviation> "cont:" .
+                                                                       owl:versionIRI <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology/v1> ;
+                                                                       owl:imports <http://www.semanticweb.org/rpg/ontologies/2021/5/om-subset> ;
+                                                                       om:abbreviation "cont:" ;
+                                                                       rdfs:label "Container Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/abbreviation
+om:abbreviation rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/hasQuantity
+om:hasQuantity rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#centrifugeResistance
 cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                           rdfs:domain cont:Container ;
-                          rdfs:range [ owl:intersectionOf ( <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure>
+                          rdfs:range [ owl:intersectionOf ( om:Measure
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty cont:measureType ;
-                                                              owl:allValuesFrom <http://www.ontology-of-units-of-measure.org/resource/om-2/Force>
+                                                              owl:allValuesFrom om:Force
                                                             ]
                                                           ) ;
                                        rdf:type owl:Class
@@ -57,10 +71,10 @@ cont:compatiblePlateReaders rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#diameter
 cont:diameter rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cont:geometricProperty ;
-              rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure> ,
+              rdfs:range om:Measure ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/hasQuantity> ;
-                           owl:allValuesFrom <http://www.ontology-of-units-of-measure.org/resource/om-2/Diameter>
+                           owl:onProperty om:hasQuantity ;
+                           owl:allValuesFrom om:Diameter
                          ] .
 
 
@@ -90,13 +104,13 @@ cont:hasVendorFirm rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#height
 cont:height rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cont:geometricProperty ;
-            rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure> .
+            rdfs:range om:Measure .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#measureType
 cont:measureType rdf:type owl:ObjectProperty ;
-                 rdfs:domain <http://www.ontology-of-units-of-measure.org/resource/om-2/Measure> ;
-                 rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> .
+                 rdfs:domain om:Measure ;
+                 rdfs:range om:Quantity .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#volume
@@ -106,12 +120,27 @@ cont:volume rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellDepth
 cont:wellDepth rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf cont:geometricProperty .
+               rdfs:subPropertyOf cont:geometricProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain cont:Container ;
+               rdfs:range [ owl:intersectionOf ( om:Measure
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty cont:measureType ;
+                                                   owl:hasValue om:Depth
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellShape
 cont:wellShape rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf cont:geometricProperty .
+               rdfs:subPropertyOf cont:geometricProperty ;
+               rdfs:domain cont:Container ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty cont:measureType ;
+                            owl:allValuesFrom om:Height
+                          ] .
 
 
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
@@ -169,6 +198,10 @@ cont:wellCount rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Force
+om:Force rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#CatalogEntry
 cont:CatalogEntry rdf:type owl:Class .
 
@@ -199,6 +232,7 @@ cont:LabMachinery rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Plate
 cont:Plate rdf:type owl:Class ;
+           owl:equivalentClass cont:VWRCentrifugePCRPlateSpec ;
            rdfs:subClassOf cont:Container .
 
 
@@ -207,8 +241,27 @@ cont:PlateReader rdf:type owl:Class ;
                  rdfs:subClassOf cont:LabMachinery .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#PunningClasses
-cont:PunningClasses rdf:type owl:Class .
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#VWRCentrifugePCRPlateSpec
+cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
+                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cont:wellDepth ;
+                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty om:hasUnit ;
+                                                                                                 owl:hasValue om:millimetre
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty cont:measureType ;
+                                                                                                 owl:hasValue om:Depth
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty om:hasNumericalValue ;
+                                                                                                 owl:hasValue "20.1"^^xsd:float
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                   ] .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#VendorFirm
@@ -220,18 +273,72 @@ cont:Well rdf:type owl:Class ;
           rdfs:subClassOf cont:Container .
 
 
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well
+<http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf cont:Plate ,
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:wellDepth ;
+                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                                    owl:onProperty om:hasUnit ;
+                                                                                                                                                                    owl:hasValue om:millimetre
+                                                                                                                                                                  ]
+                                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                                    owl:onProperty cont:measureType ;
+                                                                                                                                                                    owl:hasValue om:Depth
+                                                                                                                                                                  ]
+                                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                                    owl:onProperty om:hasNumericalValue ;
+                                                                                                                                                                    owl:hasValue "20.1"^^xsd:float
+                                                                                                                                                                  ]
+                                                                                                                                                                ) ;
+                                                                                                                                             rdf:type owl:Class
+                                                                                                                                           ]
+                                                                                                                      ] ,
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ;
+                                                                                                                        owl:hasValue cont:ThermoFisher
+                                                                                                                      ] ,
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ;
+                                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                        owl:onClass cont:VendorFirm
+                                                                                                                      ] ,
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:wellCount ;
+                                                                                                                        owl:hasValue 96
+                                                                                                                      ] .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Depth
+om:Depth rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Centrifuge
-cont:Centrifuge rdf:type owl:NamedIndividual ,
-                         cont:PunningClasses .
+cont:Centrifuge rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#PlateReader
-cont:PlateReader rdf:type owl:NamedIndividual ,
-                          cont:PunningClasses .
+cont:PlateReader rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#TFEPWD
+cont:TFEPWD rdf:type owl:NamedIndividual ,
+                     om:Measure ;
+            om:hasUnit om:millimetre ;
+            cont:measureType om:Depth ;
+            om:hasNumericalValue "20.1"^^xsd:float ;
+            rdfs:comment "The measure corresponding to the well height of the ThermoFisher EnduraPlate 96 well" .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher
+cont:ThermoFisher rdf:type owl:NamedIndividual ,
+                           cont:VendorFirm ;
+                  cont:vendorName "ThermoFisher"^^xsd:string .
 
 
 #################################################################
