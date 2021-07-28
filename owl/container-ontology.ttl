@@ -16,15 +16,18 @@ om:abbreviation a owl:AnnotationProperty .
 
 cont:Centrifuge a owl:Class,
         owl:NamedIndividual ;
+    rdfs:label "Centrifuge" ;
     rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
     rdfs:subClassOf cont:LabMachinery .
 
 cont:PlateReader a owl:Class,
         owl:NamedIndividual ;
+    rdfs:label "PlateReader" ;
     rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
     rdfs:subClassOf cont:LabMachinery .
 
 cont:SLAS-1-2004 a owl:Class ;
+    rdfs:label "SLAS-1-2004" ;
     rdfs:comment "SLAS 1-2004 specifies the microplate footprint standard"^^xsd:string ;
     rdfs:subClassOf cont:Plate ;
     owl:equivalentClass [ a owl:Class ;
@@ -141,6 +144,7 @@ cont:TFEPWD a om:Measure,
         cont:SLAS-4-2004 .
 
 cont:VWRCentrifugePCRPlateSpec a owl:Class ;
+    rdfs:label "VWRCentrifugePCRPlateSpec" ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty cont:wellDepth ;
             owl:someValuesFrom [ a owl:Class ;
@@ -227,7 +231,8 @@ om:Force a owl:Class .
 
 om:hasQuantity a owl:ObjectProperty .
 
-cont:CoatingMaterial a owl:Class .
+cont:CoatingMaterial a owl:Class ;
+    rdfs:label "CoatingMaterial" .
 
 cont:SLAS-2-2004-4-2 a owl:Class ;
     rdfs:label "SLAS 2-2004 Typical Height with Clearance"^^xsd:string ;
@@ -283,6 +288,7 @@ cont:ThermoFisher a cont:VendorFirm,
     cont:vendorName "ThermoFisher"^^xsd:string .
 
 cont:Well a owl:Class ;
+    rdfs:label "Well" ;
     rdfs:subClassOf cont:Container .
 
 cont:isSLAS1-2004compliant a owl:DatatypeProperty ;
@@ -303,6 +309,7 @@ cont:ContainerRoot a owl:Class ;
     rdfs:subClassOf <http://sbols.org/v3#Identified> .
 
 cont:LabMachinery a owl:Class ;
+    rdfs:label "LabMachinery" ;
     rdfs:comment "This is likely a poor name, but it is intended to refer to items of equipment that act upon containers and/or their contents." ;
     rdfs:subClassOf cont:LabEquipment .
 
@@ -357,9 +364,11 @@ owl:topObjectProperty rdfs:domain cont:LabEquipment ;
 om:Depth a owl:NamedIndividual .
 
 cont:CatalogEntry a owl:Class ;
+    rdfs:label "CatalogEntry" ;
     rdfs:subClassOf cont:ContainerRoot .
 
-cont:VendorFirm a owl:Class .
+cont:VendorFirm a owl:Class ;
+    rdfs:label "VendorFirm" .
 
 cont:plateHeight a owl:ObjectProperty ;
     rdfs:label "plateHeight" ;
@@ -382,6 +391,7 @@ cont:wellDepth a owl:FunctionalProperty,
     rdfs:subPropertyOf cont:geometricProperty .
 
 cont:LabEquipment a owl:Class ;
+    rdfs:label "LabEquipment" ;
     rdfs:subClassOf cont:ContainerRoot .
 
 cont:containerDataProperty a owl:DatatypeProperty ;
@@ -416,9 +426,11 @@ cont:geometricProperty a owl:ObjectProperty ;
     rdfs:range om:Measure .
 
 cont:Container a owl:Class ;
+    rdfs:label "Container" ;
     rdfs:subClassOf cont:LabEquipment .
 
 cont:Plate a owl:Class ;
+    rdfs:label "Plate" ;
     rdfs:subClassOf cont:Container ;
     owl:disjointWith cont:Well .
 
