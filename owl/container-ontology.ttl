@@ -11,7 +11,8 @@
 
 <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology> rdf:type owl:Ontology ;
                                                                        owl:versionIRI <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology/v1> ;
-                                                                       owl:imports <http://www.semanticweb.org/rpg/ontologies/2021/5/om-subset> ;
+                                                                       owl:imports <http://sbols.org/v3> ,
+                                                                                   <http://www.semanticweb.org/rpg/ontologies/2021/5/om-subset> ;
                                                                        om:abbreviation "cont:" ;
                                                                        rdfs:label "Container Ontology"@en .
 
@@ -42,12 +43,15 @@ cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                                                           ) ;
                                        rdf:type owl:Class
                                      ] ;
-                          rdfs:comment "What is the maximum force the container can (or must) resist (for the assay/protocol if this is defined there)."^^xsd:string .
+    rdfs:comment "What is the maximum force the container can (or must) resist (for the assay/protocol if this is defined there)."^^xsd:string ;
+
+                          rdfs:label "centrifugeResistance".
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#clearanceToPlateBottom
 cont:clearanceToPlateBottom rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf cont:height ;
+                            rdfs:label "clearanceToPlateBottom" ;
                             rdfs:comment "The minimum clearance from the resting plane to the plane of the bottom external surface of the wells."@en .
 
 
@@ -55,6 +59,7 @@ cont:clearanceToPlateBottom rdf:type owl:ObjectProperty ;
 cont:coating rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              rdfs:domain cont:Container ;
+             rdfs:label "coating" ;
              rdfs:range cont:CoatingMaterial .
 
 
@@ -62,25 +67,30 @@ cont:coating rdf:type owl:ObjectProperty ;
 cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf cont:compatibleLabEquipment ;
                            rdfs:domain cont:Container ;
+                           rdfs:label "compatibleCentrifuges" ;
                            rdfs:comment "Centrifuge TYPES with which this container is compatible."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatibleLabEquipment
-cont:compatibleLabEquipment rdf:type owl:ObjectProperty .
+cont:compatibleLabEquipment rdf:type owl:ObjectProperty ;
+     rdfs:label "compatibleLabEquipment".
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatiblePlateReaders
-cont:compatiblePlateReaders rdf:type owl:ObjectProperty ;
+cont:compatiblePlateReaders rdf:type owl:ObjectProperty ; rdfs:label "compatiblePlateReaders" ;
+
                             rdfs:subPropertyOf cont:compatibleLabEquipment .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#cornerRadius
-cont:cornerRadius rdf:type owl:ObjectProperty ;
+cont:cornerRadius rdf:type owl:ObjectProperty ; rdfs:label "cornerRadius" ;
+
                   rdfs:subPropertyOf cont:geometricProperty .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#diameter
-cont:diameter rdf:type owl:ObjectProperty ;
+cont:diameter rdf:type owl:ObjectProperty ; rdfs:label "diameter" ;
+
               rdfs:subPropertyOf cont:geometricProperty ;
               rdfs:range om:Measure ,
                          [ rdf:type owl:Restriction ;
@@ -90,7 +100,8 @@ cont:diameter rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#geometricProperty
-cont:geometricProperty rdf:type owl:ObjectProperty ;
+cont:geometricProperty rdf:type owl:ObjectProperty ; rdfs:label "geometricProperty" ;
+
                        rdfs:domain cont:Container ;
                        rdfs:range om:Measure .
 
@@ -99,7 +110,8 @@ cont:geometricProperty rdf:type owl:ObjectProperty ;
 cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain cont:LabEquipment ;
-                     rdfs:range cont:CatalogEntry .
+                     rdfs:range cont:CatalogEntry ;
+                     rdfs:label "hasCatalogEntry" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasVendorFirm
@@ -110,11 +122,13 @@ cont:hasVendorFirm rdf:type owl:ObjectProperty ;
                                                cont:LabEquipment
                                              )
                                ] ;
-                   rdfs:range cont:VendorFirm .
+                   rdfs:range cont:VendorFirm ;
+                   rdfs:label "hasVendorFirm" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#height
-cont:height rdf:type owl:ObjectProperty ;
+cont:height rdf:type owl:ObjectProperty ; rdfs:label "height" ;
+
             rdfs:subPropertyOf cont:geometricProperty ;
             rdfs:range [ owl:intersectionOf ( om:Measure
                                               [ rdf:type owl:Restriction ;
@@ -127,12 +141,14 @@ cont:height rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#length
-cont:length rdf:type owl:ObjectProperty ;
+cont:length rdf:type owl:ObjectProperty ; rdfs:label "label" ;
+
             rdfs:subPropertyOf cont:geometricProperty .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#lengthAtEdge
-cont:lengthAtEdge rdf:type owl:ObjectProperty ;
+cont:lengthAtEdge rdf:type owl:ObjectProperty ; rdfs:label "lengthAtEdge" ;
+
                   rdfs:subPropertyOf cont:length ;
                   owl:propertyDisjointWith cont:lengthOverall ;
                   rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
@@ -141,7 +157,8 @@ This property is for the length within 12.7 mm of the edge; the other property i
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#lengthOverall
-cont:lengthOverall rdf:type owl:ObjectProperty ;
+cont:lengthOverall rdf:type owl:ObjectProperty ; rdfs:label "lengthOverall" ;
+
                    rdfs:subPropertyOf cont:length ;
                    rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
 
@@ -149,32 +166,37 @@ This property is for the length anywhere on the plate (the more permissive const
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#measureType
-cont:measureType rdf:type owl:ObjectProperty ;
+cont:measureType rdf:type owl:ObjectProperty ; rdfs:label "measureType" ;
+
                  rdfs:domain om:Measure ;
                  rdfs:range om:Quantity .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#overallPlateHeight
-cont:overallPlateHeight rdf:type owl:ObjectProperty ;
+cont:overallPlateHeight rdf:type owl:ObjectProperty ; rdfs:label "overallPlateHeight" ;
+
                         rdfs:subPropertyOf cont:height ;
                         owl:propertyDisjointWith cont:plateHeight ;
                         rdfs:comment "The overall plate height, measured from ... the resting plane ... to the maximum protrusion of the plate."@en .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#plateHeight
-cont:plateHeight rdf:type owl:ObjectProperty ;
+cont:plateHeight rdf:type owl:ObjectProperty ; rdfs:label "plateHeight" ;
+
                  rdfs:subPropertyOf cont:height ;
                  rdfs:domain cont:Plate ;
                  rdfs:comment "The plate height measured from ... the resting plane... to the maximum protrusion of the perimeter wells."@en .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#volume
-cont:volume rdf:type owl:ObjectProperty ;
+cont:volume rdf:type owl:ObjectProperty ; rdfs:label "volume" ;
+
             rdfs:subPropertyOf cont:geometricProperty .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellDepth
-cont:wellDepth rdf:type owl:ObjectProperty ;
+cont:wellDepth rdf:type owl:ObjectProperty ; rdfs:label "wellDepth" ;
+
                rdfs:subPropertyOf cont:geometricProperty ;
                rdf:type owl:FunctionalProperty ;
                rdfs:domain cont:Container ;
@@ -189,7 +211,8 @@ cont:wellDepth rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellShape
-cont:wellShape rdf:type owl:ObjectProperty ;
+cont:wellShape rdf:type owl:ObjectProperty ; rdfs:label "wellShape" ;
+
                rdfs:subPropertyOf cont:geometricProperty ;
                rdfs:domain cont:Container ;
                rdfs:range [ rdf:type owl:Restriction ;
@@ -199,7 +222,8 @@ cont:wellShape rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#width
-cont:width rdf:type owl:ObjectProperty ;
+cont:width rdf:type owl:ObjectProperty ; rdfs:label "width" ;
+
            rdfs:subPropertyOf cont:geometricProperty .
 
 
@@ -215,24 +239,36 @@ owl:topObjectProperty rdfs:domain cont:LabEquipment ;
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#catalogNumber
 cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain cont:CatalogEntry ;
+    rdfs:domain cont:CatalogEntry ; rdfs:label "catalogNumber" ;
+
                    rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#columnCount
+cont:columnCount rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf cont:containerDataProperty ;
+    rdfs:domain cont:Plate ; rdfs:label "columnCount" ;
+
+                 rdfs:range xsd:positiveInteger .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#containerDataProperty
-cont:containerDataProperty rdf:type owl:DatatypeProperty ;
+cont:containerDataProperty rdf:type owl:DatatypeProperty ; rdfs:label "containerDataProperty" ;
+
                            rdfs:domain cont:Container .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#isOpticallyTransparent
-cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
+cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ; rdfs:label "isOpticallyTransparent" ;
+
                             rdfs:subPropertyOf cont:containerDataProperty ;
                             rdfs:domain cont:Container ;
                             rdfs:range xsd:boolean .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#isSLAS1-2004compliant
-cont:isSLAS1-2004compliant rdf:type owl:DatatypeProperty ;
+cont:isSLAS1-2004compliant rdf:type owl:DatatypeProperty ; rdfs:label "isSLAS1-2004compliant" ;
+
                            rdfs:subPropertyOf cont:containerDataProperty ;
                            rdfs:range xsd:boolean .
 
@@ -241,6 +277,13 @@ cont:isSLAS1-2004compliant rdf:type owl:DatatypeProperty ;
 cont:isStackable rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
                  rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#rowCount
+cont:rowCount rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cont:containerDataProperty ;
+              rdfs:domain cont:Plate ;
+              rdfs:range xsd:positiveInteger .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#vendorName
@@ -269,7 +312,8 @@ om:Force rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#CatalogEntry
-cont:CatalogEntry rdf:type owl:Class .
+cont:CatalogEntry rdf:type owl:Class ;
+                  rdfs:subClassOf cont:ContainerRoot .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Centrifuge
@@ -286,8 +330,16 @@ cont:Container rdf:type owl:Class ;
                rdfs:subClassOf cont:LabEquipment .
 
 
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ContainerRoot
+cont:ContainerRoot rdf:type owl:Class ;
+                   rdfs:subClassOf <http://sbols.org/v3#Identified> ;
+                   rdfs:comment "This is the root class for the classes defined in the Container Ontology. It is introduced to be the bridge between the container ontology and the SBOL Ontology. In turn, this connects to the sbol:Identified class, in order to make it possible for the container ontology classes to be translated into Python classes by the SBOL factory." ;
+                   rdfs:label "ContainerRoot" .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#LabEquipment
-cont:LabEquipment rdf:type owl:Class .
+cont:LabEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf cont:ContainerRoot .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#LabMachinery
@@ -740,18 +792,6 @@ cont:PlateReader rdfs:comment "Likely this should actually be imported from anot
                 cont:volume
                 cont:wellDepth
                 cont:wellShape
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointProperties ;
-  owl:members ( om:hasNumericalValue
-                cont:catalogNumber
-                cont:isOpticallyTransparent
-                cont:isSLAS1-2004compliant
-                cont:isStackable
-                cont:vendorName
-                cont:wellCount
               )
 ] .
 
