@@ -112,9 +112,10 @@ cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:label "hasCatalogEntry" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasOpticalProperty
-cont:hasOpticalProperty rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf cont:qualitativeProperty .
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasColor
+cont:hasColor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf cont:qualitativeProperty ;
+              rdfs:range cont:Color .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasVendorFirm
@@ -241,6 +242,12 @@ cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:label "catalogNumber" .
 
 
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#colorName
+cont:colorName rdf:type owl:DatatypeProperty ;
+               rdfs:domain cont:Color ;
+               rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#columnCount
 cont:columnCount rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
@@ -319,9 +326,21 @@ cont:Centrifuge rdf:type owl:Class ;
                 rdfs:subClassOf cont:LabMachinery .
 
 
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Clear
+cont:Clear rdf:type owl:Class ;
+           rdfs:subClassOf cont:Color .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#CoatingMaterial
 cont:CoatingMaterial rdf:type owl:Class ;
                      rdfs:label "CoatingMaterial" .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Color
+cont:Color rdf:type owl:Class ;
+           rdfs:subClassOf cont:ContainerRoot ;
+           rdfs:comment "Enumeration class of optical properties for well plates." ;
+           rdfs:label "OpticalProperty" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Container
@@ -337,6 +356,104 @@ cont:ContainerRoot rdf:type owl:Class ;
                    rdfs:label "ContainerRoot" .
 
 
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Blue
+cont:EnduraPlate_96Well_Blue rdf:type owl:Class ;
+                             rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> ;
+    owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty cont:hasColor ;
+                                                                            owl:hasValue cont:blue
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cont:hasCatalogEntry ;
+                                                     owl:hasValue cont:tf4483343
+                                                   ].
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Clear
+cont:EnduraPlate_96Well_Clear rdf:type owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> ;
+    owl:equivalentClass [
+        owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+            [ rdf:type owl:Restriction ;
+                owl:onProperty cont:hasColor ;
+                owl:hasValue cont:clear
+                ]
+            owl:unionOf([ rdf:type owl:Restriction ;
+                    owl:onProperty cont:hasCatalogEntry ;
+                    owl:hasValue cont:tf4483354
+                    ]  
+                    [ rdf:type owl:Restriction ;
+                    owl:onProperty cont:hasCatalogEntry ;
+                    owl:hasValue cont:tf4483352
+                    ]) ) ;
+        rdf:type owl:Class
+        ]  .
+    
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Multicolor
+cont:EnduraPlate_96Well_Multicolor rdf:type owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> ;
+    owl:equivalentClass
+    [ owl:intersectionOf (
+            <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+            [ rdf:type owl:Restriction ;
+                owl:onProperty cont:hasColor ;
+                owl:hasValue cont:multicolor
+                ]
+            owl:unionOf(
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty cont:hasCatalogEntry ;
+                    owl:hasValue cont:tf4483355
+                    ]
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty cont:hasCatalogEntry ;
+                    owl:hasValue cont:tf4483356
+                    ])
+            ) ;
+        rdf:type owl:Class
+        ] .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Red
+cont:EnduraPlate_96Well_Red rdf:type owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> ;
+    owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+            [ rdf:type owl:Restriction ;
+                owl:onProperty cont:hasColor ;
+                owl:hasValue cont:red
+                ]
+            [ rdf:type owl:Restriction ;
+                owl:onProperty cont:hasCatalogEntry ;
+                owl:hasValue cont:tf4483350
+                ] 
+            ) ;
+        rdf:type owl:Class
+        ] 
+    .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Yellow
+cont:EnduraPlate_96Well_Yellow rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty cont:hasColor ;
+                                                                            owl:hasValue cont:yellow
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cont:hasCatalogEntry ;
+                                                     owl:hasValue cont:tf4483395
+                                                   ] ;
+                               rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#LabEquipment
 cont:LabEquipment rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
@@ -350,17 +467,9 @@ cont:LabMachinery rdf:type owl:Class ;
                   rdfs:label "LabMachinery" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#OpticalProperty
-cont:OpticalProperty rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Class ;
-                                           owl:oneOf ( cont:black
-                                                       cont:clear
-                                                       cont:white
-                                                     )
-                                         ] ;
-                     rdfs:subClassOf cont:ContainerRoot ;
-                     rdfs:comment "Enumeration class of optical properties for well plates." ;
-                     rdfs:label "OpticalProperty" .
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Opaque
+cont:Opaque rdf:type owl:Class ;
+            rdfs:subClassOf cont:Color .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Plate
@@ -788,6 +897,10 @@ cont:WellShape rdf:type owl:Class ;
                                                                                                                         owl:hasValue cont:ThermoFisher
                                                                                                                       ] ,
                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasWellBottomShape ;
+                                                                                                                        owl:hasValue cont:veeBottom
+                                                                                                                      ] ,
+                                                                                                                      [ rdf:type owl:Restriction ;
                                                                                                                         owl:onProperty cont:hasVendorFirm ;
                                                                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                                                         owl:onClass cont:VendorFirm
@@ -831,12 +944,16 @@ cont:ThermoFisher rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#black
 cont:black rdf:type owl:NamedIndividual ,
-                    cont:OpticalProperty .
+                    cont:Color ,
+                    cont:Opaque ;
+           cont:colorName "black" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#clear
 cont:clear rdf:type owl:NamedIndividual ,
-                    cont:OpticalProperty .
+                    cont:Clear ,
+                    cont:Color ;
+           cont:colorName "clear" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#flatBottom
@@ -849,6 +966,29 @@ cont:roundBottom rdf:type owl:NamedIndividual ,
                           cont:WellShape .
 
 
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483395
+cont:tf4483395 rdf:type owl:NamedIndividual ,
+                        cont:CatalogEntry .
+
+cont:tf4483350 rdf:type owl:NamedIndividual , cont:CatalogEntry ,  [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ; owl:hasValue cont:ThermoFisher ] .
+
+cont:tf4483352 rdf:type owl:NamedIndividual , cont:CatalogEntry ,  [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ; owl:hasValue cont:ThermoFisher ]  .
+
+cont:tf4483343 rdf:type owl:NamedIndividual , cont:CatalogEntry ,  [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ; owl:hasValue cont:ThermoFisher ]  .
+
+cont:tf4483354 rdf:type owl:NamedIndividual , cont:CatalogEntry ,  [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ; owl:hasValue cont:ThermoFisher ]  .
+
+cont:tf4483355 rdf:type owl:NamedIndividual , cont:CatalogEntry ,  [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ; owl:hasValue cont:ThermoFisher ]  .
+
+cont:tf4483356 rdf:type owl:NamedIndividual , cont:CatalogEntry ,  [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty cont:hasVendorFirm ; owl:hasValue cont:ThermoFisher ]  .
+
+
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#veeBottom
 cont:veeBottom rdf:type owl:NamedIndividual ,
                         cont:WellShape .
@@ -856,7 +996,31 @@ cont:veeBottom rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#white
 cont:white rdf:type owl:NamedIndividual ,
-                    cont:OpticalProperty .
+                    cont:Color ,
+                    cont:Opaque ;
+           cont:colorName "white" .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#yellow
+cont:yellow rdf:type owl:NamedIndividual ,
+                     cont:Opaque ;
+            cont:colorName "yellow" .
+
+cont:red rdf:type owl:NamedIndividual ,
+                     cont:Opaque ;
+            cont:colorName "red" .
+
+cont:blue rdf:type owl:NamedIndividual ,
+                     cont:Opaque ;
+            cont:colorName "blue" .
+
+cont:green rdf:type owl:NamedIndividual ,
+                     cont:Opaque ;
+            cont:colorName "green" .
+
+cont:multicolor rdf:type owl:NamedIndividual ,
+                     cont:Opaque ;
+            cont:colorName "multicolor" .
 
 
 #################################################################
@@ -877,8 +1041,18 @@ cont:PlateReader rdfs:comment "Likely this should actually be imported from anot
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( cont:CatalogEntry
+                cont:Color
                 cont:LabEquipment
-                cont:OpticalProperty
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cont:EnduraPlate_96Well_Blue
+                cont:EnduraPlate_96Well_Clear
+                cont:EnduraPlate_96Well_Multicolor
+                cont:EnduraPlate_96Well_Red
+                cont:EnduraPlate_96Well_Yellow
               )
 ] .
 
@@ -889,6 +1063,3 @@ cont:PlateReader rdfs:comment "Likely this should actually be imported from anot
                 cont:plateHeight
               )
 ] .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
