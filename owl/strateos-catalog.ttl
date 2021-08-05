@@ -1,0 +1,1164 @@
+@prefix ns1: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix ns2: <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#384-pcr> a ns2:Plate .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Chemspeedchemspeed-96-sealed-pin-rack> a ns2:Plate ;
+    rdfs:label "chemspeed-96-sealed-pin-rack" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Chemspeedunknown> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height5> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth5> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume5> ;
+    rdfs:comment "Chemspeed Chemspeed 96 Pin Rack" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning1536-tc-white-corning-3727> a ns2:Plate ;
+    rdfs:label "1536-tc-white-corning-3727" ;
+    ns2:columnCount 48 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3727> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height36> ;
+    ns2:rowCount 32 ;
+    ns2:wellCount 1536 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth36> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume36> ;
+    rdfs:comment "Corning 1536 well Corning white TC treated HiBase" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-flat> a ns2:Plate ;
+    rdfs:label "384-flat" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3706> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height32> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth32> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume32> ;
+    rdfs:comment "Corning 384-Well Clear Bottom White Polystyrene Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-flat-clear-clear> a ns2:Plate ;
+    rdfs:label "384-flat-clear-clear" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3700> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height34> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth34> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume34> ;
+    rdfs:comment "Corning 384-Well Clear Flat Bottom Polystyrene High Bind Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-flat-white-clear> a ns2:Plate ;
+    rdfs:label "384-flat-white-clear" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3763> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height24> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth24> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume24> ;
+    rdfs:comment "Corning 384-well flat-bottom polystyrene plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-flat-white-white-lv> a ns2:Plate ;
+    rdfs:label "384-flat-white-white-lv" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3824> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height11> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth11> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume11> ;
+    rdfs:comment "Corning 384-Well Low Volume White Flat Bottom Polystyrene NBS Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-flat-white-white-nbs> a ns2:Plate ;
+    rdfs:label "384-flat-white-white-nbs" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3574> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height2> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth2> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume2> ;
+    rdfs:comment "Corning 384-Well Low Flange White FlatBottom Polystyrene NBS Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-flat-white-white-tc> a ns2:Plate ;
+    rdfs:label "384-flat-white-white-tc" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3570> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height18> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth18> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume18> ;
+    rdfs:comment "Corning 384-Well Low Flange White Flat Bottom Polystyrene TC-Treated Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-round-black-black-lv-nbs> a ns2:Plate ;
+    rdfs:label "384-round-black-black-lv-nbs" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning4514> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height29> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth29> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume29> ;
+    rdfs:comment "Corning Corning 4514 384-well Low Volume Black Round Bottom Polystyrene NBS Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning384-round-clear-clear> a ns2:Plate ;
+    rdfs:label "384-round-clear-clear" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3657> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height20> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth20> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume20> ;
+    rdfs:comment "Corning 384-Well Clear Round Bottom Polypropylene Not Treated Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning96-deep> a ns2:Plate ;
+    rdfs:label "96-deep" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3961> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height38> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth38> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume38> ;
+    rdfs:comment "Corning 96-Well Clear V-Bottom Polypropylene Deep Well Plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning96-flat> a ns2:Plate ;
+    rdfs:label "96-flat" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3632> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height13> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth13> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume13> ;
+    rdfs:comment "Corning 96-Well White with Clear Flat Bottom Polystyrene Not Treated Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning96-flat-uv> a ns2:Plate ;
+    rdfs:label "96-flat-uv" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3635> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height8> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth8> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume8> ;
+    rdfs:comment "Corning 96-Well Clear Flat Bottom UV-Transparent Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning96-ubottom-clear-tc> a ns2:Plate ;
+    rdfs:label "96-ubottom-clear-tc" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning353077> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height16> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth16> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume16> ;
+    rdfs:comment "Corning Falcon 96-Well, Cell Culture-Treated, U-Shaped-Bottom Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning96-well-v-bottom> a ns2:Plate ;
+    rdfs:label "96-well-v-bottom" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3894> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height23> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth23> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume23> ;
+    rdfs:comment "Corning 96-well cell culture multiple well plate, V bottom" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Costar96-flat-clear-costar-3590> a ns2:Plate ;
+    rdfs:label "96-flat-clear-costar-3590" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Costar3590> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height7> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth7> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume7> ;
+    rdfs:comment "Costar 96-well EIA/RIA Clear Flat Bottom Polystyrene High Bind Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#E%26K%20Scientific24-deep> a ns2:Plate ;
+    rdfs:label "24-deep" ;
+    ns2:columnCount 6 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#E%26K%20ScientificEK-2053-S> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height33> ;
+    ns2:rowCount 4 ;
+    ns2:wellCount 24 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth33> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume33> ;
+    rdfs:comment "E&K Scientific 24-Well Pyramid Bottom Plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf384-pcr> a ns2:Plate ;
+    rdfs:label "384-pcr" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf951020539> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height0> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth0> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume0> ;
+    rdfs:comment "Eppendorf 384-Well twin.tec PCR Plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf6-flat> a ns2:Plate ;
+    rdfs:label "6-flat" ;
+    ns2:columnCount 3 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf30720016> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height21> ;
+    ns2:rowCount 2 ;
+    ns2:wellCount 6 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth21> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume21> ;
+    rdfs:comment "Eppendorf 6-Well Non-Treated Sterile Plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf6-flat-tc> a ns2:Plate ;
+    rdfs:label "6-flat-tc" ;
+    ns2:columnCount 3 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf30720113> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height15> ;
+    ns2:rowCount 2 ;
+    ns2:wellCount 6 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth15> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume15> ;
+    rdfs:comment "Eppendorf 6-Well TC Treated Sterile Plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf96-flat-clear-clear-tc> a ns2:Plate ;
+    rdfs:label "96-flat-clear-clear-tc" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf30730119> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height25> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth25> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume25> ;
+    rdfs:comment "Eppendorf 96-Well Flat TC-Treated Polystyrene Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf96-pcr> a ns2:Plate ;
+    rdfs:label "96-pcr" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf951020619> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height19> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth19> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume19> ;
+    rdfs:comment "Eppendorf 96-Well twin.tec PCR Plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher96-deep-kf> a ns2:Plate ;
+    rdfs:label "96-deep-kf" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher22-387-031> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height17> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth17> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume17> ;
+    rdfs:comment "Fisher 96-Well KingFisher Deepwell Plate V-bottom Polypropylene" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher96-v-kf> a ns2:Plate ;
+    rdfs:label "96-v-kf" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher22-387-030> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height4> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth4> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume4> ;
+    rdfs:comment "Fisher 96-well KingFisher PCR microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher96-vbottom-microwell> a ns2:Plate ;
+    rdfs:label "96-vbottom-microwell" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher249944> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height30> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth30> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume30> ;
+    rdfs:comment "Fisher 96 vbottom microwell lcms plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner1536-white-tc> a ns2:Plate ;
+    rdfs:label "1536-white-tc" ;
+    ns2:columnCount 48 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner782073> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height37> ;
+    ns2:rowCount 32 ;
+    ns2:wellCount 1536 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth37> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume37> ;
+    rdfs:comment "Greiner 1536 Greiner White TC-treated HiBase" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner384-v-clear-clear> a ns2:Plate ;
+    rdfs:label "384-v-clear-clear" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner781280> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height35> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth35> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume35> ;
+    rdfs:comment "Greiner 384-Well PP V-Bottom Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner96-flat-black-black-fluotrac-600> a ns2:Plate ;
+    rdfs:label "96-flat-black-black-fluotrac-600" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner655077> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height14> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth14> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume14> ;
+    rdfs:comment "Greiner 96-Well F-Bottom Black Fluotrac High-Binding Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Labcyte384-echo> a ns2:Plate ;
+    rdfs:label "384-echo" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#LabcytePP-0200> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height6> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth6> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume6> ;
+    rdfs:comment "Labcyte 384-Well Echo Qualified Polypropylene Microplate 2.0" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Labcyte384-echo-ldv> a ns2:Plate ;
+    rdfs:label "384-echo-ldv" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#LabcyteLP-0200> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height28> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth28> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume28> ;
+    rdfs:comment "Labcyte 384-well Echo low dead volume plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Mesoscale96-10-spot-uplex-MSD> a ns2:Plate ;
+    rdfs:label "96-10-spot-uplex-MSD" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#MesoscaleK15069L> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height12> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth12> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume12> ;
+    rdfs:comment "Mesoscale 96-well 10-spot u-plex MSD plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD> a ns2:Plate ;
+    rdfs:label "96-10-spot-vplex-m-pro-inflamm1-MSD" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#MesoscaleK15048G> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height1> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth1> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume1> ;
+    rdfs:comment "Mesoscale 96-well 10-spot v-plex mouse pro-inflammatory panel 1 MSD plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Mesoscale96-4-spot-mMIP3a-MSD> a ns2:Plate ;
+    rdfs:label "96-4-spot-mMIP3a-MSD" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#MesoscaleK152MSD> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height10> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth10> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume10> ;
+    rdfs:comment "Mesoscale 96-well 4-spot mouse MIP3a MSD plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer384-flat-black-black-proxiplate-plus-f> a ns2:Plate ;
+    rdfs:label "384-flat-black-black-proxiplate-plus-f" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer6008260> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height31> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth31> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume31> ;
+    rdfs:comment "PerkinElmer 384-well black flat-bottom polystyrene proximity plus plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer384-flat-white-white-optiplate> a ns2:Plate ;
+    rdfs:label "384-flat-white-white-optiplate" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer6007290> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height3> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth3> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume3> ;
+    rdfs:comment "PerkinElmer 384-Well White Opaque Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer384-flat-white-white-proxiplate-plus> a ns2:Plate ;
+    rdfs:label "384-flat-white-white-proxiplate-plus" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer6008280> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height22> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth22> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume22> ;
+    rdfs:comment "PerkinElmer 384-well flat-bottom polystyrene proximity plus plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc> a ns2:Plate ;
+    rdfs:label "384-ubottom-white-tc" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Sumitomo%20Bakelite%20Co.MS-9384WZ> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height40> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth40> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume40> ;
+    rdfs:comment "Sumitomo Bakelite Co. Sumitomo Bakelite Co. PrimeSurface384U White Plate 3-D Cell Culture Plate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#ThermoFisher384-ubottom-clear-polypropylene-nunc-264573> a ns2:Plate ;
+    rdfs:label "384-ubottom-clear-polypropylene-nunc-264573" ;
+    ns2:columnCount 24 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#ThermoFisher264573> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height27> ;
+    ns2:rowCount 16 ;
+    ns2:wellCount 384 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth27> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume27> ;
+    rdfs:comment "ThermoFisher Nunc 384-Well Polypropylene U-Bottom Natural Color Storage Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#ThermoFisher96-flat-white-dc> a ns2:Plate ;
+    rdfs:label "96-flat-white-dc" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#ThermoFisher136101> ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height9> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 96 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth9> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume9> ;
+    rdfs:comment "ThermoFisher Nunc MicroWell 96-Well, Nunclon Delta-Treated, Flat-Bottom Microplate" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth2> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.43"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height0> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.6"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height1> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.35"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height16> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.6"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height22> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.35"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height23> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "3.25"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height28> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.48"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height35> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth28> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "5.1"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume21> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "5000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume26> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "32000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height11> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "12.19"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height24> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height32> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height33> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "44.04"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height36> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height6> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height8> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth39> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "39.3"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume12> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "410.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume18> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "80.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume34> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "80.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume38> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "2000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume5> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "9000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height27> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height40> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth1> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.68"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth13> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.67"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth17> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "42.3"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth6> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.5"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume16> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "320.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume23> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "200.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume9> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "320.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth24> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.56"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth30> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.5"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height13> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume11> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "40.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height25> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume2> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "80.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume24> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "90.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume3> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "105.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth18> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.43"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth19> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.6"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth26> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "39.1"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth5> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "36.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth8> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.67"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume1> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "410.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume37> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "10.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume39> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "21000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume4> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "200.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth14> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.9"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth20> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.57"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height15> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "19.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height20> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height21> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "19.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height30> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.7"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height31> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.35"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height34> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.2"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height4> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.5"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height5> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "36.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth22> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "5.3"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth36> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "4.8"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth38> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "42.03"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume30> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "400.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume35> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "120.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height29> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height37> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height39> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "44.04"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume13> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "340.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume14> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "340.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume19> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "160.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume20> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "70.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume27> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "120.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth10> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.68"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth15> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "16.5"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth21> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "16.5"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth25> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.3"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth3> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.45"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth31> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "5.3"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth32> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.43"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth34> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.43"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth35> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.5"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume0> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "40.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth37> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "5.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume10> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "410.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume17> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "1000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume25> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "340.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume29> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "35.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume31> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "28.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume36> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "12.5"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume40> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "100.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume7> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "360.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth0> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "9.6"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth29> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "6.58"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth40> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "12.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth7> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.67"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height10> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.35"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height12> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.35"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height14> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height17> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "44.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height18> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height19> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "15.9"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height2> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.35"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height38> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "43.8"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height7> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.22"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth11> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "9.39"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth16> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.59"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth23> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "10.668"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth27> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.7"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth33> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "42.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth9> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.2"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume22> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "28.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume28> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "14.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height26> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "43.8"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height3> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.4"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height9> a ns1:Height ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "14.6"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume32> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "90.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth12> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "11.68"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth4> a ns1:Depth ;
+    ns1:hasDimension ns1:millimetre ;
+    ns1:hasNumericalValue "12.9"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume15> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "5000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume33> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "10000.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume6> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "135.0"^^xsd:float .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume8> a ns1:Volume ;
+    ns1:hasDimension ns1:microlitre ;
+    ns1:hasNumericalValue "340.0"^^xsd:float .
+
+ns2:Chemspeed a ns2:VendorFirm ;
+    rdfs:label "Chemspeed" ;
+    ns2:vendorName "Chemspeed" .
+
+ns2:Costar a ns2:VendorFirm ;
+    rdfs:label "Costar" ;
+    ns2:vendorName "Costar" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#E%26K%20Scientific> a ns2:VendorFirm ;
+    rdfs:label "E&K Scientific" ;
+    ns2:vendorName "E&K Scientific" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Sumitomo%20Bakelite%20Co.> a ns2:VendorFirm ;
+    rdfs:label "Sumitomo Bakelite Co." ;
+    ns2:vendorName "Sumitomo Bakelite Co." .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Axygenres-mw12-hp> a ns2:CatalogEntry,
+        ns2:Plate ;
+    rdfs:label "res-mw12-hp" ;
+    ns2:catalogNumber "res-mw12-hp" ;
+    ns2:columnCount 12 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Axygenres-mw12-hp> ;
+    ns2:hasVendor ns2:Axygen ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height39> ;
+    ns2:rowCount 1 ;
+    ns2:wellCount 12 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth39> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume39> ;
+    rdfs:comment "Axygen Multiple Well Reagent Reservoir with 12-Channel Trough, High Profile" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Axygenres-mw8-hp> a ns2:CatalogEntry,
+        ns2:Plate ;
+    rdfs:label "res-mw8-hp" ;
+    ns2:catalogNumber "res-mw8-hp" ;
+    ns2:columnCount 1 ;
+    ns2:hasCatalogEntry <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Axygenres-mw8-hp> ;
+    ns2:hasVendor ns2:Axygen ;
+    ns2:height <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#height26> ;
+    ns2:rowCount 8 ;
+    ns2:wellCount 8 ;
+    ns2:wellDepth <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellDepth26> ;
+    ns2:wellVolume <http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#wellvolume26> ;
+    rdfs:comment "Axygen Multiple Well Reagent Reservoir with 8-Channel Trough, High Profile" .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Chemspeedunknown> a ns2:CatalogEntry ;
+    ns2:catalogNumber "unknown" ;
+    ns2:hasVendor ns2:Chemspeed .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning353077> a ns2:CatalogEntry ;
+    ns2:catalogNumber "353077" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3570> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3570" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3574> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3574" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3632> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3632" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3635> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3635" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3657> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3657" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3700> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3700" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3706> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3706" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3727> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3727" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3763> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3763" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3824> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3824" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3894> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3894" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning3961> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3961" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Corning4514> a ns2:CatalogEntry ;
+    ns2:catalogNumber "4514" ;
+    ns2:hasVendor ns2:Corning .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Costar3590> a ns2:CatalogEntry ;
+    ns2:catalogNumber "3590" ;
+    ns2:hasVendor ns2:Costar .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#E%26K%20ScientificEK-2053-S> a ns2:CatalogEntry ;
+    ns2:catalogNumber "EK-2053-S" ;
+    ns2:hasVendor <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#E%26K%20Scientific> .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf30720016> a ns2:CatalogEntry ;
+    ns2:catalogNumber "30720016" ;
+    ns2:hasVendor ns2:Eppendorf .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf30720113> a ns2:CatalogEntry ;
+    ns2:catalogNumber "30720113" ;
+    ns2:hasVendor ns2:Eppendorf .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf30730119> a ns2:CatalogEntry ;
+    ns2:catalogNumber "30730119" ;
+    ns2:hasVendor ns2:Eppendorf .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf951020539> a ns2:CatalogEntry ;
+    ns2:catalogNumber "951020539" ;
+    ns2:hasVendor ns2:Eppendorf .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Eppendorf951020619> a ns2:CatalogEntry ;
+    ns2:catalogNumber "951020619" ;
+    ns2:hasVendor ns2:Eppendorf .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher22-387-030> a ns2:CatalogEntry ;
+    ns2:catalogNumber "22-387-030" ;
+    ns2:hasVendor ns2:Fisher .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher22-387-031> a ns2:CatalogEntry ;
+    ns2:catalogNumber "22-387-031" ;
+    ns2:hasVendor ns2:Fisher .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Fisher249944> a ns2:CatalogEntry ;
+    ns2:catalogNumber "249944" ;
+    ns2:hasVendor ns2:Fisher .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner655077> a ns2:CatalogEntry ;
+    ns2:catalogNumber "655077" ;
+    ns2:hasVendor ns2:Greiner .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner781280> a ns2:CatalogEntry ;
+    ns2:catalogNumber "781280" ;
+    ns2:hasVendor ns2:Greiner .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Greiner782073> a ns2:CatalogEntry ;
+    ns2:catalogNumber "782073" ;
+    ns2:hasVendor ns2:Greiner .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#LabcyteLP-0200> a ns2:CatalogEntry ;
+    ns2:catalogNumber "LP-0200" ;
+    ns2:hasVendor ns2:Labcyte .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#LabcytePP-0200> a ns2:CatalogEntry ;
+    ns2:catalogNumber "PP-0200" ;
+    ns2:hasVendor ns2:Labcyte .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#MesoscaleK15048G> a ns2:CatalogEntry ;
+    ns2:catalogNumber "K15048G" ;
+    ns2:hasVendor ns2:Mesoscale .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#MesoscaleK15069L> a ns2:CatalogEntry ;
+    ns2:catalogNumber "K15069L" ;
+    ns2:hasVendor ns2:Mesoscale .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#MesoscaleK152MSD> a ns2:CatalogEntry ;
+    ns2:catalogNumber "K152MSD" ;
+    ns2:hasVendor ns2:Mesoscale .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer6007290> a ns2:CatalogEntry ;
+    ns2:catalogNumber "6007290" ;
+    ns2:hasVendor ns2:PerkinElmer .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer6008260> a ns2:CatalogEntry ;
+    ns2:catalogNumber "6008260" ;
+    ns2:hasVendor ns2:PerkinElmer .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#PerkinElmer6008280> a ns2:CatalogEntry ;
+    ns2:catalogNumber "6008280" ;
+    ns2:hasVendor ns2:PerkinElmer .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#Sumitomo%20Bakelite%20Co.MS-9384WZ> a ns2:CatalogEntry ;
+    ns2:catalogNumber "MS-9384WZ" ;
+    ns2:hasVendor <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Sumitomo%20Bakelite%20Co.> .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#ThermoFisher136101> a ns2:CatalogEntry ;
+    ns2:catalogNumber "136101" ;
+    ns2:hasVendor ns2:ThermoFisher .
+
+<http://www.semanticweb.org/rpg/ontologies/2021/8/strateos-containers#ThermoFisher264573> a ns2:CatalogEntry ;
+    ns2:catalogNumber "264573" ;
+    ns2:hasVendor ns2:ThermoFisher .
+
+ns2:Axygen a ns2:VendorFirm ;
+    rdfs:label "Axygen" ;
+    ns2:vendorName "Axygen" .
+
+ns2:Labcyte a ns2:VendorFirm ;
+    rdfs:label "Labcyte" ;
+    ns2:vendorName "Labcyte" .
+
+ns2:ThermoFisher a ns2:VendorFirm ;
+    rdfs:label "ThermoFisher" ;
+    ns2:vendorName "ThermoFisher" .
+
+ns2:Fisher a ns2:VendorFirm ;
+    rdfs:label "Fisher" ;
+    ns2:vendorName "Fisher" .
+
+ns2:Greiner a ns2:VendorFirm ;
+    rdfs:label "Greiner" ;
+    ns2:vendorName "Greiner" .
+
+ns2:Mesoscale a ns2:VendorFirm ;
+    rdfs:label "Mesoscale" ;
+    ns2:vendorName "Mesoscale" .
+
+ns2:PerkinElmer a ns2:VendorFirm ;
+    rdfs:label "PerkinElmer" ;
+    ns2:vendorName "PerkinElmer" .
+
+ns2:Eppendorf a ns2:VendorFirm ;
+    rdfs:label "Eppendorf" ;
+    ns2:vendorName "Eppendorf" .
+
+ns2:Corning a ns2:VendorFirm ;
+    rdfs:label "Corning" ;
+    ns2:vendorName "Corning" .
+
