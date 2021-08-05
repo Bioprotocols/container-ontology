@@ -202,12 +202,6 @@ cont:qualitativeProperty rdf:type owl:ObjectProperty ;
                          rdfs:domain cont:Container .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#volume
-cont:volume rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf cont:geometricProperty ;
-            rdfs:label "volume" .
-
-
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellDepth
 cont:wellDepth rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf cont:geometricProperty ;
@@ -222,6 +216,12 @@ cont:wellDepth rdf:type owl:ObjectProperty ;
                             rdf:type owl:Class
                           ] ;
                rdfs:label "wellDepth" .
+
+
+###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellVolume
+cont:wellVolume rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf cont:geometricProperty ;
+                rdfs:label "wellVolume" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#width
