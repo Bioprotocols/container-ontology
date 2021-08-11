@@ -1,19 +1,20 @@
-@prefix : <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#> .
+@prefix : <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cont: <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#> .
+@prefix cont: <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology> .
+@prefix sbol: <http://sbols.org/v3#> .
+@base <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl> .
 
-<http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology> rdf:type owl:Ontology ;
-                                                                       owl:versionIRI <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology/v1> ;
-                                                                       owl:imports <http://sbols.org/v3> ,
-                                                                                   <http://www.semanticweb.org/rpg/ontologies/2021/5/om-subset> ;
-                                                                       om:abbreviation "cont:" ;
-                                                                       rdfs:label "Container Ontology"@en .
+<https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl> ;
+                                                                    owl:imports <http://sbols.org/v3> ,
+                                                                                <https://www.dropbox.com/s/ytuxjttj1ba5f0d/om-subset.ttl> ;
+                                                                    om:abbreviation "cont:" ;
+                                                                    rdfs:label "Container Ontology"@en .
 
 #################################################################
 #    Annotation properties
@@ -31,7 +32,14 @@ om:abbreviation rdf:type owl:AnnotationProperty .
 om:hasQuantity rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#centrifugeResistance
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#catalogEntryOf
+cont:catalogEntryOf rdf:type owl:ObjectProperty ;
+                    owl:inverseOf cont:hasCatalogEntry ;
+                    rdfs:domain cont:CatalogEntry ;
+                    rdfs:range cont:LabEquipment .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#centrifugeResistance
 cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                           rdfs:domain cont:Container ;
                           rdfs:range [ owl:intersectionOf ( om:Measure
@@ -46,14 +54,14 @@ cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                           rdfs:label "centrifugeResistance" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#clearanceToPlateBottom
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#clearanceToPlateBottom
 cont:clearanceToPlateBottom rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf cont:height ;
                             rdfs:comment "The minimum clearance from the resting plane to the plane of the bottom external surface of the wells."@en ;
                             rdfs:label "clearanceToPlateBottom" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#coating
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#coating
 cont:coating rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              rdfs:domain cont:Container ;
@@ -61,7 +69,7 @@ cont:coating rdf:type owl:ObjectProperty ;
              rdfs:label "coating" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatibleCentrifuges
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#compatibleCentrifuges
 cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf cont:compatibleLabEquipment ;
                            rdfs:domain cont:Container ;
@@ -69,24 +77,24 @@ cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
                            rdfs:label "compatibleCentrifuges" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatibleLabEquipment
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#compatibleLabEquipment
 cont:compatibleLabEquipment rdf:type owl:ObjectProperty ;
                             rdfs:label "compatibleLabEquipment" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#compatiblePlateReaders
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#compatiblePlateReaders
 cont:compatiblePlateReaders rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf cont:compatibleLabEquipment ;
                             rdfs:label "compatiblePlateReaders" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#cornerRadius
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#cornerRadius
 cont:cornerRadius rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf cont:geometricProperty ;
                   rdfs:label "cornerRadius" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#diameter
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#diameter
 cont:diameter rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cont:geometricProperty ;
               rdfs:range om:Measure ,
@@ -97,14 +105,20 @@ cont:diameter rdf:type owl:ObjectProperty ;
               rdfs:label "diameter" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#geometricProperty
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#equipmentVendor
+cont:equipmentVendor rdf:type owl:ObjectProperty ;
+                     rdfs:domain cont:LabEquipment ;
+                     rdfs:range cont:VendorFirm .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#geometricProperty
 cont:geometricProperty rdf:type owl:ObjectProperty ;
                        rdfs:domain cont:Container ;
                        rdfs:range om:Measure ;
                        rdfs:label "geometricProperty" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasCatalogEntry
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#hasCatalogEntry
 cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain cont:LabEquipment ;
@@ -112,31 +126,27 @@ cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:label "hasCatalogEntry" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasColor
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#hasColor
 cont:hasColor rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cont:qualitativeProperty ;
               rdfs:range cont:Color .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasVendorFirm
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#hasVendorFirm
 cont:hasVendorFirm rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( cont:CatalogEntry
-                                               cont:LabEquipment
-                                             )
-                               ] ;
+                   rdfs:domain cont:CatalogEntry ;
                    rdfs:range cont:VendorFirm ;
                    rdfs:label "hasVendorFirm" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#hasWellBottomShape
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#hasWellBottomShape
 cont:hasWellBottomShape rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf cont:qualitativeProperty ;
                         rdfs:label "hasWellBottomShape"^^xsd:string .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#height
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#height
 cont:height rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cont:geometricProperty ;
             rdfs:range [ owl:intersectionOf ( om:Measure
@@ -150,13 +160,13 @@ cont:height rdf:type owl:ObjectProperty ;
             rdfs:label "height" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#length
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#length
 cont:length rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cont:geometricProperty ;
             rdfs:label "length" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#lengthAtEdge
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#lengthAtEdge
 cont:lengthAtEdge rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf cont:length ;
                   rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
@@ -165,7 +175,7 @@ This property is for the length within 12.7 mm of the edge; the other property i
                   rdfs:label "lengthAtEdge" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#lengthOverall
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#lengthOverall
 cont:lengthOverall rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf cont:length ;
                    rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
@@ -174,14 +184,14 @@ This property is for the length anywhere on the plate (the more permissive const
                    rdfs:label "lengthOverall" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#measureType
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#measureType
 cont:measureType rdf:type owl:ObjectProperty ;
                  rdfs:domain om:Measure ;
                  rdfs:range om:Quantity ;
                  rdfs:label "measureType" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#overallPlateHeight
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#overallPlateHeight
 cont:overallPlateHeight rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf cont:height ;
                         owl:propertyDisjointWith cont:plateHeight ;
@@ -189,7 +199,7 @@ cont:overallPlateHeight rdf:type owl:ObjectProperty ;
                         rdfs:label "overallPlateHeight" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#plateHeight
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#plateHeight
 cont:plateHeight rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf cont:height ;
                  rdfs:domain cont:Plate ;
@@ -197,12 +207,12 @@ cont:plateHeight rdf:type owl:ObjectProperty ;
                  rdfs:label "plateHeight" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#qualitativeProperty
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#qualitativeProperty
 cont:qualitativeProperty rdf:type owl:ObjectProperty ;
                          rdfs:domain cont:Container .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellDepth
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#wellDepth
 cont:wellDepth rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf cont:geometricProperty ;
                rdf:type owl:FunctionalProperty ;
@@ -218,13 +228,13 @@ cont:wellDepth rdf:type owl:ObjectProperty ;
                rdfs:label "wellDepth" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellVolume
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#wellVolume
 cont:wellVolume rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf cont:geometricProperty ;
                 rdfs:label "wellVolume" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#width
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#width
 cont:width rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf cont:geometricProperty ;
            rdfs:label "width" .
@@ -234,7 +244,7 @@ cont:width rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#catalogNumber
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#catalogNumber
 cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain cont:CatalogEntry ;
@@ -242,13 +252,13 @@ cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:label "catalogNumber" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#colorName
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#colorName
 cont:colorName rdf:type owl:DatatypeProperty ;
                rdfs:domain cont:Color ;
                rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#columnCount
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#columnCount
 cont:columnCount rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
                  rdfs:domain cont:Plate ;
@@ -256,13 +266,13 @@ cont:columnCount rdf:type owl:DatatypeProperty ;
                  rdfs:label "columnCount" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#containerDataProperty
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#containerDataProperty
 cont:containerDataProperty rdf:type owl:DatatypeProperty ;
                            rdfs:domain cont:Container ;
                            rdfs:label "containerDataProperty" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#isOpticallyTransparent
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#isOpticallyTransparent
 cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf cont:containerDataProperty ;
                             rdfs:domain cont:Container ;
@@ -270,27 +280,27 @@ cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
                             rdfs:label "isOpticallyTransparent" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#isSLAS1-2004compliant
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#isSLAS1-2004compliant
 cont:isSLAS1-2004compliant rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf cont:containerDataProperty ;
                            rdfs:range xsd:boolean ;
                            rdfs:label "isSLAS1-2004compliant" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#isStackable
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#isStackable
 cont:isStackable rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
                  rdfs:range xsd:boolean .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#rowCount
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#rowCount
 cont:rowCount rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf cont:containerDataProperty ;
               rdfs:domain cont:Plate ;
               rdfs:range xsd:positiveInteger .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#vendorName
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#vendorName
 cont:vendorName rdf:type owl:DatatypeProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( cont:LabEquipment
@@ -300,7 +310,7 @@ cont:vendorName rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#wellCount
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#wellCount
 cont:wellCount rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf cont:containerDataProperty ;
                rdfs:domain cont:Plate ;
@@ -315,50 +325,50 @@ cont:wellCount rdf:type owl:DatatypeProperty ;
 om:Force rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#CatalogEntry
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#CatalogEntry
 cont:CatalogEntry rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
                   rdfs:label "CatalogEntry" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Centrifuge
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Centrifuge
 cont:Centrifuge rdf:type owl:Class ;
                 rdfs:subClassOf cont:LabMachinery .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Clear
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Clear
 cont:Clear rdf:type owl:Class ;
            rdfs:subClassOf cont:Color .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#CoatingMaterial
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#CoatingMaterial
 cont:CoatingMaterial rdf:type owl:Class ;
                      rdfs:label "CoatingMaterial" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Color
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Color
 cont:Color rdf:type owl:Class ;
            rdfs:subClassOf cont:ContainerRoot ;
            rdfs:comment "Enumeration class of optical properties for well plates." ;
            rdfs:label "OpticalProperty" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Container
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Container
 cont:Container rdf:type owl:Class ;
                rdfs:subClassOf cont:LabEquipment ;
                rdfs:label "Container" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ContainerRoot
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ContainerRoot
 cont:ContainerRoot rdf:type owl:Class ;
-                   rdfs:subClassOf <http://sbols.org/v3#Identified> ;
+                   rdfs:subClassOf sbol:Identified ;
                    rdfs:comment "This is the root class for the classes defined in the Container Ontology. It is introduced to be the bridge between the container ontology and the SBOL Ontology. In turn, this connects to the sbol:Identified class, in order to make it possible for the container ontology classes to be translated into Python classes by the SBOL factory." ;
                    rdfs:label "ContainerRoot" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Blue
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Blue
 cont:EnduraPlate_96Well_Blue rdf:type owl:Class ;
-                             owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+                             owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty cont:hasColor ;
                                                                           owl:hasValue cont:blue
@@ -370,12 +380,12 @@ cont:EnduraPlate_96Well_Blue rdf:type owl:Class ;
                                                    owl:onProperty cont:hasCatalogEntry ;
                                                    owl:hasValue cont:tf4483343
                                                  ] ;
-                             rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> .
+                             rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Clear
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Clear
 cont:EnduraPlate_96Well_Clear rdf:type owl:Class ;
-                              owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+                              owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
                                                                          [ rdf:type owl:Class ;
                                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty cont:hasCatalogEntry ;
@@ -394,12 +404,12 @@ cont:EnduraPlate_96Well_Clear rdf:type owl:Class ;
                                                                        ) ;
                                                     rdf:type owl:Class
                                                   ] ;
-                              rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> .
+                              rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Multicolor
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Multicolor
 cont:EnduraPlate_96Well_Multicolor rdf:type owl:Class ;
-                                   owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
                                                                               [ rdf:type owl:Class ;
                                                                                 owl:unionOf ( [ rdf:type owl:Restriction ;
                                                                                                 owl:onProperty cont:hasCatalogEntry ;
@@ -418,12 +428,12 @@ cont:EnduraPlate_96Well_Multicolor rdf:type owl:Class ;
                                                                             ) ;
                                                          rdf:type owl:Class
                                                        ] ;
-                                   rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> .
+                                   rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Red
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Red
 cont:EnduraPlate_96Well_Red rdf:type owl:Class ;
-                            owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+                            owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty cont:hasCatalogEntry ;
                                                                          owl:hasValue cont:tf4483350
@@ -435,12 +445,12 @@ cont:EnduraPlate_96Well_Red rdf:type owl:Class ;
                                                                      ) ;
                                                   rdf:type owl:Class
                                                 ] ;
-                            rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> .
+                            rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#EnduraPlate_96Well_Yellow
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Yellow
 cont:EnduraPlate_96Well_Yellow rdf:type owl:Class ;
-                               owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well>
+                               owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty cont:hasColor ;
                                                                             owl:hasValue cont:yellow
@@ -452,40 +462,40 @@ cont:EnduraPlate_96Well_Yellow rdf:type owl:Class ;
                                                      owl:onProperty cont:hasCatalogEntry ;
                                                      owl:hasValue cont:tf4483395
                                                    ] ;
-                               rdfs:subClassOf <http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> .
+                               rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#LabEquipment
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#LabEquipment
 cont:LabEquipment rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
                   rdfs:label "LabEquipment" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#LabMachinery
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#LabMachinery
 cont:LabMachinery rdf:type owl:Class ;
                   rdfs:subClassOf cont:LabEquipment ;
                   rdfs:comment "This is likely a poor name, but it is intended to refer to items of equipment that act upon containers and/or their contents." ;
                   rdfs:label "LabMachinery" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Opaque
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Opaque
 cont:Opaque rdf:type owl:Class ;
             rdfs:subClassOf cont:Color .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Plate
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Plate
 cont:Plate rdf:type owl:Class ;
            rdfs:subClassOf cont:Container ;
            owl:disjointWith cont:Well ;
            rdfs:label "Plate" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#PlateReader
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#PlateReader
 cont:PlateReader rdf:type owl:Class ;
                  rdfs:subClassOf cont:LabMachinery .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#SLAS-1-2004
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS-1-2004
 cont:SLAS-1-2004 rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                               owl:onProperty cont:cornerRadius ;
@@ -561,7 +571,7 @@ cont:SLAS-1-2004 rdf:type owl:Class ;
                  rdfs:label "SLAS-1-2004" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#SLAS-2-2004-4-1
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS-2-2004-4-1
 cont:SLAS-2-2004-4-1 rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( cont:SLAS-2-2004-4-2
                                                                 [ rdf:type owl:Restriction ;
@@ -592,7 +602,7 @@ cont:SLAS-2-2004-4-1 rdf:type owl:Class ;
                      rdfs:label "SLAS 2-2004 Typical Height with Clearance"^^xsd:string .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#SLAS-2-2004-4-2
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS-2-2004-4-2
 cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                                 [ rdf:type owl:Class ;
@@ -662,7 +672,7 @@ cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                      rdfs:label "SLAS 2-2004 Typical Height with Clearance"^^xsd:string .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#SLAS-4-2004
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS-4-2004
 cont:SLAS-4-2004 rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                             [ rdf:type owl:Class ;
@@ -688,7 +698,7 @@ cont:SLAS-4-2004 rdf:type owl:Class ;
                  rdfs:label "SLAS 4-2004 Well Placement standard"^^xsd:string .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#SLAS_4-2004_1536_Well_Plate
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS_4-2004_1536_Well_Plate
 cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
                                  owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                               owl:onProperty cont:columnCount ;
@@ -708,7 +718,7 @@ cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
                                  rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#SLAS_4-2004_384_Well_Plate
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS_4-2004_384_Well_Plate
 cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
                                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                              owl:onProperty cont:columnCount ;
@@ -728,7 +738,7 @@ cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
                                 rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#SLAS_4-2004_96_Well_Plate
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS_4-2004_96_Well_Plate
 cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
                                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                             owl:onProperty cont:columnCount ;
@@ -748,7 +758,7 @@ cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
                                rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisherCatalogEntry
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisherCatalogEntry
 cont:ThermoFisherCatalogEntry rdf:type owl:Class ;
                               owl:equivalentClass [ owl:intersectionOf ( cont:CatalogEntry
                                                                          [ rdf:type owl:Restriction ;
@@ -761,7 +771,7 @@ cont:ThermoFisherCatalogEntry rdf:type owl:Class ;
                               rdfs:subClassOf cont:CatalogEntry .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#VWRCentrifugePCRPlateSpec
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#VWRCentrifugePCRPlateSpec
 cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                      owl:onProperty cont:wellDepth ;
@@ -785,18 +795,18 @@ cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
                                rdfs:label "VWRCentrifugePCRPlateSpec" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#VendorFirm
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#VendorFirm
 cont:VendorFirm rdf:type owl:Class ;
                 rdfs:label "VendorFirm" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Well
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Well
 cont:Well rdf:type owl:Class ;
           rdfs:subClassOf cont:Container ;
           rdfs:label "Well" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#WellShape
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#WellShape
 cont:WellShape rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Class ;
                                      owl:oneOf ( cont:flatBottom
@@ -809,120 +819,120 @@ cont:WellShape rdf:type owl:Class ;
                rdfs:label "WellShape" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well
-<http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher/EnduraPlate_96Well> rdf:type owl:Class ;
-                                                                                                      rdfs:subClassOf cont:Plate ,
-                                                                                                                      cont:SLAS_4-2004_96_Well_Plate ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:cornerRadius ;
-                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasUnit ;
-                                                                                                                                                                    owl:hasValue om:millimetre
-                                                                                                                                                                  ]
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                    owl:hasValue 4.0
-                                                                                                                                                                  ]
-                                                                                                                                                                ) ;
-                                                                                                                                             rdf:type owl:Class
-                                                                                                                                           ]
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:length ;
-                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasUnit ;
-                                                                                                                                                                    owl:hasValue om:millimetre
-                                                                                                                                                                  ]
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                                                                         owl:onDatatype xsd:float ;
-                                                                                                                                                                                         owl:withRestrictions ( [ xsd:minInclusive "127.26"^^xsd:float
-                                                                                                                                                                                                                ]
-                                                                                                                                                                                                                [ xsd:maxInclusive "128.26"^^xsd:float
-                                                                                                                                                                                                                ]
-                                                                                                                                                                                                              )
-                                                                                                                                                                                       ]
-                                                                                                                                                                  ]
-                                                                                                                                                                ) ;
-                                                                                                                                             rdf:type owl:Class
-                                                                                                                                           ]
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:plateHeight ;
-                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasUnit ;
-                                                                                                                                                                    owl:hasValue om:millimetre
-                                                                                                                                                                  ]
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                    owl:hasValue 7.50
-                                                                                                                                                                  ]
-                                                                                                                                                                ) ;
-                                                                                                                                             rdf:type owl:Class
-                                                                                                                                           ]
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:wellDepth ;
-                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasUnit ;
-                                                                                                                                                                    owl:hasValue om:millimetre
-                                                                                                                                                                  ]
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty cont:measureType ;
-                                                                                                                                                                    owl:hasValue om:Depth
-                                                                                                                                                                  ]
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                    owl:hasValue "20.1"^^xsd:float
-                                                                                                                                                                  ]
-                                                                                                                                                                ) ;
-                                                                                                                                             rdf:type owl:Class
-                                                                                                                                           ]
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:width ;
-                                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasUnit ;
-                                                                                                                                                                    owl:hasValue om:millimetre
-                                                                                                                                                                  ]
-                                                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                                                    owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                                                                         owl:onDatatype xsd:float ;
-                                                                                                                                                                                         owl:withRestrictions ( [ xsd:minInclusive "84.98"^^xsd:float
-                                                                                                                                                                                                                ]
-                                                                                                                                                                                                                [ xsd:maxInclusive "85.98"^^xsd:float
-                                                                                                                                                                                                                ]
-                                                                                                                                                                                                              )
-                                                                                                                                                                                       ]
-                                                                                                                                                                  ]
-                                                                                                                                                                ) ;
-                                                                                                                                             rdf:type owl:Class
-                                                                                                                                           ]
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:hasVendorFirm ;
-                                                                                                                        owl:hasValue cont:ThermoFisher
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:hasWellBottomShape ;
-                                                                                                                        owl:hasValue cont:veeBottom
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:hasVendorFirm ;
-                                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                                                        owl:onClass cont:VendorFirm
-                                                                                                                      ] ,
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty cont:wellCount ;
-                                                                                                                        owl:hasValue 96
-                                                                                                                      ] .
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well
+<https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf cont:Plate ,
+                                                                                                                   cont:SLAS_4-2004_96_Well_Plate ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:cornerRadius ;
+                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasUnit ;
+                                                                                                                                                                 owl:hasValue om:millimetre
+                                                                                                                                                               ]
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
+                                                                                                                                                                 owl:hasValue 4.0
+                                                                                                                                                               ]
+                                                                                                                                                             ) ;
+                                                                                                                                          rdf:type owl:Class
+                                                                                                                                        ]
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:length ;
+                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasUnit ;
+                                                                                                                                                                 owl:hasValue om:millimetre
+                                                                                                                                                               ]
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
+                                                                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                                                                      owl:onDatatype xsd:float ;
+                                                                                                                                                                                      owl:withRestrictions ( [ xsd:minInclusive "127.26"^^xsd:float
+                                                                                                                                                                                                             ]
+                                                                                                                                                                                                             [ xsd:maxInclusive "128.26"^^xsd:float
+                                                                                                                                                                                                             ]
+                                                                                                                                                                                                           )
+                                                                                                                                                                                    ]
+                                                                                                                                                               ]
+                                                                                                                                                             ) ;
+                                                                                                                                          rdf:type owl:Class
+                                                                                                                                        ]
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:plateHeight ;
+                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasUnit ;
+                                                                                                                                                                 owl:hasValue om:millimetre
+                                                                                                                                                               ]
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
+                                                                                                                                                                 owl:hasValue 7.50
+                                                                                                                                                               ]
+                                                                                                                                                             ) ;
+                                                                                                                                          rdf:type owl:Class
+                                                                                                                                        ]
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:wellDepth ;
+                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasUnit ;
+                                                                                                                                                                 owl:hasValue om:millimetre
+                                                                                                                                                               ]
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty cont:measureType ;
+                                                                                                                                                                 owl:hasValue om:Depth
+                                                                                                                                                               ]
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
+                                                                                                                                                                 owl:hasValue "20.1"^^xsd:float
+                                                                                                                                                               ]
+                                                                                                                                                             ) ;
+                                                                                                                                          rdf:type owl:Class
+                                                                                                                                        ]
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:width ;
+                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasUnit ;
+                                                                                                                                                                 owl:hasValue om:millimetre
+                                                                                                                                                               ]
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
+                                                                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                                                                      owl:onDatatype xsd:float ;
+                                                                                                                                                                                      owl:withRestrictions ( [ xsd:minInclusive "84.98"^^xsd:float
+                                                                                                                                                                                                             ]
+                                                                                                                                                                                                             [ xsd:maxInclusive "85.98"^^xsd:float
+                                                                                                                                                                                                             ]
+                                                                                                                                                                                                           )
+                                                                                                                                                                                    ]
+                                                                                                                                                               ]
+                                                                                                                                                             ) ;
+                                                                                                                                          rdf:type owl:Class
+                                                                                                                                        ]
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:equipmentVendor ;
+                                                                                                                     owl:hasValue cont:ThermoFisher
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:hasWellBottomShape ;
+                                                                                                                     owl:hasValue cont:veeBottom
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:equipmentVendor ;
+                                                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                     owl:onClass cont:VendorFirm
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:wellCount ;
+                                                                                                                     owl:hasValue 96
+                                                                                                                   ] .
 
 
 #################################################################
@@ -933,15 +943,15 @@ cont:WellShape rdf:type owl:Class ;
 om:Depth rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#Centrifuge
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Centrifuge
 cont:Centrifuge rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#PlateReader
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#PlateReader
 cont:PlateReader rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#TFEPWD
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#TFEPWD
 cont:TFEPWD rdf:type owl:NamedIndividual ,
                      om:Measure ;
             om:hasUnit om:millimetre ;
@@ -950,61 +960,61 @@ cont:TFEPWD rdf:type owl:NamedIndividual ,
             rdfs:comment "The measure corresponding to the well height of the ThermoFisher EnduraPlate 96 well" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#ThermoFisher
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher
 cont:ThermoFisher rdf:type owl:NamedIndividual ,
                            cont:VendorFirm ;
                   cont:vendorName "ThermoFisher"^^xsd:string .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#black
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#black
 cont:black rdf:type owl:NamedIndividual ,
                     cont:Color ,
                     cont:Opaque ;
            cont:colorName "black" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#blue
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#blue
 cont:blue rdf:type owl:NamedIndividual ,
                    cont:Opaque ;
           cont:colorName "blue" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#clear
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#clear
 cont:clear rdf:type owl:NamedIndividual ,
                     cont:Clear ,
                     cont:Color ;
            cont:colorName "clear" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#flatBottom
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#flatBottom
 cont:flatBottom rdf:type owl:NamedIndividual ,
                          cont:WellShape .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#green
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#green
 cont:green rdf:type owl:NamedIndividual ,
                     cont:Opaque ;
            cont:colorName "green" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#multicolor
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#multicolor
 cont:multicolor rdf:type owl:NamedIndividual ,
                          cont:Opaque ;
                 cont:colorName "multicolor" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#red
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#red
 cont:red rdf:type owl:NamedIndividual ,
                   cont:Opaque ;
          cont:colorName "red" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#roundBottom
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#roundBottom
 cont:roundBottom rdf:type owl:NamedIndividual ,
                           cont:WellShape .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483343
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483343
 cont:tf4483343 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ,
                         [ rdf:type owl:Restriction ;
@@ -1014,7 +1024,7 @@ cont:tf4483343 rdf:type owl:NamedIndividual ,
                cont:catalogNumber "tf4483343" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483350
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483350
 cont:tf4483350 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ,
                         [ rdf:type owl:Restriction ;
@@ -1024,7 +1034,7 @@ cont:tf4483350 rdf:type owl:NamedIndividual ,
                cont:catalogNumber "tf4483350" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483352
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483352
 cont:tf4483352 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ,
                         [ rdf:type owl:Restriction ;
@@ -1034,7 +1044,7 @@ cont:tf4483352 rdf:type owl:NamedIndividual ,
                cont:catalogNumber "tf4483352" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483354
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483354
 cont:tf4483354 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ,
                         [ rdf:type owl:Restriction ;
@@ -1044,7 +1054,7 @@ cont:tf4483354 rdf:type owl:NamedIndividual ,
                cont:catalogNumber "tf4483354" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483355
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483355
 cont:tf4483355 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ,
                         [ rdf:type owl:Restriction ;
@@ -1054,7 +1064,7 @@ cont:tf4483355 rdf:type owl:NamedIndividual ,
                cont:catalogNumber "tf4483355" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483356
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483356
 cont:tf4483356 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ,
                         [ rdf:type owl:Restriction ;
@@ -1064,25 +1074,25 @@ cont:tf4483356 rdf:type owl:NamedIndividual ,
                cont:catalogNumber "tf4483356" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#tf4483395
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483395
 cont:tf4483395 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:catalogNumber "tf4483395" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#veeBottom
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#veeBottom
 cont:veeBottom rdf:type owl:NamedIndividual ,
                         cont:WellShape .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#white
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#white
 cont:white rdf:type owl:NamedIndividual ,
                     cont:Color ,
                     cont:Opaque ;
            cont:colorName "white" .
 
 
-###  http://www.semanticweb.org/rpg/ontologies/2021/5/container-ontology#yellow
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#yellow
 cont:yellow rdf:type owl:NamedIndividual ,
                      cont:Opaque ;
             cont:colorName "yellow" .
@@ -1092,8 +1102,8 @@ cont:yellow rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-cont:Centrifuge rdfs:label "Centrifuge" ;
-                rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
+cont:Centrifuge rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
+                rdfs:label "Centrifuge" .
 
 
 cont:PlateReader rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
@@ -1128,3 +1138,6 @@ cont:PlateReader rdfs:comment "Likely this should actually be imported from anot
                 cont:plateHeight
               )
 ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
