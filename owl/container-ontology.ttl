@@ -1033,67 +1033,50 @@ cont:roundBottom rdf:type owl:NamedIndividual ,
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483343
 cont:tf4483343 rdf:type owl:NamedIndividual ,
-                        cont:CatalogEntry ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty cont:hasVendorFirm ;
-                          owl:hasValue cont:ThermoFisher
-                        ] ;
+                        cont:CatalogEntry ;
+               cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483343" .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483350
 cont:tf4483350 rdf:type owl:NamedIndividual ,
-                        cont:CatalogEntry ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty cont:hasVendorFirm ;
-                          owl:hasValue cont:ThermoFisher
-                        ] ;
+                        cont:CatalogEntry ;
+               cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483350" .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483352
 cont:tf4483352 rdf:type owl:NamedIndividual ,
-                        cont:CatalogEntry ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty cont:hasVendorFirm ;
-                          owl:hasValue cont:ThermoFisher
-                        ] ;
+                        cont:CatalogEntry ;
+               cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483352" .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483354
 cont:tf4483354 rdf:type owl:NamedIndividual ,
-                        cont:CatalogEntry ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty cont:hasVendorFirm ;
-                          owl:hasValue cont:ThermoFisher
-                        ] ;
+                        cont:CatalogEntry ;
+               cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483354" .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483355
 cont:tf4483355 rdf:type owl:NamedIndividual ,
-                        cont:CatalogEntry ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty cont:hasVendorFirm ;
-                          owl:hasValue cont:ThermoFisher
-                        ] ;
+                        cont:CatalogEntry ;
+               cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483355" .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483356
 cont:tf4483356 rdf:type owl:NamedIndividual ,
-                        cont:CatalogEntry ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty cont:hasVendorFirm ;
-                          owl:hasValue cont:ThermoFisher
-                        ] ;
+                        cont:CatalogEntry ;
+               cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483356" .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#tf4483395
 cont:tf4483395 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
+               cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483395" .
 
 
@@ -1119,8 +1102,8 @@ cont:yellow rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-cont:Centrifuge rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
-                rdfs:label "Centrifuge" .
+cont:Centrifuge rdfs:label "Centrifuge" ;
+                rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
 
 
 cont:PlateReader rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
