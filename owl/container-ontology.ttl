@@ -710,7 +710,8 @@ cont:SLAS-4-2004 rdf:type owl:Class ;
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS_4-2004_1536_Well_Plate
 cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
-                                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                 owl:equivalentClass cont:Standard1536WellPlate ,
+                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                               owl:onProperty cont:columnCount ;
                                                                               owl:hasValue 48
                                                                             ]
@@ -730,7 +731,8 @@ cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS_4-2004_384_Well_Plate
 cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
-                                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                owl:equivalentClass cont:Standard384WellPlate ,
+                                                    [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                              owl:onProperty cont:columnCount ;
                                                                              owl:hasValue 24
                                                                            ]
@@ -767,6 +769,16 @@ cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
                                                      rdf:type owl:Class
                                                    ] ;
                                rdfs:subClassOf cont:SLAS-4-2004 .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Standard1536WellPlate
+cont:Standard1536WellPlate rdf:type owl:Class ;
+                           rdfs:subClassOf cont:SLAS-4-2004 .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Standard384WellPlate
+cont:Standard384WellPlate rdf:type owl:Class ;
+                          rdfs:subClassOf cont:SLAS-4-2004 .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Standard96WellPlate
