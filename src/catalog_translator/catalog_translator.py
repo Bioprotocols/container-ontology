@@ -56,7 +56,7 @@ def make_catalog_graph(
     g.base = identifier
     for x in [CONT_NS, OM_SUBSET]:
         g.add((identifier, OWL.imports, URIRef(x.rstrip("#"))))
-    g.add((identifier, RDF.type, OWL.ontology))
+    g.add((identifier, RDF.type, OWL.Ontology))
     g.add((identifier, RDFS.label, Literal(label, lang="en")))
     if comment is not None:
         g.add((identifier, RDFS.comment, Literal(comment, lang="en")))

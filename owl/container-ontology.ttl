@@ -325,6 +325,28 @@ cont:wellCount rdf:type owl:DatatypeProperty ;
 om:Force rdf:type owl:Class .
 
 
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Measure
+om:Measure rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty om:hasDimension ;
+                                                    owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty om:hasDimension ;
+                                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty om:hasNumericalValue ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty om:hasNumericalValue ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] .
+
+
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#CatalogEntry
 cont:CatalogEntry rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
@@ -339,6 +361,19 @@ cont:Centrifuge rdf:type owl:Class ;
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Clear
 cont:Clear rdf:type owl:Class ;
            rdfs:subClassOf cont:Color .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ClearPlate
+cont:ClearPlate rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( cont:Plate
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty cont:hasColor ;
+                                                             owl:someValuesFrom cont:Clear
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf cont:Plate .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#CoatingMaterial
@@ -366,105 +401,6 @@ cont:ContainerRoot rdf:type owl:Class ;
                    rdfs:label "ContainerRoot" .
 
 
-###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Blue
-cont:EnduraPlate_96Well_Blue rdf:type owl:Class ;
-                             owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty cont:hasColor ;
-                                                                          owl:hasValue cont:blue
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty cont:hasCatalogEntry ;
-                                                   owl:hasValue cont:tf4483343
-                                                 ] ;
-                             rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
-
-
-###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Clear
-cont:EnduraPlate_96Well_Clear rdf:type owl:Class ;
-                              owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
-                                                                         [ rdf:type owl:Class ;
-                                                                           owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty cont:hasCatalogEntry ;
-                                                                                           owl:hasValue cont:tf4483352
-                                                                                         ]
-                                                                                         [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty cont:hasCatalogEntry ;
-                                                                                           owl:hasValue cont:tf4483354
-                                                                                         ]
-                                                                                       )
-                                                                         ]
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty cont:hasColor ;
-                                                                           owl:hasValue cont:clear
-                                                                         ]
-                                                                       ) ;
-                                                    rdf:type owl:Class
-                                                  ] ;
-                              rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
-
-
-###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Multicolor
-cont:EnduraPlate_96Well_Multicolor rdf:type owl:Class ;
-                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
-                                                                              [ rdf:type owl:Class ;
-                                                                                owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                owl:onProperty cont:hasCatalogEntry ;
-                                                                                                owl:hasValue cont:tf4483355
-                                                                                              ]
-                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                owl:onProperty cont:hasCatalogEntry ;
-                                                                                                owl:hasValue cont:tf4483356
-                                                                                              ]
-                                                                                            )
-                                                                              ]
-                                                                              [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty cont:hasColor ;
-                                                                                owl:hasValue cont:multicolor
-                                                                              ]
-                                                                            ) ;
-                                                         rdf:type owl:Class
-                                                       ] ;
-                                   rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
-
-
-###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Red
-cont:EnduraPlate_96Well_Red rdf:type owl:Class ;
-                            owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty cont:hasCatalogEntry ;
-                                                                         owl:hasValue cont:tf4483350
-                                                                       ]
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty cont:hasColor ;
-                                                                         owl:hasValue cont:red
-                                                                       ]
-                                                                     ) ;
-                                                  rdf:type owl:Class
-                                                ] ;
-                            rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
-
-
-###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Yellow
-cont:EnduraPlate_96Well_Yellow rdf:type owl:Class ;
-                               owl:equivalentClass [ owl:intersectionOf ( <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well>
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty cont:hasColor ;
-                                                                            owl:hasValue cont:yellow
-                                                                          ]
-                                                                        ) ;
-                                                     rdf:type owl:Class
-                                                   ] ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty cont:hasCatalogEntry ;
-                                                     owl:hasValue cont:tf4483395
-                                                   ] ;
-                               rdfs:subClassOf <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> .
-
-
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#LabEquipment
 cont:LabEquipment rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
@@ -481,6 +417,19 @@ cont:LabMachinery rdf:type owl:Class ;
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Opaque
 cont:Opaque rdf:type owl:Class ;
             rdfs:subClassOf cont:Color .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#OpaquePlate
+cont:OpaquePlate rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( cont:Plate
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty cont:hasColor ;
+                                                              owl:someValuesFrom cont:Opaque
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf cont:Plate .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Plate
@@ -684,26 +633,11 @@ cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS-4-2004
 cont:SLAS-4-2004 rdf:type owl:Class ;
-                 owl:equivalentClass [ owl:intersectionOf ( cont:Plate
-                                                            [ rdf:type owl:Class ;
-                                                              owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty cont:wellCount ;
-                                                                              owl:hasValue 1536
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty cont:wellCount ;
-                                                                              owl:hasValue 384
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty cont:wellCount ;
-                                                                              owl:hasValue 96
-                                                                            ]
-                                                                          )
-                                                            ]
-                                                          ) ;
-                                       rdf:type owl:Class
-                                     ] ;
                  rdfs:subClassOf cont:Plate ;
+                 owl:disjointUnionOf ( cont:SLAS_4-2004_1536_Well_Plate
+                                       cont:SLAS_4-2004_384_Well_Plate
+                                       cont:SLAS_4-2004_96_Well_Plate
+                                     ) ;
                  rdfs:comment "We do not model the well placement in detail, simply specifying whether or not it complies with 4-2004."^^xsd:string ;
                  rdfs:label "SLAS 4-2004 Well Placement standard"^^xsd:string .
 
@@ -752,8 +686,8 @@ cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#SLAS_4-2004_96_Well_Plate
 cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
-                               owl:equivalentClass cont:Standard96WellPlate ,
-                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                               owl:equivalentClass [ owl:intersectionOf ( cont:Plate
+                                                                          [ rdf:type owl:Restriction ;
                                                                             owl:onProperty cont:columnCount ;
                                                                             owl:hasValue 12
                                                                           ]
@@ -783,8 +717,34 @@ cont:Standard384WellPlate rdf:type owl:Class ;
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Standard96WellPlate
 cont:Standard96WellPlate rdf:type owl:Class ;
-                         rdfs:subClassOf cont:Plate ;
-                         rdfs:comment "" .
+                         owl:equivalentClass [ owl:intersectionOf ( cont:Plate
+                                                                    cont:SLAS_4-2004_96_Well_Plate
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty cont:height ;
+                                                                      owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty om:hasDimension ;
+                                                                                                                  owl:hasValue om:millimetre
+                                                                                                                ]
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty om:hasNumericalValue ;
+                                                                                                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                       owl:onDatatype xsd:float ;
+                                                                                                                                       owl:withRestrictions ( [ xsd:minInclusive "13.5"^^xsd:float
+                                                                                                                                                              ]
+                                                                                                                                                              [ xsd:maxInclusive "15.25"^^xsd:float
+                                                                                                                                                              ]
+                                                                                                                                                            )
+                                                                                                                                     ]
+                                                                                                                ]
+                                                                                                              ) ;
+                                                                                           rdf:type owl:Class
+                                                                                         ]
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:comment "This is meant to capture the intuitive notion of a standard (i.e., not deep) 96 well plate." ;
+                         rdfs:label "Standard 96 Well Plate" .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisherCatalogEntry
@@ -852,6 +812,17 @@ cont:WellShape rdf:type owl:Class ;
 <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> rdf:type owl:Class ;
                                                                                                    rdfs:subClassOf cont:Plate ,
                                                                                                                    cont:SLAS_4-2004_96_Well_Plate ,
+                                                                                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty cont:columnCount ;
+                                                                                                                                            owl:hasValue 12
+                                                                                                                                          ]
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty cont:rowCount ;
+                                                                                                                                            owl:hasValue 8
+                                                                                                                                          ]
+                                                                                                                                        ) ;
+                                                                                                                     rdf:type owl:Class
+                                                                                                                   ] ,
                                                                                                                    [ rdf:type owl:Restriction ;
                                                                                                                      owl:onProperty cont:cornerRadius ;
                                                                                                                      owl:someValuesFrom [ owl:intersectionOf ( om:Measure
@@ -862,6 +833,21 @@ cont:WellShape rdf:type owl:Class ;
                                                                                                                                                                [ rdf:type owl:Restriction ;
                                                                                                                                                                  owl:onProperty om:hasNumericalValue ;
                                                                                                                                                                  owl:hasValue 4.0
+                                                                                                                                                               ]
+                                                                                                                                                             ) ;
+                                                                                                                                          rdf:type owl:Class
+                                                                                                                                        ]
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty cont:height ;
+                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasUnit ;
+                                                                                                                                                                 owl:hasValue om:millimetre
+                                                                                                                                                               ]
+                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
+                                                                                                                                                                 owl:hasValue "20.1"^^xsd:float
                                                                                                                                                                ]
                                                                                                                                                              ) ;
                                                                                                                                           rdf:type owl:Class
@@ -974,6 +960,48 @@ om:Depth rdf:type owl:NamedIndividual .
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#Centrifuge
 cont:Centrifuge rdf:type owl:NamedIndividual .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Blue
+cont:EnduraPlate_96Well_Blue rdf:type owl:NamedIndividual ,
+                                      cont:OpaquePlate ,
+                                      <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> ;
+                             cont:hasCatalogEntry cont:tf4483343 ;
+                             cont:hasColor cont:blue .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Clear
+cont:EnduraPlate_96Well_Clear rdf:type owl:NamedIndividual ,
+                                       cont:ClearPlate ,
+                                       <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> ;
+                              cont:hasCatalogEntry cont:tf4483352 ,
+                                                   cont:tf4483354 ;
+                              cont:hasColor cont:clear .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Multicolor
+cont:EnduraPlate_96Well_Multicolor rdf:type owl:NamedIndividual ,
+                                            cont:OpaquePlate ,
+                                            <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> ;
+                                   cont:hasCatalogEntry cont:tf4483355 ,
+                                                        cont:tf4483356 ;
+                                   cont:hasColor cont:multicolor .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Red
+cont:EnduraPlate_96Well_Red rdf:type owl:NamedIndividual ,
+                                     cont:OpaquePlate ,
+                                     <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> ;
+                            cont:hasCatalogEntry cont:tf4483350 ;
+                            cont:hasColor cont:red .
+
+
+###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#EnduraPlate_96Well_Yellow
+cont:EnduraPlate_96Well_Yellow rdf:type owl:NamedIndividual ,
+                                        cont:OpaquePlate ,
+                                        <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> ;
+                               cont:hasCatalogEntry cont:tf4483395 ;
+                               cont:hasColor cont:yellow .
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#PlateReader
@@ -1114,8 +1142,8 @@ cont:yellow rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-cont:Centrifuge rdfs:label "Centrifuge" ;
-                rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
+cont:Centrifuge rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
+                rdfs:label "Centrifuge" .
 
 
 cont:PlateReader rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
@@ -1130,16 +1158,6 @@ cont:PlateReader rdfs:comment "Likely this should actually be imported from anot
   owl:members ( cont:CatalogEntry
                 cont:Color
                 cont:LabEquipment
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( cont:EnduraPlate_96Well_Blue
-                cont:EnduraPlate_96Well_Clear
-                cont:EnduraPlate_96Well_Multicolor
-                cont:EnduraPlate_96Well_Red
-                cont:EnduraPlate_96Well_Yellow
               )
 ] .
 

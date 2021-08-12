@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<urn:absolute:strateos-catalog> a owl:ontology ;
+<urn:absolute:strateos-catalog> a owl:Ontology ;
     rdfs:label "Strateos Plate Catalog"@en ;
     owl:imports <https://www.dropbox.com/s/ytuxjttj1ba5f0d/om-subset.ttl>,
         <https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl> .
