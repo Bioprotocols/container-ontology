@@ -1,4 +1,4 @@
-@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/om-subset.ttl#> .
+@prefix : <URL_PREFIX/om-subset.ttl#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,8 +7,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://www.dropbox.com/s/ytuxjttj1ba5f0d/om-subset.ttl> .
 
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/om-subset.ttl> rdf:type owl:Ontology ;
-    owl:versionIRI <https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/om-subset.ttl> .
+<URL_PREFIX/om-subset.ttl> rdf:type owl:Ontology ;
+    owl:versionIRI <URL_PREFIX/om-subset.ttl> .
 
 #################################################################
 #    Annotation properties

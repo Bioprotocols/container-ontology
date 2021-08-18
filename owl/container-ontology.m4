@@ -1,17 +1,17 @@
-@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/container-ontology.ttl#> .
+@prefix : <URL_PREFIX/container-ontology.ttl#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/container-ontology.ttl#> .
+@prefix cont: <URL_PREFIX/container-ontology.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sbol: <http://sbols.org/v3#> .
 
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/container-ontology.ttl> rdf:type owl:Ontology ;
-                                                                    owl:versionIRI <https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/container-ontology.ttl> ;
+<URL_PREFIX/container-ontology.ttl> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <URL_PREFIX/container-ontology.ttl> ;
                                                                     owl:imports <http://sbols.org/v3> ,
-                                                                                <https://raw.githubusercontent.com/rpgoldman/container-ontology/iss7/owl/om-subset.ttl> ;
+                                                                                <URL_PREFIX/om-subset.ttl> ;
                                                                     om:abbreviation "cont:" ;
                                                                     rdfs:label "Container Ontology"@en .
 
