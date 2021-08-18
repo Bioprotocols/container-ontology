@@ -30,6 +30,6 @@ $(catalog_file): %.xml: %.m4
 
 
 server: $(turtle_files)
-	mkdir $(makeFileDir)server-files
+	mkdir -p $(makeFileDir)server-files
 	cp $(turtle_files) $(makeFileDir)server-files
 	docker run --rm -p 8080:8080 -v $(makeFileDir):/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf phenoscape/owlery:latest 
