@@ -8,6 +8,8 @@ ifndef M4
     endif
 endif
 
+HOST_PORT ?= 8080
+
 GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
 URL_PREFIX = https://raw.githubusercontent.com/rpgoldman/container-ontology/${GIT_BRANCH}/owl
@@ -32,4 +34,5 @@ $(catalog_file): %.xml: %.m4
 server: $(turtle_files)
 	mkdir -p $(makeFileDir)server-files
 	cp $(turtle_files) $(makeFileDir)server-files
-	docker run --rm -p 8080:8080 -v $(makeFileDir):/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf phenoscape/owlery:latest 
+	rm -f $(makeFileDir)server-files/.DS_Store
+	docker run --rm -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf phenoscape/owlery:latest
