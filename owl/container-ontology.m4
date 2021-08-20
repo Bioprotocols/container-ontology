@@ -853,21 +853,21 @@ cont:WellShape rdf:type owl:Class ;
 
 
 ###  https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well
-<https://www.dropbox.com/s/s1e2dzw64m01f9n/container-ontology.ttl#ThermoFisher/EnduraPlate_96Well> rdf:type owl:Class ;
-                                                                                                   rdfs:subClassOf cont:Plate ,
-                                                                                                                   cont:SLAS_4-2004_96_Well_Plate ,
-                                                                                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                            owl:onProperty cont:columnCount ;
-                                                                                                                                            owl:hasValue 12
-                                                                                                                                          ]
-                                                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                                                            owl:onProperty cont:rowCount ;
-                                                                                                                                            owl:hasValue 8
-                                                                                                                                          ]
-                                                                                                                                        ) ;
-                                                                                                                     rdf:type owl:Class
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
+cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
+    rdfs:subClassOf cont:Plate ,
+        cont:SLAS_4-2004_96_Well_Plate ,
+        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                owl:onProperty cont:columnCount ;
+                owl:hasValue 12
+                ]
+            [ rdf:type owl:Restriction ;
+                owl:onProperty cont:rowCount ;
+                owl:hasValue 8
+                ]
+            ) ;
+        rdf:type owl:Class
+        ] ,
+        [ rdf:type owl:Restriction ;
                                                                                                                      owl:onProperty cont:cornerRadius ;
                                                                                                                      owl:someValuesFrom [ owl:intersectionOf ( om:Measure
                                                                                                                                                                [ rdf:type owl:Restriction ;
@@ -880,118 +880,118 @@ cont:WellShape rdf:type owl:Class ;
                                                                                                                                                                ]
                                                                                                                                                              ) ;
                                                                                                                                           rdf:type owl:Class
-                                                                                                                                        ]
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:height ;
-                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasUnit ;
-                                                                                                                                                                 owl:hasValue om:millimetre
-                                                                                                                                                               ]
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                 owl:hasValue "20.1"^^xsd:float
-                                                                                                                                                               ]
-                                                                                                                                                             ) ;
-                                                                                                                                          rdf:type owl:Class
-                                                                                                                                        ]
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:length ;
-                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasUnit ;
-                                                                                                                                                                 owl:hasValue om:millimetre
-                                                                                                                                                               ]
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                                                                      owl:onDatatype xsd:float ;
-                                                                                                                                                                                      owl:withRestrictions ( [ xsd:minInclusive "127.26"^^xsd:float
-                                                                                                                                                                                                             ]
-                                                                                                                                                                                                             [ xsd:maxInclusive "128.26"^^xsd:float
-                                                                                                                                                                                                             ]
-                                                                                                                                                                                                           )
-                                                                                                                                                                                    ]
-                                                                                                                                                               ]
-                                                                                                                                                             ) ;
-                                                                                                                                          rdf:type owl:Class
-                                                                                                                                        ]
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:plateHeight ;
-                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasUnit ;
-                                                                                                                                                                 owl:hasValue om:millimetre
-                                                                                                                                                               ]
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                 owl:hasValue 7.50
-                                                                                                                                                               ]
-                                                                                                                                                             ) ;
-                                                                                                                                          rdf:type owl:Class
-                                                                                                                                        ]
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:wellDepth ;
-                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasUnit ;
-                                                                                                                                                                 owl:hasValue om:millimetre
-                                                                                                                                                               ]
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty cont:measureType ;
-                                                                                                                                                                 owl:hasValue om:Depth
-                                                                                                                                                               ]
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                 owl:hasValue "20.1"^^xsd:float
-                                                                                                                                                               ]
-                                                                                                                                                             ) ;
-                                                                                                                                          rdf:type owl:Class
-                                                                                                                                        ]
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:width ;
-                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasUnit ;
-                                                                                                                                                                 owl:hasValue om:millimetre
-                                                                                                                                                               ]
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                                                                      owl:onDatatype xsd:float ;
-                                                                                                                                                                                      owl:withRestrictions ( [ xsd:minInclusive "84.98"^^xsd:float
-                                                                                                                                                                                                             ]
-                                                                                                                                                                                                             [ xsd:maxInclusive "85.98"^^xsd:float
-                                                                                                                                                                                                             ]
-                                                                                                                                                                                                           )
-                                                                                                                                                                                    ]
-                                                                                                                                                               ]
-                                                                                                                                                             ) ;
-                                                                                                                                          rdf:type owl:Class
-                                                                                                                                        ]
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:equipmentVendor ;
-                                                                                                                     owl:hasValue cont:ThermoFisher
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:hasWellBottomShape ;
-                                                                                                                     owl:hasValue cont:veeBottom
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:equipmentVendor ;
-                                                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                                                     owl:onClass cont:VendorFirm
-                                                                                                                   ] ,
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:wellCount ;
-                                                                                                                     owl:hasValue 96
-                                                                                                                   ] .
+            ]
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:height ;
+        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasUnit ;
+                    owl:hasValue om:millimetre
+                    ]
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasNumericalValue ;
+                    owl:hasValue "20.1"^^xsd:float
+                    ]
+                ) ;
+            rdf:type owl:Class
+            ]
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:length ;
+        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasUnit ;
+                    owl:hasValue om:millimetre
+                    ]
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasNumericalValue ;
+                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                        owl:onDatatype xsd:float ;
+                        owl:withRestrictions ( [ xsd:minInclusive "127.26"^^xsd:float
+                                ]
+                            [ xsd:maxInclusive "128.26"^^xsd:float
+                                ]
+                            )
+                        ]
+                    ]
+                ) ;
+            rdf:type owl:Class
+            ]
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:plateHeight ;
+        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasUnit ;
+                    owl:hasValue om:millimetre
+                    ]
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasNumericalValue ;
+                    owl:hasValue 7.50
+                    ]
+                ) ;
+            rdf:type owl:Class
+            ]
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:wellDepth ;
+        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasUnit ;
+                    owl:hasValue om:millimetre
+                    ]
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty cont:measureType ;
+                    owl:hasValue om:Depth
+                    ]
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasNumericalValue ;
+                    owl:hasValue "20.1"^^xsd:float
+                    ]
+                ) ;
+            rdf:type owl:Class
+            ]
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:width ;
+        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasUnit ;
+                    owl:hasValue om:millimetre
+                    ]
+                [ rdf:type owl:Restriction ;
+                    owl:onProperty om:hasNumericalValue ;
+                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                        owl:onDatatype xsd:float ;
+                        owl:withRestrictions ( [ xsd:minInclusive "84.98"^^xsd:float
+                                ]
+                            [ xsd:maxInclusive "85.98"^^xsd:float
+                                ]
+                            )
+                        ]
+                    ]
+                ) ;
+            rdf:type owl:Class
+            ]
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:equipmentVendor ;
+        owl:hasValue cont:ThermoFisher
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:hasWellBottomShape ;
+        owl:hasValue cont:veeBottom
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:equipmentVendor ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass cont:VendorFirm
+        ] ,
+        [ rdf:type owl:Restriction ;
+        owl:onProperty cont:wellCount ;
+        owl:hasValue 96
+        ] .
 
 
 #################################################################
