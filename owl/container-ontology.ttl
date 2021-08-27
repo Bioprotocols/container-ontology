@@ -280,7 +280,7 @@ cont:colorName rdf:type owl:DatatypeProperty ;
 
 
 ###  URL_PREFIX/container-ontology.ttl#columnCount
-cont:columnCount rdf:type owl:DatatypeProperty ;
+cont:columnCount rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
                  rdfs:domain cont:Plate ;
                  rdfs:range xsd:positiveInteger ;
@@ -315,13 +315,13 @@ cont:isStackable rdf:type owl:DatatypeProperty ;
 
 
 ###  URL_PREFIX/container-ontology.ttl#labName
-cont:labName rdf:type owl:DatatypeProperty ;
+cont:labName rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
              rdfs:domain cont:Lab ;
              rdfs:range xsd:string .
 
 
 ###  URL_PREFIX/container-ontology.ttl#rowCount
-cont:rowCount rdf:type owl:DatatypeProperty ;
+cont:rowCount rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
               rdfs:subPropertyOf cont:containerDataProperty ;
               rdfs:domain cont:Plate ;
               rdfs:range xsd:positiveInteger .
@@ -338,7 +338,7 @@ cont:vendorName rdf:type owl:DatatypeProperty ;
 
 
 ###  URL_PREFIX/container-ontology.ttl#wellCount
-cont:wellCount rdf:type owl:DatatypeProperty ;
+cont:wellCount rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
                rdfs:subPropertyOf cont:containerDataProperty ;
                rdfs:domain cont:Plate ;
                rdfs:range xsd:positiveInteger .
@@ -476,6 +476,45 @@ cont:Plate rdf:type owl:Class ;
            rdfs:subClassOf cont:Container ;
            owl:disjointWith cont:Well ;
            rdfs:label "Plate" .
+
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Plate1536Well
+cont:Plate1536Well rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( cont:Plate
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty cont:wellCount ;
+                                                                owl:hasValue 1536
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf cont:Plate .
+
+
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Plate384Well
+cont:Plate384Well rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( cont:Plate
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty cont:wellCount ;
+                                                               owl:hasValue 384
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf cont:Plate .
+
+
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Plate96Well
+cont:Plate96Well rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( cont:Plate
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty cont:wellCount ;
+                                                              owl:hasValue 96
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf cont:Plate .
+
 
 
 ###  URL_PREFIX/container-ontology.ttl#PlateReader
