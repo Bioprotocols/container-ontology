@@ -10,7 +10,11 @@ To retrieve entities (for now, this really only works for Plates), you may do th
     
 This will start an [Owlery](https://github.com/phenoscape/owlery) server on localhost, listening on port 8080.  (If you would prefer a different port, you can do, for example, `make HOST_PORT=80 server`.
 
-## Making Queries
+### Interactive UI
+
+A rudimentary UI is provided,based on the Swagger/OpenAPI spec on the resulting server.  To try it, aim your browser at `http://localhost:8080/docs/index.html` (assuming your server is running on port 8080 on the local host).
+
+### Making Queries
 
 From here, you should be able to execute queries such as the following:
 
