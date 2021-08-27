@@ -35,4 +35,4 @@ server: $(turtle_files)
 	mkdir -p $(makeFileDir)server-files
 	cp $(turtle_files) $(makeFileDir)server-files
 	rm -f $(makeFileDir)server-files/.DS_Store
-	docker run --rm -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf phenoscape/owlery:latest
+	docker run --rm -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf owlery:latest | tee server.log
