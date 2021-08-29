@@ -20,6 +20,8 @@ catalog_file = catalog-v001.xml
 
 makeFileDir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
+JAVA_ARGS := "-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dorg.slf4j.simpleLogger.logFile=/srv/owlery.log"
+
 .PHONY: server
 
 all: $(turtle_files) $(catalog_file)
@@ -35,4 +37,4 @@ server: $(turtle_files)
 	mkdir -p $(makeFileDir)server-files
 	cp $(turtle_files) $(makeFileDir)server-files
 	rm -f $(makeFileDir)server-files/.DS_Store
-	docker run --rm -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf owlery:latest | tee server.log
+	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf owlery:latest | tee server.log
