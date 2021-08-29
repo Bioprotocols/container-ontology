@@ -1,17 +1,17 @@
-@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#> .
+@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#> .
+@prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sbol: <http://sbols.org/v3#> .
 
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl> rdf:type owl:Ontology ;
-                                                                    owl:versionIRI <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl> ;
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> ;
                                                                     owl:imports <http://sbols.org/v3> ,
-                                                                                <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/om-subset.ttl> ;
+                                                                                <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl> ;
                                                                     om:abbreviation "cont:" ;
                                                                     rdfs:label "Container Ontology"@en .
 
@@ -1048,7 +1048,7 @@ cont:Centrifuge rdf:type owl:NamedIndividual .
 ###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Blue
 cont:EnduraPlate_96Well_Blue rdf:type owl:NamedIndividual ,
                                       cont:OpaquePlate ,
-                                      <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                      <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
                              cont:hasCatalogEntry cont:tf4483343 ;
                              cont:hasColor cont:blue .
 
@@ -1056,7 +1056,7 @@ cont:EnduraPlate_96Well_Blue rdf:type owl:NamedIndividual ,
 ###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Clear
 cont:EnduraPlate_96Well_Clear rdf:type owl:NamedIndividual ,
                                        cont:ClearPlate ,
-                                       <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                       <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
                               cont:hasCatalogEntry cont:tf4483352 ,
                                                    cont:tf4483354 ;
                               cont:hasColor cont:clear .
@@ -1065,7 +1065,7 @@ cont:EnduraPlate_96Well_Clear rdf:type owl:NamedIndividual ,
 ###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Multicolor
 cont:EnduraPlate_96Well_Multicolor rdf:type owl:NamedIndividual ,
                                             cont:OpaquePlate ,
-                                            <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                            <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
                                    cont:hasCatalogEntry cont:tf4483355 ,
                                                         cont:tf4483356 ;
                                    cont:hasColor cont:multicolor .
@@ -1074,7 +1074,7 @@ cont:EnduraPlate_96Well_Multicolor rdf:type owl:NamedIndividual ,
 ###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Red
 cont:EnduraPlate_96Well_Red rdf:type owl:NamedIndividual ,
                                      cont:OpaquePlate ,
-                                     <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                     <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
                             cont:hasCatalogEntry cont:tf4483350 ;
                             cont:hasColor cont:red .
 
@@ -1082,7 +1082,7 @@ cont:EnduraPlate_96Well_Red rdf:type owl:NamedIndividual ,
 ###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Yellow
 cont:EnduraPlate_96Well_Yellow rdf:type owl:NamedIndividual ,
                                         cont:OpaquePlate ,
-                                        <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                        <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
                                cont:hasCatalogEntry cont:tf4483395 ;
                                cont:hasColor cont:yellow .
 
