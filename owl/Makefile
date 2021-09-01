@@ -23,7 +23,7 @@ server_catalog_file = owlery-catalog.xml
 makeFileDir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 # -Dorg.slf4j.simpleLogger.logFile=/srv/owlery.log 
-JAVA_ARGS := "-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlog4j.configurationFile=/srv/conf/log4j.xml"
+JAVA_ARGS := '-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlogback.configurationFile=/srv/conf/logback.xml' # -Dlog4j.configurationFile=/srv/conf/log4j.xml"
 
 .PHONY: server
 
@@ -41,4 +41,4 @@ server:
 	cp $(turtle_files) $(makeFileDir)server-files
 	cp $(server_catalog_file) $(makeFileDir)server-files
 	rm -f $(makeFileDir)server-files/.DS_Store
-	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf owlery:latest | tee server.log
+	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf rpgoldman/owlery:latest | tee server.log
