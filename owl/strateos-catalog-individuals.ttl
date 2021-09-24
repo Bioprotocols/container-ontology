@@ -1,23 +1,23 @@
-@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#> .
+@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#> .
+@prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl> .
+@base <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl> .
 
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl> rdf:type owl:Ontology ;
-                                                                                                                     owl:imports <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl> ,
-                                                                                                                                 <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/om-subset.ttl> ;
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl> rdf:type owl:Ontology ;
+                                                                                                                     owl:imports <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> ,
+                                                                                                                                 <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl> ;
                                                                                                                      rdfs:label "Strateos Plate Catalog"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#hasVendor
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasVendor
 cont:hasVendor rdf:type owl:AnnotationProperty .
 
 
@@ -25,15 +25,15 @@ cont:hasVendor rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#columnCount
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#columnCount
 cont:columnCount rdf:type owl:FunctionalProperty .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#rowCount
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#rowCount
 cont:rowCount rdf:type owl:FunctionalProperty .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#wellCount
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellCount
 cont:wellCount rdf:type owl:FunctionalProperty .
 
 
@@ -49,7 +49,7 @@ om:Depth rdf:type owl:Class .
 om:Volume rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#StrateosEquipment
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#StrateosEquipment
 :StrateosEquipment rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Restriction ;
                                          owl:onProperty cont:availableAt ;
@@ -65,102 +65,102 @@ om:Volume rdf:type owl:Class .
 om:microlitre rdf:type owl:NamedIndividual .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Axygen
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Axygen
 cont:Axygen rdf:type owl:NamedIndividual ,
                      cont:VendorFirm ;
             cont:vendorName "Axygen" ;
             rdfs:label "Axygen" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Chemspeed
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Chemspeed
 cont:Chemspeed rdf:type owl:NamedIndividual ,
                         cont:VendorFirm ;
                cont:vendorName "Chemspeed" ;
                rdfs:label "Chemspeed" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Corning
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Corning
 cont:Corning rdf:type owl:NamedIndividual ,
                       cont:VendorFirm ;
              cont:vendorName "Corning" ;
              rdfs:label "Corning" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Costar
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Costar
 cont:Costar rdf:type owl:NamedIndividual ,
                      cont:VendorFirm ;
             cont:vendorName "Costar" ;
             rdfs:label "Costar" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Eppendorf
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Eppendorf
 cont:Eppendorf rdf:type owl:NamedIndividual ,
                         cont:VendorFirm ;
                cont:vendorName "Eppendorf" ;
                rdfs:label "Eppendorf" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Fisher
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Fisher
 cont:Fisher rdf:type owl:NamedIndividual ,
                      cont:VendorFirm ;
             cont:vendorName "Fisher" ;
             rdfs:label "Fisher" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Greiner
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Greiner
 cont:Greiner rdf:type owl:NamedIndividual ,
                       cont:VendorFirm ;
              cont:vendorName "Greiner" ;
              rdfs:label "Greiner" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Labcyte
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Labcyte
 cont:Labcyte rdf:type owl:NamedIndividual ,
                       cont:VendorFirm ;
              cont:vendorName "Labcyte" ;
              rdfs:label "Labcyte" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Mesoscale
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Mesoscale
 cont:Mesoscale rdf:type owl:NamedIndividual ,
                         cont:VendorFirm ;
                cont:vendorName "Mesoscale" ;
                rdfs:label "Mesoscale" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#PerkinElmer
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#PerkinElmer
 cont:PerkinElmer rdf:type owl:NamedIndividual ,
                           cont:VendorFirm ;
                  cont:vendorName "PerkinElmer" ;
                  rdfs:label "PerkinElmer" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#ThermoFisher
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher
 cont:ThermoFisher rdf:type cont:VendorFirm ;
                   cont:vendorName "ThermoFisher" ;
                   rdfs:label "ThermoFisher" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#E%26K%20Scientific
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#E%26K%20Scientific> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#E%26K%20Scientific
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#E%26K%20Scientific> rdf:type owl:NamedIndividual ,
                                                                                                                                       cont:VendorFirm ;
                                                                                                                              cont:vendorName "E&K Scientific" ;
                                                                                                                              rdfs:label "E&K Scientific" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.> rdf:type owl:NamedIndividual ,
                                                                                                                                              cont:VendorFirm ;
                                                                                                                                     cont:vendorName "Sumitomo Bakelite Co." ;
                                                                                                                                     rdfs:label "Sumitomo Bakelite Co." .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Axygenres-mw12-hp
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Axygenres-mw12-hp
 :Axygenres-mw12-hp rdf:type owl:NamedIndividual ,
                             cont:Plate ;
                    cont:availableAt :Strateos ;
                    cont:equipmentVendor cont:Axygen ;
-                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw12-hp> ;
+                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw12-hp> ;
                    cont:height :height39 ;
                    cont:wellDepth :wellDepth39 ;
                    cont:wellVolume :wellvolume39 ;
@@ -171,12 +171,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                    rdfs:label "res-mw12-hp" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Axygenres-mw8-hp
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Axygenres-mw8-hp
 :Axygenres-mw8-hp rdf:type owl:NamedIndividual ,
                            cont:Plate ;
                   cont:availableAt :Strateos ;
                   cont:equipmentVendor cont:Axygen ;
-                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw8-hp> ;
+                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw8-hp> ;
                   cont:height :height26 ;
                   cont:wellDepth :wellDepth26 ;
                   cont:wellVolume :wellvolume26 ;
@@ -187,12 +187,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                   rdfs:label "res-mw8-hp" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Chemspeedchemspeed-96-sealed-pin-rack
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Chemspeedchemspeed-96-sealed-pin-rack
 :Chemspeedchemspeed-96-sealed-pin-rack rdf:type owl:NamedIndividual ,
                                                 cont:Plate ;
                                        cont:availableAt :Strateos ;
                                        cont:equipmentVendor cont:Chemspeed ;
-                                       cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Chemspeedunknown> ;
+                                       cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Chemspeedunknown> ;
                                        cont:height :height5 ;
                                        cont:wellDepth :wellDepth5 ;
                                        cont:wellVolume :wellvolume5 ;
@@ -203,12 +203,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                        rdfs:label "chemspeed-96-sealed-pin-rack" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning1536-tc-white-corning-3727
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning1536-tc-white-corning-3727
 :Corning1536-tc-white-corning-3727 rdf:type owl:NamedIndividual ,
                                             cont:Plate ;
                                    cont:availableAt :Strateos ;
                                    cont:equipmentVendor cont:Corning ;
-                                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3727> ;
+                                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3727> ;
                                    cont:height :height36 ;
                                    cont:wellDepth :wellDepth36 ;
                                    cont:wellVolume :wellvolume36 ;
@@ -219,12 +219,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                    rdfs:label "1536-tc-white-corning-3727" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-flat
 :Corning384-flat rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Corning ;
-                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3706> ;
+                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3706> ;
                  cont:height :height32 ;
                  cont:wellDepth :wellDepth32 ;
                  cont:wellVolume :wellvolume32 ;
@@ -235,12 +235,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "384-flat" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-clear-clear
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-flat-clear-clear
 :Corning384-flat-clear-clear rdf:type owl:NamedIndividual ,
                                       cont:Plate ;
                              cont:availableAt :Strateos ;
                              cont:equipmentVendor cont:Corning ;
-                             cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3700> ;
+                             cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3700> ;
                              cont:height :height34 ;
                              cont:wellDepth :wellDepth34 ;
                              cont:wellVolume :wellvolume34 ;
@@ -251,12 +251,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                              rdfs:label "384-flat-clear-clear" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-clear
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-clear
 :Corning384-flat-white-clear rdf:type owl:NamedIndividual ,
                                       cont:Plate ;
                              cont:availableAt :Strateos ;
                              cont:equipmentVendor cont:Corning ;
-                             cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3763> ;
+                             cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3763> ;
                              cont:height :height24 ;
                              cont:wellDepth :wellDepth24 ;
                              cont:wellVolume :wellvolume24 ;
@@ -267,12 +267,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                              rdfs:label "384-flat-white-clear" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-lv
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-lv
 :Corning384-flat-white-white-lv rdf:type owl:NamedIndividual ,
                                          cont:Plate ;
                                 cont:availableAt :Strateos ;
                                 cont:equipmentVendor cont:Corning ;
-                                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3824> ;
+                                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3824> ;
                                 cont:height :height11 ;
                                 cont:wellDepth :wellDepth11 ;
                                 cont:wellVolume :wellvolume11 ;
@@ -283,12 +283,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                 rdfs:label "384-flat-white-white-lv" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-nbs
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-nbs
 :Corning384-flat-white-white-nbs rdf:type owl:NamedIndividual ,
                                           cont:Plate ;
                                  cont:availableAt :Strateos ;
                                  cont:equipmentVendor cont:Corning ;
-                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3574> ;
+                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3574> ;
                                  cont:height :height2 ;
                                  cont:wellDepth :wellDepth2 ;
                                  cont:wellVolume :wellvolume2 ;
@@ -299,12 +299,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                  rdfs:label "384-flat-white-white-nbs" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-tc
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-tc
 :Corning384-flat-white-white-tc rdf:type owl:NamedIndividual ,
                                          cont:Plate ;
                                 cont:availableAt :Strateos ;
                                 cont:equipmentVendor cont:Corning ;
-                                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3570> ;
+                                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3570> ;
                                 cont:height :height18 ;
                                 cont:wellDepth :wellDepth18 ;
                                 cont:wellVolume :wellvolume18 ;
@@ -315,12 +315,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                 rdfs:label "384-flat-white-white-tc" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-round-black-black-lv-nbs
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-round-black-black-lv-nbs
 :Corning384-round-black-black-lv-nbs rdf:type owl:NamedIndividual ,
                                               cont:Plate ;
                                      cont:availableAt :Strateos ;
                                      cont:equipmentVendor cont:Corning ;
-                                     cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning4514> ;
+                                     cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning4514> ;
                                      cont:height :height29 ;
                                      cont:wellDepth :wellDepth29 ;
                                      cont:wellVolume :wellvolume29 ;
@@ -331,12 +331,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                      rdfs:label "384-round-black-black-lv-nbs" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-round-clear-clear
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning384-round-clear-clear
 :Corning384-round-clear-clear rdf:type owl:NamedIndividual ,
                                        cont:Plate ;
                               cont:availableAt :Strateos ;
                               cont:equipmentVendor cont:Corning ;
-                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3657> ;
+                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3657> ;
                               cont:height :height20 ;
                               cont:wellDepth :wellDepth20 ;
                               cont:wellVolume :wellvolume20 ;
@@ -347,12 +347,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                               rdfs:label "384-round-clear-clear" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-deep
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning96-deep
 :Corning96-deep rdf:type owl:NamedIndividual ,
                          cont:Plate ;
                 cont:availableAt :Strateos ;
                 cont:equipmentVendor cont:Corning ;
-                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3961> ;
+                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3961> ;
                 cont:height :height38 ;
                 cont:wellDepth :wellDepth38 ;
                 cont:wellVolume :wellvolume38 ;
@@ -363,12 +363,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                 rdfs:label "96-deep" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-flat
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning96-flat
 :Corning96-flat rdf:type owl:NamedIndividual ,
                          cont:Plate ;
                 cont:availableAt :Strateos ;
                 cont:equipmentVendor cont:Corning ;
-                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3632> ;
+                cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3632> ;
                 cont:height :height13 ;
                 cont:wellDepth :wellDepth13 ;
                 cont:wellVolume :wellvolume13 ;
@@ -379,12 +379,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                 rdfs:label "96-flat" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-flat-uv
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning96-flat-uv
 :Corning96-flat-uv rdf:type owl:NamedIndividual ,
                             cont:Plate ;
                    cont:availableAt :Strateos ;
                    cont:equipmentVendor cont:Corning ;
-                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3635> ;
+                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3635> ;
                    cont:height :height8 ;
                    cont:wellDepth :wellDepth8 ;
                    cont:wellVolume :wellvolume8 ;
@@ -395,12 +395,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                    rdfs:label "96-flat-uv" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-ubottom-clear-tc
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning96-ubottom-clear-tc
 :Corning96-ubottom-clear-tc rdf:type owl:NamedIndividual ,
                                      cont:Plate ;
                             cont:availableAt :Strateos ;
                             cont:equipmentVendor cont:Corning ;
-                            cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning353077> ;
+                            cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning353077> ;
                             cont:height :height16 ;
                             cont:wellDepth :wellDepth16 ;
                             cont:wellVolume :wellvolume16 ;
@@ -411,12 +411,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                             rdfs:label "96-ubottom-clear-tc" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-well-v-bottom
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Corning96-well-v-bottom
 :Corning96-well-v-bottom rdf:type owl:NamedIndividual ,
                                   cont:Plate ;
                          cont:availableAt :Strateos ;
                          cont:equipmentVendor cont:Corning ;
-                         cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3894> ;
+                         cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3894> ;
                          cont:height :height23 ;
                          cont:wellDepth :wellDepth23 ;
                          cont:wellVolume :wellvolume23 ;
@@ -427,12 +427,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                          rdfs:label "96-well-v-bottom" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Costar96-flat-clear-costar-3590
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Costar96-flat-clear-costar-3590
 :Costar96-flat-clear-costar-3590 rdf:type owl:NamedIndividual ,
                                           cont:Plate ;
                                  cont:availableAt :Strateos ;
                                  cont:equipmentVendor cont:Costar ;
-                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Costar3590> ;
+                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Costar3590> ;
                                  cont:height :height7 ;
                                  cont:wellDepth :wellDepth7 ;
                                  cont:wellVolume :wellvolume7 ;
@@ -443,12 +443,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                  rdfs:label "96-flat-clear-costar-3590" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf384-pcr
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Eppendorf384-pcr
 :Eppendorf384-pcr rdf:type owl:NamedIndividual ,
                            cont:Plate ;
                   cont:availableAt :Strateos ;
                   cont:equipmentVendor cont:Eppendorf ;
-                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020539> ;
+                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020539> ;
                   cont:height :height0 ;
                   cont:wellDepth :wellDepth0 ;
                   cont:wellVolume :wellvolume0 ;
@@ -459,12 +459,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                   rdfs:label "384-pcr" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf6-flat
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Eppendorf6-flat
 :Eppendorf6-flat rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Eppendorf ;
-                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720016> ;
+                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720016> ;
                  cont:height :height21 ;
                  cont:wellDepth :wellDepth21 ;
                  cont:wellVolume :wellvolume21 ;
@@ -475,12 +475,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "6-flat" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf6-flat-tc
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Eppendorf6-flat-tc
 :Eppendorf6-flat-tc rdf:type owl:NamedIndividual ,
                              cont:Plate ;
                     cont:availableAt :Strateos ;
                     cont:equipmentVendor cont:Eppendorf ;
-                    cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720113> ;
+                    cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720113> ;
                     cont:height :height15 ;
                     cont:wellDepth :wellDepth15 ;
                     cont:wellVolume :wellvolume15 ;
@@ -491,12 +491,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                     rdfs:label "6-flat-tc" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf96-flat-clear-clear-tc
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Eppendorf96-flat-clear-clear-tc
 :Eppendorf96-flat-clear-clear-tc rdf:type owl:NamedIndividual ,
                                           cont:Plate ;
                                  cont:availableAt :Strateos ;
                                  cont:equipmentVendor cont:Eppendorf ;
-                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30730119> ;
+                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30730119> ;
                                  cont:height :height25 ;
                                  cont:wellDepth :wellDepth25 ;
                                  cont:wellVolume :wellvolume25 ;
@@ -507,12 +507,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                  rdfs:label "96-flat-clear-clear-tc" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf96-pcr
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Eppendorf96-pcr
 :Eppendorf96-pcr rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Eppendorf ;
-                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020619> ;
+                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020619> ;
                  cont:height :height19 ;
                  cont:wellDepth :wellDepth19 ;
                  cont:wellVolume :wellvolume19 ;
@@ -523,12 +523,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "96-pcr" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Fisher96-deep-kf
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Fisher96-deep-kf
 :Fisher96-deep-kf rdf:type owl:NamedIndividual ,
                            cont:Plate ;
                   cont:availableAt :Strateos ;
                   cont:equipmentVendor cont:Fisher ;
-                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-031> ;
+                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-031> ;
                   cont:height :height17 ;
                   cont:wellDepth :wellDepth17 ;
                   cont:wellVolume :wellvolume17 ;
@@ -539,12 +539,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                   rdfs:label "96-deep-kf" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Fisher96-v-kf
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Fisher96-v-kf
 :Fisher96-v-kf rdf:type owl:NamedIndividual ,
                         cont:Plate ;
                cont:availableAt :Strateos ;
                cont:equipmentVendor cont:Fisher ;
-               cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-030> ;
+               cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-030> ;
                cont:height :height4 ;
                cont:wellDepth :wellDepth4 ;
                cont:wellVolume :wellvolume4 ;
@@ -555,12 +555,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                rdfs:label "96-v-kf" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Fisher96-vbottom-microwell
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Fisher96-vbottom-microwell
 :Fisher96-vbottom-microwell rdf:type owl:NamedIndividual ,
                                      cont:Plate ;
                             cont:availableAt :Strateos ;
                             cont:equipmentVendor cont:Fisher ;
-                            cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher249944> ;
+                            cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher249944> ;
                             cont:height :height30 ;
                             cont:wellDepth :wellDepth30 ;
                             cont:wellVolume :wellvolume30 ;
@@ -571,12 +571,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                             rdfs:label "96-vbottom-microwell" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Greiner1536-white-tc
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Greiner1536-white-tc
 :Greiner1536-white-tc rdf:type owl:NamedIndividual ,
                                cont:Plate ;
                       cont:availableAt :Strateos ;
                       cont:equipmentVendor cont:Greiner ;
-                      cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner782073> ;
+                      cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner782073> ;
                       cont:height :height37 ;
                       cont:wellDepth :wellDepth37 ;
                       cont:wellVolume :wellvolume37 ;
@@ -587,12 +587,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                       rdfs:label "1536-white-tc" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Greiner384-v-clear-clear
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Greiner384-v-clear-clear
 :Greiner384-v-clear-clear rdf:type owl:NamedIndividual ,
                                    cont:Plate ;
                           cont:availableAt :Strateos ;
                           cont:equipmentVendor cont:Greiner ;
-                          cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner781280> ;
+                          cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner781280> ;
                           cont:height :height35 ;
                           cont:wellDepth :wellDepth35 ;
                           cont:wellVolume :wellvolume35 ;
@@ -603,12 +603,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                           rdfs:label "384-v-clear-clear" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Greiner96-flat-black-black-fluotrac-600
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Greiner96-flat-black-black-fluotrac-600
 :Greiner96-flat-black-black-fluotrac-600 rdf:type owl:NamedIndividual ,
                                                   cont:Plate ;
                                          cont:availableAt :Strateos ;
                                          cont:equipmentVendor cont:Greiner ;
-                                         cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner655077> ;
+                                         cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner655077> ;
                                          cont:height :height14 ;
                                          cont:wellDepth :wellDepth14 ;
                                          cont:wellVolume :wellvolume14 ;
@@ -619,12 +619,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                          rdfs:label "96-flat-black-black-fluotrac-600" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Labcyte384-echo
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Labcyte384-echo
 :Labcyte384-echo rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Labcyte ;
-                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcytePP-0200> ;
+                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcytePP-0200> ;
                  cont:height :height6 ;
                  cont:wellDepth :wellDepth6 ;
                  cont:wellVolume :wellvolume6 ;
@@ -635,12 +635,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "384-echo" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Labcyte384-echo-ldv
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Labcyte384-echo-ldv
 :Labcyte384-echo-ldv rdf:type owl:NamedIndividual ,
                               cont:Plate ;
                      cont:availableAt :Strateos ;
                      cont:equipmentVendor cont:Labcyte ;
-                     cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcyteLP-0200> ;
+                     cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcyteLP-0200> ;
                      cont:height :height28 ;
                      cont:wellDepth :wellDepth28 ;
                      cont:wellVolume :wellvolume28 ;
@@ -651,12 +651,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                      rdfs:label "384-echo-ldv" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Mesoscale96-10-spot-uplex-MSD
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Mesoscale96-10-spot-uplex-MSD
 :Mesoscale96-10-spot-uplex-MSD rdf:type owl:NamedIndividual ,
                                         cont:Plate ;
                                cont:availableAt :Strateos ;
                                cont:equipmentVendor cont:Mesoscale ;
-                               cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15069L> ;
+                               cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15069L> ;
                                cont:height :height12 ;
                                cont:wellDepth :wellDepth12 ;
                                cont:wellVolume :wellvolume12 ;
@@ -667,12 +667,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                rdfs:label "96-10-spot-uplex-MSD" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD
 :Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD rdf:type owl:NamedIndividual ,
                                                        cont:Plate ;
                                               cont:availableAt :Strateos ;
                                               cont:equipmentVendor cont:Mesoscale ;
-                                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15048G> ;
+                                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15048G> ;
                                               cont:height :height1 ;
                                               cont:wellDepth :wellDepth1 ;
                                               cont:wellVolume :wellvolume1 ;
@@ -683,12 +683,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                               rdfs:label "96-10-spot-vplex-m-pro-inflamm1-MSD" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Mesoscale96-4-spot-mMIP3a-MSD
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Mesoscale96-4-spot-mMIP3a-MSD
 :Mesoscale96-4-spot-mMIP3a-MSD rdf:type owl:NamedIndividual ,
                                         cont:Plate ;
                                cont:availableAt :Strateos ;
                                cont:equipmentVendor cont:Mesoscale ;
-                               cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK152MSD> ;
+                               cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK152MSD> ;
                                cont:height :height10 ;
                                cont:wellDepth :wellDepth10 ;
                                cont:wellVolume :wellvolume10 ;
@@ -699,12 +699,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                rdfs:label "96-4-spot-mMIP3a-MSD" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-black-black-proxiplate-plus-f
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-black-black-proxiplate-plus-f
 :PerkinElmer384-flat-black-black-proxiplate-plus-f rdf:type owl:NamedIndividual ,
                                                             cont:Plate ;
                                                    cont:availableAt :Strateos ;
                                                    cont:equipmentVendor cont:PerkinElmer ;
-                                                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008260> ;
+                                                   cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008260> ;
                                                    cont:height :height31 ;
                                                    cont:wellDepth :wellDepth31 ;
                                                    cont:wellVolume :wellvolume31 ;
@@ -715,12 +715,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                    rdfs:label "384-flat-black-black-proxiplate-plus-f" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-white-white-optiplate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-white-white-optiplate
 :PerkinElmer384-flat-white-white-optiplate rdf:type owl:NamedIndividual ,
                                                     cont:Plate ;
                                            cont:availableAt :Strateos ;
                                            cont:equipmentVendor cont:PerkinElmer ;
-                                           cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6007290> ;
+                                           cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6007290> ;
                                            cont:height :height3 ;
                                            cont:wellDepth :wellDepth3 ;
                                            cont:wellVolume :wellvolume3 ;
@@ -731,12 +731,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                            rdfs:label "384-flat-white-white-optiplate" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-white-white-proxiplate-plus
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-white-white-proxiplate-plus
 :PerkinElmer384-flat-white-white-proxiplate-plus rdf:type owl:NamedIndividual ,
                                                           cont:Plate ;
                                                  cont:availableAt :Strateos ;
                                                  cont:equipmentVendor cont:PerkinElmer ;
-                                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008280> ;
+                                                 cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008280> ;
                                                  cont:height :height22 ;
                                                  cont:wellDepth :wellDepth22 ;
                                                  cont:wellVolume :wellvolume22 ;
@@ -747,18 +747,18 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                  rdfs:label "384-flat-white-white-proxiplate-plus" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Strateos
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Strateos
 :Strateos rdf:type owl:NamedIndividual ,
                    cont:Lab ;
           cont:labName "Strateos" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#ThermoFisher384-ubottom-clear-polypropylene-nunc-264573
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#ThermoFisher384-ubottom-clear-polypropylene-nunc-264573
 :ThermoFisher384-ubottom-clear-polypropylene-nunc-264573 rdf:type owl:NamedIndividual ,
                                                                   cont:Plate ;
                                                          cont:availableAt :Strateos ;
                                                          cont:equipmentVendor cont:ThermoFisher ;
-                                                         cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher264573> ;
+                                                         cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher264573> ;
                                                          cont:height :height27 ;
                                                          cont:wellDepth :wellDepth27 ;
                                                          cont:wellVolume :wellvolume27 ;
@@ -769,12 +769,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                          rdfs:label "384-ubottom-clear-polypropylene-nunc-264573" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#ThermoFisher96-flat-white-dc
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#ThermoFisher96-flat-white-dc
 :ThermoFisher96-flat-white-dc rdf:type owl:NamedIndividual ,
                                        cont:Plate ;
                               cont:availableAt :Strateos ;
                               cont:equipmentVendor cont:ThermoFisher ;
-                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher136101> ;
+                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher136101> ;
                               cont:height :height9 ;
                               cont:wellDepth :wellDepth9 ;
                               cont:wellVolume :wellvolume9 ;
@@ -785,873 +785,873 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                               rdfs:label "96-flat-white-dc" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height0
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height0
 :height0 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "10.6"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height1
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height1
 :height1 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height10
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height10
 :height10 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height11
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height11
 :height11 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "12.19"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height12
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height12
 :height12 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height13
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height13
 :height13 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height14
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height14
 :height14 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height15
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height15
 :height15 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "19.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height16
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height16
 :height16 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.6"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height17
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height17
 :height17 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "44.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height18
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height18
 :height18 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height19
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height19
 :height19 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "15.9"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height2
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height2
 :height2 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height20
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height20
 :height20 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height21
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height21
 :height21 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "19.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height22
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height22
 :height22 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height23
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height23
 :height23 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "3.25"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height24
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height24
 :height24 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height25
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height25
 :height25 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height26
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height26
 :height26 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "43.8"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height27
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height27
 :height27 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height28
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height28
 :height28 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "10.48"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height29
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height29
 :height29 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height3
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height3
 :height3 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height30
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height30
 :height30 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.7"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height31
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height31
 :height31 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height32
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height32
 :height32 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height33
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height33
 :height33 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "44.04"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height34
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height34
 :height34 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.2"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height35
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height35
 :height35 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height36
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height36
 :height36 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "10.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height37
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height37
 :height37 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "10.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height38
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height38
 :height38 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "43.8"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height39
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height39
 :height39 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "44.04"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height4
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height4
 :height4 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.5"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height40
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height40
 :height40 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height5
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height5
 :height5 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "36.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height6
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height6
 :height6 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height7
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height7
 :height7 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height8
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height8
 :height8 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#height9
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#height9
 :height9 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.6"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth0
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth0
 :wellDepth0 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "9.6"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth1
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth1
 :wellDepth1 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.68"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth10
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth10
 :wellDepth10 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.68"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth11
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth11
 :wellDepth11 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "9.39"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth12
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth12
 :wellDepth12 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.68"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth13
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth13
 :wellDepth13 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.67"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth14
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth14
 :wellDepth14 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.9"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth15
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth15
 :wellDepth15 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "16.5"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth16
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth16
 :wellDepth16 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.59"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth17
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth17
 :wellDepth17 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "42.3"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth18
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth18
 :wellDepth18 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth19
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth19
 :wellDepth19 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "14.6"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth2
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth2
 :wellDepth2 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth20
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth20
 :wellDepth20 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.57"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth21
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth21
 :wellDepth21 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "16.5"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth22
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth22
 :wellDepth22 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.3"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth23
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth23
 :wellDepth23 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.668"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth24
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth24
 :wellDepth24 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.56"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth25
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth25
 :wellDepth25 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.3"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth26
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth26
 :wellDepth26 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "39.1"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth27
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth27
 :wellDepth27 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.7"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth28
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth28
 :wellDepth28 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.1"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth29
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth29
 :wellDepth29 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "6.58"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth3
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth3
 :wellDepth3 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "10.45"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth30
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth30
 :wellDepth30 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.5"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth31
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth31
 :wellDepth31 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.3"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth32
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth32
 :wellDepth32 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth33
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth33
 :wellDepth33 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "42.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth34
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth34
 :wellDepth34 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth35
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth35
 :wellDepth35 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.5"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth36
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth36
 :wellDepth36 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "4.8"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth37
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth37
 :wellDepth37 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth38
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth38
 :wellDepth38 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "42.03"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth39
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth39
 :wellDepth39 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "39.3"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth4
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth4
 :wellDepth4 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "12.9"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth40
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth40
 :wellDepth40 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "12.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth5
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth5
 :wellDepth5 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "36.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth6
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth6
 :wellDepth6 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.5"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth7
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth7
 :wellDepth7 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "10.67"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth8
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth8
 :wellDepth8 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "10.67"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellDepth9
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellDepth9
 :wellDepth9 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.2"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume0
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume0
 :wellvolume0 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "40.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume1
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume1
 :wellvolume1 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "410.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume10
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume10
 :wellvolume10 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "410.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume11
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume11
 :wellvolume11 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "40.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume12
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume12
 :wellvolume12 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "410.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume13
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume13
 :wellvolume13 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume14
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume14
 :wellvolume14 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume15
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume15
 :wellvolume15 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "5000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume16
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume16
 :wellvolume16 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "320.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume17
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume17
 :wellvolume17 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "1000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume18
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume18
 :wellvolume18 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "80.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume19
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume19
 :wellvolume19 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "160.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume2
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume2
 :wellvolume2 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "80.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume20
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume20
 :wellvolume20 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "70.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume21
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume21
 :wellvolume21 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "5000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume22
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume22
 :wellvolume22 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "28.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume23
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume23
 :wellvolume23 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "200.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume24
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume24
 :wellvolume24 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "90.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume25
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume25
 :wellvolume25 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume26
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume26
 :wellvolume26 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "32000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume27
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume27
 :wellvolume27 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "120.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume28
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume28
 :wellvolume28 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "14.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume29
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume29
 :wellvolume29 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "35.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume3
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume3
 :wellvolume3 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "105.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume30
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume30
 :wellvolume30 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "400.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume31
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume31
 :wellvolume31 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "28.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume32
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume32
 :wellvolume32 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "90.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume33
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume33
 :wellvolume33 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "10000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume34
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume34
 :wellvolume34 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "80.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume35
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume35
 :wellvolume35 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "120.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume36
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume36
 :wellvolume36 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "12.5"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume37
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume37
 :wellvolume37 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "10.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume38
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume38
 :wellvolume38 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "2000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume39
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume39
 :wellvolume39 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "21000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume4
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume4
 :wellvolume4 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "200.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume40
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume40
 :wellvolume40 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "100.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume5
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume5
 :wellvolume5 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "9000.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume6
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume6
 :wellvolume6 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "135.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume7
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume7
 :wellvolume7 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "360.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume8
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume8
 :wellvolume8 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#wellvolume9
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#wellvolume9
 :wellvolume9 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "320.0"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#E%26K%20Scientific24-deep
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#E%26K%20Scientific24-deep> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#E%26K%20Scientific24-deep
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#E%26K%20Scientific24-deep> rdf:type owl:NamedIndividual ,
                                                                                                                                                        cont:Plate ;
                                                                                                                                               cont:availableAt :Strateos ;
-                                                                                                                                              cont:equipmentVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#E%26K%20Scientific> ;
-                                                                                                                                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#E%26K%20ScientificEK-2053-S> ;
+                                                                                                                                              cont:equipmentVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#E%26K%20Scientific> ;
+                                                                                                                                              cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#E%26K%20ScientificEK-2053-S> ;
                                                                                                                                               cont:height :height33 ;
                                                                                                                                               cont:wellDepth :wellDepth33 ;
                                                                                                                                               cont:wellVolume :wellvolume33 ;
@@ -1662,12 +1662,12 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                                                                                                               rdfs:label "24-deep" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc> rdf:type owl:NamedIndividual ,
                                                                                                                                                                            cont:Plate ;
                                                                                                                                                                   cont:availableAt :Strateos ;
-                                                                                                                                                                  cont:equipmentVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.> ;
-                                                                                                                                                                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ> ;
+                                                                                                                                                                  cont:equipmentVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.> ;
+                                                                                                                                                                  cont:hasCatalogEntry <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ> ;
                                                                                                                                                                   cont:height :height40 ;
                                                                                                                                                                   cont:wellDepth :wellDepth40 ;
                                                                                                                                                                   cont:wellVolume :wellvolume40 ;
@@ -1678,291 +1678,291 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                                                                                                                                   rdfs:label "384-ubottom-white-tc" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw12-hp
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw12-hp> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw12-hp
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw12-hp> rdf:type owl:NamedIndividual ,
                                                                                                                                                                cont:CatalogEntry ;
                                                                                                                                                       cont:catalogNumber "res-mw12-hp" ;
                                                                                                                                                       cont:hasVendor cont:Axygen .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw8-hp
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw8-hp> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw8-hp
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Axygenres-mw8-hp> rdf:type owl:NamedIndividual ,
                                                                                                                                                               cont:CatalogEntry ;
                                                                                                                                                      cont:catalogNumber "res-mw8-hp" ;
                                                                                                                                                      cont:hasVendor cont:Axygen .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Chemspeedunknown
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Chemspeedunknown> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Chemspeedunknown
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Chemspeedunknown> rdf:type owl:NamedIndividual ,
                                                                                                                                                               cont:CatalogEntry ;
                                                                                                                                                      cont:catalogNumber "unknown" ;
                                                                                                                                                      cont:hasVendor cont:Chemspeed .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning353077
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning353077> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning353077
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning353077> rdf:type owl:NamedIndividual ,
                                                                                                                                                            cont:CatalogEntry ;
                                                                                                                                                   cont:catalogNumber "353077" ;
                                                                                                                                                   cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3570
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3570> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3570
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3570> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3570" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3574
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3574> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3574
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3574> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3574" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3632
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3632> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3632
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3632> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3632" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3635
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3635> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3635
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3635> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3635" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3657
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3657> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3657
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3657> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3657" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3700
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3700> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3700
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3700> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3700" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3706
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3706> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3706
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3706> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3706" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3727
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3727> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3727
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3727> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3727" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3763
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3763> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3763
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3763> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3763" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3824
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3824> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3824
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3824> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3824" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3894
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3894> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3894
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3894> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3894" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3961
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3961> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3961
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning3961> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "3961" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning4514
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning4514> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning4514
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Corning4514> rdf:type owl:NamedIndividual ,
                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                 cont:catalogNumber "4514" ;
                                                                                                                                                 cont:hasVendor cont:Corning .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Costar3590
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Costar3590> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Costar3590
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Costar3590> rdf:type owl:NamedIndividual ,
                                                                                                                                                         cont:CatalogEntry ;
                                                                                                                                                cont:catalogNumber "3590" ;
                                                                                                                                                cont:hasVendor cont:Costar .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720016
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720016> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720016
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720016> rdf:type owl:NamedIndividual ,
                                                                                                                                                                cont:CatalogEntry ;
                                                                                                                                                       cont:catalogNumber "30720016" ;
                                                                                                                                                       cont:hasVendor cont:Eppendorf .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720113
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720113> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720113
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30720113> rdf:type owl:NamedIndividual ,
                                                                                                                                                                cont:CatalogEntry ;
                                                                                                                                                       cont:catalogNumber "30720113" ;
                                                                                                                                                       cont:hasVendor cont:Eppendorf .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30730119
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30730119> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30730119
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf30730119> rdf:type owl:NamedIndividual ,
                                                                                                                                                                cont:CatalogEntry ;
                                                                                                                                                       cont:catalogNumber "30730119" ;
                                                                                                                                                       cont:hasVendor cont:Eppendorf .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020539
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020539> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020539
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020539> rdf:type owl:NamedIndividual ,
                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                        cont:catalogNumber "951020539" ;
                                                                                                                                                        cont:hasVendor cont:Eppendorf .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020619
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020619> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020619
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Eppendorf951020619> rdf:type owl:NamedIndividual ,
                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                        cont:catalogNumber "951020619" ;
                                                                                                                                                        cont:hasVendor cont:Eppendorf .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-030
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-030> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-030
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-030> rdf:type owl:NamedIndividual ,
                                                                                                                                                               cont:CatalogEntry ;
                                                                                                                                                      cont:catalogNumber "22-387-030" ;
                                                                                                                                                      cont:hasVendor cont:Fisher .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-031
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-031> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-031
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher22-387-031> rdf:type owl:NamedIndividual ,
                                                                                                                                                               cont:CatalogEntry ;
                                                                                                                                                      cont:catalogNumber "22-387-031" ;
                                                                                                                                                      cont:hasVendor cont:Fisher .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher249944
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher249944> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher249944
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Fisher249944> rdf:type owl:NamedIndividual ,
                                                                                                                                                           cont:CatalogEntry ;
                                                                                                                                                  cont:catalogNumber "249944" ;
                                                                                                                                                  cont:hasVendor cont:Fisher .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner655077
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner655077> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner655077
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner655077> rdf:type owl:NamedIndividual ,
                                                                                                                                                            cont:CatalogEntry ;
                                                                                                                                                   cont:catalogNumber "655077" ;
                                                                                                                                                   cont:hasVendor cont:Greiner .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner781280
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner781280> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner781280
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner781280> rdf:type owl:NamedIndividual ,
                                                                                                                                                            cont:CatalogEntry ;
                                                                                                                                                   cont:catalogNumber "781280" ;
                                                                                                                                                   cont:hasVendor cont:Greiner .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner782073
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner782073> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner782073
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Greiner782073> rdf:type owl:NamedIndividual ,
                                                                                                                                                            cont:CatalogEntry ;
                                                                                                                                                   cont:catalogNumber "782073" ;
                                                                                                                                                   cont:hasVendor cont:Greiner .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcyteLP-0200
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcyteLP-0200> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcyteLP-0200
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcyteLP-0200> rdf:type owl:NamedIndividual ,
                                                                                                                                                             cont:CatalogEntry ;
                                                                                                                                                    cont:catalogNumber "LP-0200" ;
                                                                                                                                                    cont:hasVendor cont:Labcyte .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcytePP-0200
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcytePP-0200> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcytePP-0200
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#LabcytePP-0200> rdf:type owl:NamedIndividual ,
                                                                                                                                                             cont:CatalogEntry ;
                                                                                                                                                    cont:catalogNumber "PP-0200" ;
                                                                                                                                                    cont:hasVendor cont:Labcyte .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15048G
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15048G> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15048G
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15048G> rdf:type owl:NamedIndividual ,
                                                                                                                                                               cont:CatalogEntry ;
                                                                                                                                                      cont:catalogNumber "K15048G" ;
                                                                                                                                                      cont:hasVendor cont:Mesoscale .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15069L
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15069L> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15069L
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK15069L> rdf:type owl:NamedIndividual ,
                                                                                                                                                               cont:CatalogEntry ;
                                                                                                                                                      cont:catalogNumber "K15069L" ;
                                                                                                                                                      cont:hasVendor cont:Mesoscale .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK152MSD
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK152MSD> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK152MSD
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#MesoscaleK152MSD> rdf:type owl:NamedIndividual ,
                                                                                                                                                               cont:CatalogEntry ;
                                                                                                                                                      cont:catalogNumber "K152MSD" ;
                                                                                                                                                      cont:hasVendor cont:Mesoscale .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6007290
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6007290> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6007290
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6007290> rdf:type owl:NamedIndividual ,
                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                        cont:catalogNumber "6007290" ;
                                                                                                                                                        cont:hasVendor cont:PerkinElmer .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008260
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008260> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008260
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008260> rdf:type owl:NamedIndividual ,
                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                        cont:catalogNumber "6008260" ;
                                                                                                                                                        cont:hasVendor cont:PerkinElmer .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008280
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008280> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008280
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#PerkinElmer6008280> rdf:type owl:NamedIndividual ,
                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                        cont:catalogNumber "6008280" ;
                                                                                                                                                        cont:hasVendor cont:PerkinElmer .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher136101
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher136101> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher136101
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher136101> rdf:type owl:NamedIndividual ,
                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                        cont:catalogNumber "136101" ;
                                                                                                                                                        cont:hasVendor cont:ThermoFisher .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher264573
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher264573> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher264573
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#ThermoFisher264573> rdf:type owl:NamedIndividual ,
                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                        cont:catalogNumber "264573" ;
                                                                                                                                                        cont:hasVendor cont:ThermoFisher .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#E%26K%20ScientificEK-2053-S
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#E%26K%20ScientificEK-2053-S> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#E%26K%20ScientificEK-2053-S
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#E%26K%20ScientificEK-2053-S> rdf:type owl:NamedIndividual ,
                                                                                                                                                                          cont:CatalogEntry ;
                                                                                                                                                                 cont:catalogNumber "EK-2053-S" ;
-                                                                                                                                                                cont:hasVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#E%26K%20Scientific> .
+                                                                                                                                                                cont:hasVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#E%26K%20Scientific> .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ> rdf:type owl:NamedIndividual ,
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ
+<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ> rdf:type owl:NamedIndividual ,
                                                                                                                                                                                 cont:CatalogEntry ;
                                                                                                                                                                        cont:catalogNumber "MS-9384WZ" ;
-                                                                                                                                                                       cont:hasVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.> .
+                                                                                                                                                                       cont:hasVendor <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Sumitomo%20Bakelite%20Co.> .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
