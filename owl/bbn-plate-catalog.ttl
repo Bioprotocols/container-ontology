@@ -59,7 +59,7 @@ cont:wellVolume rdfs:domain cont:Container .
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#Corning
 :Corning rdf:type owl:NamedIndividual ,
                   cont:VendorFirm ;
-         cont:vendorName "Corning"@en .
+         cont:vendorName "Corning" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#Corning_96_well_black_clear_bottom_plates
@@ -84,7 +84,7 @@ cont:wellVolume rdfs:domain cont:Container .
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#NEST
 :NEST rdf:type owl:NamedIndividual ,
                cont:VendorFirm ;
-      cont:vendorName "NEST Scientific"@en ;
+      cont:vendorName "NEST Scientific" ;
       rdfs:label "NEST Scientific" .
 
 
@@ -101,19 +101,19 @@ cont:wellVolume rdfs:domain cont:Container .
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#ce-corning-3300
 :ce-corning-3300 rdf:type owl:NamedIndividual ,
                           :CorningCatalogEntry ;
-                 cont:catalogNumber "3300"@en .
+                 cont:catalogNumber "3300" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#ce-corning-3340
 :ce-corning-3340 rdf:type owl:NamedIndividual ,
                           :CorningCatalogEntry ;
-                 cont:catalogNumber "3340"@en .
+                 cont:catalogNumber "3340" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#ce-nest-402501
 :ce-nest-402501 rdf:type owl:NamedIndividual ,
                          :NESTCatalogEntry ;
-                cont:catalogNumber "402501"@en .
+                cont:catalogNumber "402501" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#corning-3340-well-volume
@@ -134,7 +134,7 @@ cont:wellVolume rdfs:domain cont:Container .
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#miles-rogers-lab-bbn
 :miles-rogers-lab-bbn rdf:type owl:NamedIndividual ,
                                cont:Lab ;
-                      rdfs:label "Miles Rogers's lab at BBN"@en .
+                      rdfs:label "Miles Rogers's lab at BBN" .
 
 
 ###  http://www.semanticweb.org/rpg/ontologies/2021/8/bbn-plate-catalog#nest-505102-well-volume
