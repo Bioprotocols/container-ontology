@@ -14,6 +14,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeLabel
+om:alternativeLabel rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol
 om:alternativeSymbol rdf:type owl:AnnotationProperty .
 
@@ -21,6 +25,9 @@ om:alternativeSymbol rdf:type owl:AnnotationProperty .
 ###  http://www.ontology-of-units-of-measure.org/resource/om-2/symbol
 om:symbol rdf:type owl:AnnotationProperty .
 
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/unofficialAbbreviation
+om:unofficialAbbreviation rdf:type owl:AnnotationProperty .
 
 #################################################################
 #    Object Properties
@@ -169,6 +176,33 @@ om:Unit rdf:type owl:Class .
 ###  http://www.ontology-of-units-of-measure.org/resource/om-2/UnitMultiple
 om:UnitMultiple rdf:type owl:Class .
 
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/Volume
+om:Volume rdf:type owl:Class ;
+                                                                   rdfs:subClassOf om:Quantity ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty om:hasValue ;
+                                                                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty om:hasUnit ;
+                                                                                                         owl:allValuesFrom om:VolumeUnit
+                                                                                                       ]
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty om:hasDimension ;
+                                                                                     owl:hasValue om:volume-Dimension
+                                                                                   ] ;
+                                                                   om:alternativeLabel "inhoud"@nl ;
+                                                                   om:alternativeSymbol "v" ;
+                                                                   om:symbol "V" ;
+                                                                   rdfs:comment "Volume is a measure of how much three-dimensional space any phenomenon occupies. It is a derived quantity in the International System of Units. Volume is length to the power 3."@en ;
+                                                                   rdfs:label "volume"@en ,
+                                                                              "volume"@nl ,
+                                                                              "体积"@zh .
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/VolumeUnit
+om:VolumeUnit rdf:type owl:Class .
+
+
+
 
 ###  http://www.ontology-of-units-of-measure.org/resource/om-2/Width
 om:Width rdf:type owl:Class ;
@@ -205,6 +239,31 @@ om:millimetre rdf:type owl:NamedIndividual ,
               rdfs:label "millimeter"@nl ,
                          "millimetre"@en ,
                          "毫米"@zh .
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/litre
+om:litre rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/micro
+om:micro rdf:type owl:NamedIndividual .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/microlitre
+om:microlitre rdf:type owl:NamedIndividual ,
+                                                                                om:PrefixedUnit ;
+                                                                       om:hasDimension om:volume-Dimension ;
+                                                                       om:hasPrefix om:micro ;
+                                                                       om:hasUnit om:litre ;
+                                                                       om:symbol "μl" ;
+                                                                       om:unofficialAbbreviation "ul" ;
+                                                                       rdfs:label "microliter"@nl ,
+                                                                                  "microlitre"@en .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/volume-Dimension
+om:volume-Dimension rdf:type owl:NamedIndividual .
+
+
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
