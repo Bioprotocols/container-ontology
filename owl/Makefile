@@ -14,7 +14,7 @@ GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
 URL_PREFIX = https://raw.githubusercontent.com/rpgoldman/container-ontology/${GIT_BRANCH}/owl
 
-turtle_files = container-ontology.ttl om-subset.ttl strateos-catalog-individuals.ttl
+turtle_files = container-ontology.ttl om-subset.ttl strateos-catalog-individuals.ttl bbn-plate-catalog.ttl
 
 catalog_file = catalog-v001.xml
 
