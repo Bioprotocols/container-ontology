@@ -3,3 +3,21 @@ on: [push]
 jobs:
   owlery-regression-tests:
     runs-on: ubuntu-latest
+    services:
+      owlery-server:
+        image: rpgoldman/owlery:latest
+        ports:
+          - 8080:8080
+        env:
+          JAVA_OPTS: -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlogback.configurationFile=/srv/conf/logback.xml
+        volumes:
+          - ${GITHUB_WORKSPACE}/container-ontology/owl/server-files:/srv/owl
+          - ${GITHUB_WORKSPACE}/container-ontology/owl/owlery-conf:/srv/conf
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2.3.4
+      - name: test-server
+        shell: bash
+        run: if curl -s --head  --request GET https://example.com | grep "200 OK" > /dev/null;
+
+            
