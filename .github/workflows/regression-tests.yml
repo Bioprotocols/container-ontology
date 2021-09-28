@@ -13,9 +13,16 @@ jobs:
         volumes:
           - ${GITHUB_WORKSPACE}/container-ontology/owl/server-files:/srv/owl
           - ${GITHUB_WORKSPACE}/container-ontology/owl/owlery-conf:/srv/conf
+    defaults:
+      run:
+        shell:bash
+        working-directory: ${GITHUB_WORKSPACE}/container-ontology/owl
     steps:
       - name: checkout
         uses: actions/checkout@v2.3.4
+      - name: prepare-server
+        shell: bash
+        run: make prepare-server
       - name: test-server
         shell: bash
         run: if curl -s --head  --request GET https://example.com | grep "200 OK" > /dev/null;
