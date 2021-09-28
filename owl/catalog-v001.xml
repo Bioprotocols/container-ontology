@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Edited Redirect" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl" uri="container-ontology.ttl"/>
     <uri id="User Entered Import Resolution" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog.ttl" uri="strateos-catalog.ttl"/>
     <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl" uri="om-subset.ttl"/>
     <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/om-subset.ttl" uri="om-subset.ttl"/>
@@ -7,7 +8,7 @@
     <uri id="Imports Wizard Entry" name="http://www.ontology-of-units-of-measure.org/resource/om-2" uri="om-2.0.rdf"/>
     <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl" uri="container-ontology.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1632524540928" name="http://sbols.org/v3" uri="sbolowl3.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1632524540928" name="shadowed:http://sbols.org/v3" uri="server-files/sbolowl3.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1632843510004" name="http://sbols.org/v3" uri="sbolowl3.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1632843510004" name="shadowed:http://sbols.org/v3" uri="server-files/sbolowl3.rdf"/>
     </group>
 </catalog>
