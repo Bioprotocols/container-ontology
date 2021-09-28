@@ -27,18 +27,20 @@ makeFileDir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 # -Dorg.slf4j.simpleLogger.logFile=/srv/owlery.log 
 JAVA_ARGS := '-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlogback.configurationFile=/srv/conf/logback.xml' # -Dlog4j.configurationFile=/srv/conf/log4j.xml"
 
-.PHONY: server
+.PHONY: server prepare-server
 
 # all: $(turtle_files) $(catalog_file)
 
 # $(turtle_files): %.ttl: %.m4
 # 	$(M4) -D URL_PREFIX=$(URL_PREFIX) -D OUTNAME=$(@F) $< > $@
 
-server: ${server_catalog_file}
+prepare-server: ${server_catalog_file}
 	mkdir -p $(makeFileDir)server-files
 	cp $(turtle_files) $(makeFileDir)server-files
 	cp $(server_catalog_file) $(makeFileDir)server-files
 	rm -f $(makeFileDir)server-files/.DS_Store
+
+server: prepare-server
 	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf rpgoldman/owlery:latest 2>&1 | tee server.log
 
 $(server_catalog_file): %.xml: %.m4
