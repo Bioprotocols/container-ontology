@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl" uri="/srv/owl/om-subset.ttl"/>
-    <uri name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl" uri="/srv/owl/container-ontology.ttl"/>
-    <uri name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog-individuals.ttl" uri="/srv/owl/strateos-catalog-individuals.ttl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl" uri="/srv/owl/om-subset.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl" uri="/srv/owl/container-ontology.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog.ttl" uri="/srv/owl/strateos-catalog.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog" uri="/srv/owl/bbn-plate-catalog.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog.ttl" uri="/srv/owl/bbn-plate-catalog.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://sbols.org/v3" uri="/srv/owl/sbolowl3.rdf"/>
 </catalog>

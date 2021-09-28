@@ -7,13 +7,14 @@
 @prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sbol: <http://sbols.org/v3#> .
+@base <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> .
 
 <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> rdf:type owl:Ontology ;
-                                                                    owl:versionIRI <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> ;
-                                                                    owl:imports <http://sbols.org/v3> ,
-                                                                                <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl> ;
-                                                                    om:abbreviation "cont:" ;
-                                                                    rdfs:label "Container Ontology"@en .
+                                                                                                  owl:versionIRI <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> ;
+                                                                                                  owl:imports <http://sbols.org/v3> ,
+                                                                                                              <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl> ;
+                                                                                                  om:abbreviation "cont:" ;
+                                                                                                  rdfs:label "Container Ontology"@en .
 
 #################################################################
 #    Annotation properties
@@ -31,20 +32,20 @@ om:abbreviation rdf:type owl:AnnotationProperty .
 om:hasQuantity rdf:type owl:ObjectProperty .
 
 
-###  URL_PREFIX/container-ontology.ttl#availableAt
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#availableAt
 cont:availableAt rdf:type owl:ObjectProperty ;
                  rdfs:domain cont:LabEquipment ;
                  rdfs:range cont:Lab .
 
 
-###  URL_PREFIX/container-ontology.ttl#catalogEntryOf
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#catalogEntryOf
 cont:catalogEntryOf rdf:type owl:ObjectProperty ;
                     owl:inverseOf cont:hasCatalogEntry ;
                     rdfs:domain cont:CatalogEntry ;
                     rdfs:range cont:LabEquipment .
 
 
-###  URL_PREFIX/container-ontology.ttl#centrifugeResistance
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#centrifugeResistance
 cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                           rdfs:domain cont:Container ;
                           rdfs:range [ owl:intersectionOf ( om:Measure
@@ -59,14 +60,14 @@ cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                           rdfs:label "centrifugeResistance" .
 
 
-###  URL_PREFIX/container-ontology.ttl#clearanceToPlateBottom
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#clearanceToPlateBottom
 cont:clearanceToPlateBottom rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf cont:height ;
                             rdfs:comment "The minimum clearance from the resting plane to the plane of the bottom external surface of the wells."@en ;
                             rdfs:label "clearanceToPlateBottom" .
 
 
-###  URL_PREFIX/container-ontology.ttl#coating
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#coating
 cont:coating rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              rdfs:domain cont:Container ;
@@ -74,7 +75,7 @@ cont:coating rdf:type owl:ObjectProperty ;
              rdfs:label "coating" .
 
 
-###  URL_PREFIX/container-ontology.ttl#columnLabels
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#columnLabels
 cont:columnLabels rdf:type owl:ObjectProperty ,
                            owl:FunctionalProperty ;
                   rdfs:domain cont:Plate ;
@@ -82,7 +83,7 @@ cont:columnLabels rdf:type owl:ObjectProperty ,
                   rdfs:label "column labels"@en .
 
 
-###  URL_PREFIX/container-ontology.ttl#compatibleCentrifuges
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#compatibleCentrifuges
 cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf cont:compatibleLabEquipment ;
                            rdfs:domain cont:Container ;
@@ -90,24 +91,24 @@ cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
                            rdfs:label "compatibleCentrifuges" .
 
 
-###  URL_PREFIX/container-ontology.ttl#compatibleLabEquipment
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#compatibleLabEquipment
 cont:compatibleLabEquipment rdf:type owl:ObjectProperty ;
                             rdfs:label "compatibleLabEquipment" .
 
 
-###  URL_PREFIX/container-ontology.ttl#compatiblePlateReaders
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#compatiblePlateReaders
 cont:compatiblePlateReaders rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf cont:compatibleLabEquipment ;
                             rdfs:label "compatiblePlateReaders" .
 
 
-###  URL_PREFIX/container-ontology.ttl#cornerRadius
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#cornerRadius
 cont:cornerRadius rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf cont:geometricProperty ;
                   rdfs:label "cornerRadius" .
 
 
-###  URL_PREFIX/container-ontology.ttl#diameter
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#diameter
 cont:diameter rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cont:geometricProperty ;
               rdfs:range om:Measure ,
@@ -118,20 +119,20 @@ cont:diameter rdf:type owl:ObjectProperty ;
               rdfs:label "diameter" .
 
 
-###  URL_PREFIX/container-ontology.ttl#equipmentVendor
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#equipmentVendor
 cont:equipmentVendor rdf:type owl:ObjectProperty ;
                      rdfs:domain cont:LabEquipment ;
                      rdfs:range cont:VendorFirm .
 
 
-###  URL_PREFIX/container-ontology.ttl#geometricProperty
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#geometricProperty
 cont:geometricProperty rdf:type owl:ObjectProperty ;
                        rdfs:domain cont:Container ;
                        rdfs:range om:Measure ;
                        rdfs:label "geometricProperty" .
 
 
-###  URL_PREFIX/container-ontology.ttl#hasCatalogEntry
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasCatalogEntry
 cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain cont:LabEquipment ;
@@ -139,13 +140,13 @@ cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:label "hasCatalogEntry" .
 
 
-###  URL_PREFIX/container-ontology.ttl#hasColor
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasColor
 cont:hasColor rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cont:qualitativeProperty ;
               rdfs:range cont:Color .
 
 
-###  URL_PREFIX/container-ontology.ttl#hasVendorFirm
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasVendorFirm
 cont:hasVendorFirm rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain cont:CatalogEntry ;
@@ -153,13 +154,13 @@ cont:hasVendorFirm rdf:type owl:ObjectProperty ;
                    rdfs:label "hasVendorFirm" .
 
 
-###  URL_PREFIX/container-ontology.ttl#hasWellBottomShape
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasWellBottomShape
 cont:hasWellBottomShape rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf cont:qualitativeProperty ;
                         rdfs:label "hasWellBottomShape"^^xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#height
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#height
 cont:height rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cont:geometricProperty ;
             rdfs:range [ owl:intersectionOf ( om:Measure
@@ -173,13 +174,13 @@ cont:height rdf:type owl:ObjectProperty ;
             rdfs:label "height" .
 
 
-###  URL_PREFIX/container-ontology.ttl#length
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#length
 cont:length rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cont:geometricProperty ;
             rdfs:label "length" .
 
 
-###  URL_PREFIX/container-ontology.ttl#lengthAtEdge
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#lengthAtEdge
 cont:lengthAtEdge rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf cont:length ;
                   rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
@@ -188,7 +189,7 @@ This property is for the length within 12.7 mm of the edge; the other property i
                   rdfs:label "lengthAtEdge" .
 
 
-###  URL_PREFIX/container-ontology.ttl#lengthOverall
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#lengthOverall
 cont:lengthOverall rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf cont:length ;
                    rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
@@ -197,14 +198,14 @@ This property is for the length anywhere on the plate (the more permissive const
                    rdfs:label "lengthOverall" .
 
 
-###  URL_PREFIX/container-ontology.ttl#measureType
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#measureType
 cont:measureType rdf:type owl:ObjectProperty ;
                  rdfs:domain om:Measure ;
                  rdfs:range om:Quantity ;
                  rdfs:label "measureType" .
 
 
-###  URL_PREFIX/container-ontology.ttl#overallPlateHeight
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#overallPlateHeight
 cont:overallPlateHeight rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf cont:height ;
                         owl:propertyDisjointWith cont:plateHeight ;
@@ -212,7 +213,7 @@ cont:overallPlateHeight rdf:type owl:ObjectProperty ;
                         rdfs:label "overallPlateHeight" .
 
 
-###  URL_PREFIX/container-ontology.ttl#plateHeight
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#plateHeight
 cont:plateHeight rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf cont:height ;
                  rdfs:domain cont:Plate ;
@@ -220,12 +221,12 @@ cont:plateHeight rdf:type owl:ObjectProperty ;
                  rdfs:label "plateHeight" .
 
 
-###  URL_PREFIX/container-ontology.ttl#qualitativeProperty
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#qualitativeProperty
 cont:qualitativeProperty rdf:type owl:ObjectProperty ;
                          rdfs:domain cont:Container .
 
 
-###  URL_PREFIX/container-ontology.ttl#rowLabels
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#rowLabels
 cont:rowLabels rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ;
                rdfs:domain cont:Plate ;
@@ -233,7 +234,7 @@ cont:rowLabels rdf:type owl:ObjectProperty ,
                rdfs:label "row labels"@en .
 
 
-###  URL_PREFIX/container-ontology.ttl#wellDepth
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellDepth
 cont:wellDepth rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf cont:geometricProperty ;
                rdf:type owl:FunctionalProperty ;
@@ -249,13 +250,13 @@ cont:wellDepth rdf:type owl:ObjectProperty ;
                rdfs:label "wellDepth" .
 
 
-###  URL_PREFIX/container-ontology.ttl#wellVolume
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellVolume
 cont:wellVolume rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf cont:geometricProperty ;
                 rdfs:label "wellVolume" .
 
 
-###  URL_PREFIX/container-ontology.ttl#width
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#width
 cont:width rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf cont:geometricProperty ;
            rdfs:label "width" .
@@ -265,7 +266,7 @@ cont:width rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  URL_PREFIX/container-ontology.ttl#catalogNumber
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#catalogNumber
 cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain cont:CatalogEntry ;
@@ -273,27 +274,28 @@ cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:label "catalogNumber" .
 
 
-###  URL_PREFIX/container-ontology.ttl#colorName
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#colorName
 cont:colorName rdf:type owl:DatatypeProperty ;
                rdfs:domain cont:Color ;
                rdfs:range xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#columnCount
-cont:columnCount rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#columnCount
+cont:columnCount rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
+                 rdf:type owl:FunctionalProperty ;
                  rdfs:domain cont:Plate ;
                  rdfs:range xsd:positiveInteger ;
                  rdfs:label "columnCount" .
 
 
-###  URL_PREFIX/container-ontology.ttl#containerDataProperty
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#containerDataProperty
 cont:containerDataProperty rdf:type owl:DatatypeProperty ;
                            rdfs:domain cont:Container ;
                            rdfs:label "containerDataProperty" .
 
 
-###  URL_PREFIX/container-ontology.ttl#isOpticallyTransparent
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#isOpticallyTransparent
 cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf cont:containerDataProperty ;
                             rdfs:domain cont:Container ;
@@ -301,33 +303,35 @@ cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
                             rdfs:label "isOpticallyTransparent" .
 
 
-###  URL_PREFIX/container-ontology.ttl#isSLAS1-2004compliant
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#isSLAS1-2004compliant
 cont:isSLAS1-2004compliant rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf cont:containerDataProperty ;
                            rdfs:range xsd:boolean ;
                            rdfs:label "isSLAS1-2004compliant" .
 
 
-###  URL_PREFIX/container-ontology.ttl#isStackable
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#isStackable
 cont:isStackable rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
                  rdfs:range xsd:boolean .
 
 
-###  URL_PREFIX/container-ontology.ttl#labName
-cont:labName rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#labName
+cont:labName rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
              rdfs:domain cont:Lab ;
              rdfs:range xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#rowCount
-cont:rowCount rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#rowCount
+cont:rowCount rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf cont:containerDataProperty ;
+              rdf:type owl:FunctionalProperty ;
               rdfs:domain cont:Plate ;
               rdfs:range xsd:positiveInteger .
 
 
-###  URL_PREFIX/container-ontology.ttl#vendorName
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#vendorName
 cont:vendorName rdf:type owl:DatatypeProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( cont:LabEquipment
@@ -337,9 +341,10 @@ cont:vendorName rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#wellCount
-cont:wellCount rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellCount
+cont:wellCount rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf cont:containerDataProperty ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain cont:Plate ;
                rdfs:range xsd:positiveInteger .
 
@@ -374,23 +379,23 @@ om:Measure rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                            ] .
 
 
-###  URL_PREFIX/container-ontology.ttl#CatalogEntry
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#CatalogEntry
 cont:CatalogEntry rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
                   rdfs:label "CatalogEntry" .
 
 
-###  URL_PREFIX/container-ontology.ttl#Centrifuge
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Centrifuge
 cont:Centrifuge rdf:type owl:Class ;
                 rdfs:subClassOf cont:LabMachinery .
 
 
-###  URL_PREFIX/container-ontology.ttl#Clear
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Clear
 cont:Clear rdf:type owl:Class ;
            rdfs:subClassOf cont:Color .
 
 
-###  URL_PREFIX/container-ontology.ttl#ClearPlate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ClearPlate
 cont:ClearPlate rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                            [ rdf:type owl:Restriction ;
@@ -403,33 +408,33 @@ cont:ClearPlate rdf:type owl:Class ;
                 rdfs:subClassOf cont:Plate .
 
 
-###  URL_PREFIX/container-ontology.ttl#CoatingMaterial
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#CoatingMaterial
 cont:CoatingMaterial rdf:type owl:Class ;
                      rdfs:subClassOf cont:ContainerRoot ;
                      rdfs:label "CoatingMaterial" .
 
 
-###  URL_PREFIX/container-ontology.ttl#Color
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Color
 cont:Color rdf:type owl:Class ;
            rdfs:subClassOf cont:ContainerRoot ;
            rdfs:comment "Enumeration class of optical properties for well plates." ;
            rdfs:label "OpticalProperty" .
 
 
-###  URL_PREFIX/container-ontology.ttl#Container
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Container
 cont:Container rdf:type owl:Class ;
                rdfs:subClassOf cont:LabEquipment ;
                rdfs:label "Container" .
 
 
-###  URL_PREFIX/container-ontology.ttl#ContainerRoot
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ContainerRoot
 cont:ContainerRoot rdf:type owl:Class ;
                    rdfs:subClassOf sbol:Identified ;
                    rdfs:comment "This is the root class for the classes defined in the Container Ontology. It is introduced to be the bridge between the container ontology and the SBOL Ontology. In turn, this connects to the sbol:Identified class, in order to make it possible for the container ontology classes to be translated into Python classes by the SBOL factory." ;
                    rdfs:label "ContainerRoot" .
 
 
-###  URL_PREFIX/container-ontology.ttl#Lab
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Lab
 cont:Lab rdf:type owl:Class ;
          rdfs:subClassOf cont:ContainerRoot ,
                          [ rdf:type owl:Restriction ;
@@ -440,25 +445,25 @@ cont:Lab rdf:type owl:Class ;
          rdfs:label "Lab" .
 
 
-###  URL_PREFIX/container-ontology.ttl#LabEquipment
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#LabEquipment
 cont:LabEquipment rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
                   rdfs:label "LabEquipment" .
 
 
-###  URL_PREFIX/container-ontology.ttl#LabMachinery
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#LabMachinery
 cont:LabMachinery rdf:type owl:Class ;
                   rdfs:subClassOf cont:LabEquipment ;
                   rdfs:comment "This is likely a poor name, but it is intended to refer to items of equipment that act upon containers and/or their contents." ;
                   rdfs:label "LabMachinery" .
 
 
-###  URL_PREFIX/container-ontology.ttl#Opaque
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Opaque
 cont:Opaque rdf:type owl:Class ;
             rdfs:subClassOf cont:Color .
 
 
-###  URL_PREFIX/container-ontology.ttl#OpaquePlate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#OpaquePlate
 cont:OpaquePlate rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                             [ rdf:type owl:Restriction ;
@@ -471,13 +476,14 @@ cont:OpaquePlate rdf:type owl:Class ;
                  rdfs:subClassOf cont:Plate .
 
 
-###  URL_PREFIX/container-ontology.ttl#Plate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate
 cont:Plate rdf:type owl:Class ;
            rdfs:subClassOf cont:Container ;
            owl:disjointWith cont:Well ;
            rdfs:label "Plate" .
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Plate1536Well
+
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate1536Well
 cont:Plate1536Well rdf:type owl:Class ;
                    owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                               [ rdf:type owl:Restriction ;
@@ -490,7 +496,7 @@ cont:Plate1536Well rdf:type owl:Class ;
                    rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Plate384Well
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate384Well
 cont:Plate384Well rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                              [ rdf:type owl:Restriction ;
@@ -503,7 +509,7 @@ cont:Plate384Well rdf:type owl:Class ;
                   rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Plate96Well
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate96Well
 cont:Plate96Well rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                             [ rdf:type owl:Restriction ;
@@ -516,13 +522,12 @@ cont:Plate96Well rdf:type owl:Class ;
                  rdfs:subClassOf cont:Plate .
 
 
-
-###  URL_PREFIX/container-ontology.ttl#PlateReader
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#PlateReader
 cont:PlateReader rdf:type owl:Class ;
                  rdfs:subClassOf cont:LabMachinery .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS-1-2004
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-1-2004
 cont:SLAS-1-2004 rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                               owl:onProperty cont:cornerRadius ;
@@ -598,7 +603,7 @@ cont:SLAS-1-2004 rdf:type owl:Class ;
                  rdfs:label "SLAS-1-2004" .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS-2-2004-4
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-2-2004-4
 cont:SLAS-2-2004-4 rdf:type owl:Class ;
                    owl:equivalentClass [ owl:intersectionOf ( cont:SLAS-2-2004-4-1
                                                               cont:SLAS-2-2004-4-2
@@ -608,7 +613,7 @@ cont:SLAS-2-2004-4 rdf:type owl:Class ;
                    rdfs:subClassOf cont:Plate .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS-2-2004-4-1
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-2-2004-4-1
 cont:SLAS-2-2004-4-1 rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( cont:SLAS-2-2004-4-2
                                                                 [ rdf:type owl:Restriction ;
@@ -639,7 +644,7 @@ cont:SLAS-2-2004-4-1 rdf:type owl:Class ;
                      rdfs:label "SLAS 2-2004 Typical Height with Clearance"^^xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS-2-2004-4-2
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-2-2004-4-2
 cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                                 [ rdf:type owl:Class ;
@@ -709,7 +714,7 @@ cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                      rdfs:label "SLAS 2-2004 Typical Height with Clearance"^^xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS-4-2004
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-4-2004
 cont:SLAS-4-2004 rdf:type owl:Class ;
                  rdfs:subClassOf cont:Plate ;
                  owl:disjointUnionOf ( cont:SLAS_4-2004_1536_Well_Plate
@@ -720,7 +725,7 @@ cont:SLAS-4-2004 rdf:type owl:Class ;
                  rdfs:label "SLAS 4-2004 Well Placement standard"^^xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS_4-2004_1536_Well_Plate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS_4-2004_1536_Well_Plate
 cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
                                  owl:equivalentClass cont:Standard1536WellPlate ,
                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -741,7 +746,7 @@ cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
                                  rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS_4-2004_384_Well_Plate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS_4-2004_384_Well_Plate
 cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
                                 owl:equivalentClass cont:Standard384WellPlate ,
                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -762,7 +767,7 @@ cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
                                 rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  URL_PREFIX/container-ontology.ttl#SLAS_4-2004_96_Well_Plate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS_4-2004_96_Well_Plate
 cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
                                owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                                           [ rdf:type owl:Restriction ;
@@ -783,17 +788,17 @@ cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
                                rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  URL_PREFIX/container-ontology.ttl#Standard1536WellPlate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Standard1536WellPlate
 cont:Standard1536WellPlate rdf:type owl:Class ;
                            rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  URL_PREFIX/container-ontology.ttl#Standard384WellPlate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Standard384WellPlate
 cont:Standard384WellPlate rdf:type owl:Class ;
                           rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  URL_PREFIX/container-ontology.ttl#Standard96WellPlate
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Standard96WellPlate
 cont:Standard96WellPlate rdf:type owl:Class ;
                          owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                                     cont:SLAS_4-2004_96_Well_Plate
@@ -825,7 +830,7 @@ cont:Standard96WellPlate rdf:type owl:Class ;
                          rdfs:label "Standard 96 Well Plate" .
 
 
-###  URL_PREFIX/container-ontology.ttl#ThermoFisherCatalogEntry
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisherCatalogEntry
 cont:ThermoFisherCatalogEntry rdf:type owl:Class ;
                               owl:equivalentClass [ owl:intersectionOf ( cont:CatalogEntry
                                                                          [ rdf:type owl:Restriction ;
@@ -838,7 +843,149 @@ cont:ThermoFisherCatalogEntry rdf:type owl:Class ;
                               rdfs:subClassOf cont:CatalogEntry .
 
 
-###  URL_PREFIX/container-ontology.ttl#VWRCentrifugePCRPlateSpec
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well
+cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
+                                     rdfs:subClassOf cont:Plate ,
+                                                     cont:SLAS_4-2004_96_Well_Plate ,
+                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty cont:columnCount ;
+                                                                              owl:hasValue 12
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty cont:rowCount ;
+                                                                              owl:hasValue 8
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:cornerRadius ;
+                                                       owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasUnit ;
+                                                                                                   owl:hasValue om:millimetre
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasNumericalValue ;
+                                                                                                   owl:hasValue 4.0
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:height ;
+                                                       owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasUnit ;
+                                                                                                   owl:hasValue om:millimetre
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasNumericalValue ;
+                                                                                                   owl:hasValue "20.1"^^xsd:float
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:length ;
+                                                       owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasUnit ;
+                                                                                                   owl:hasValue om:millimetre
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasNumericalValue ;
+                                                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                        owl:onDatatype xsd:float ;
+                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive "127.26"^^xsd:float
+                                                                                                                                               ]
+                                                                                                                                               [ xsd:maxInclusive "128.26"^^xsd:float
+                                                                                                                                               ]
+                                                                                                                                             )
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:plateHeight ;
+                                                       owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasUnit ;
+                                                                                                   owl:hasValue om:millimetre
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasNumericalValue ;
+                                                                                                   owl:hasValue 7.50
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:wellDepth ;
+                                                       owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasUnit ;
+                                                                                                   owl:hasValue om:millimetre
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty cont:measureType ;
+                                                                                                   owl:hasValue om:Depth
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasNumericalValue ;
+                                                                                                   owl:hasValue "20.1"^^xsd:float
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:width ;
+                                                       owl:someValuesFrom [ owl:intersectionOf ( om:Measure
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasUnit ;
+                                                                                                   owl:hasValue om:millimetre
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty om:hasNumericalValue ;
+                                                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                        owl:onDatatype xsd:float ;
+                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive "84.98"^^xsd:float
+                                                                                                                                               ]
+                                                                                                                                               [ xsd:maxInclusive "85.98"^^xsd:float
+                                                                                                                                               ]
+                                                                                                                                             )
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:equipmentVendor ;
+                                                       owl:hasValue cont:ThermoFisher
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:hasWellBottomShape ;
+                                                       owl:hasValue cont:veeBottom
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:equipmentVendor ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass cont:VendorFirm
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cont:wellCount ;
+                                                       owl:hasValue 96
+                                                     ] .
+
+
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#VWRCentrifugePCRPlateSpec
 cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                      owl:onProperty cont:wellDepth ;
@@ -862,7 +1009,7 @@ cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
                                rdfs:label "VWRCentrifugePCRPlateSpec" .
 
 
-###  URL_PREFIX/container-ontology.ttl#VendorFirm
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#VendorFirm
 cont:VendorFirm rdf:type owl:Class ;
                 rdfs:subClassOf cont:ContainerRoot ,
                                 [ rdf:type owl:Restriction ;
@@ -872,13 +1019,13 @@ cont:VendorFirm rdf:type owl:Class ;
                 rdfs:label "VendorFirm" .
 
 
-###  URL_PREFIX/container-ontology.ttl#Well
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Well
 cont:Well rdf:type owl:Class ;
           rdfs:subClassOf cont:Container ;
           rdfs:label "Well" .
 
 
-###  URL_PREFIX/container-ontology.ttl#WellShape
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#WellShape
 cont:WellShape rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Class ;
                                      owl:oneOf ( cont:flatBottom
@@ -891,148 +1038,6 @@ cont:WellShape rdf:type owl:Class ;
                rdfs:label "WellShape" .
 
 
-###  URL_PREFIX/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well
-cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
-    rdfs:subClassOf cont:Plate ,
-        cont:SLAS_4-2004_96_Well_Plate ,
-        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                owl:onProperty cont:columnCount ;
-                owl:hasValue 12
-                ]
-            [ rdf:type owl:Restriction ;
-                owl:onProperty cont:rowCount ;
-                owl:hasValue 8
-                ]
-            ) ;
-        rdf:type owl:Class
-        ] ,
-        [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty cont:cornerRadius ;
-                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasUnit ;
-                                                                                                                                                                 owl:hasValue om:millimetre
-                                                                                                                                                               ]
-                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                 owl:onProperty om:hasNumericalValue ;
-                                                                                                                                                                 owl:hasValue 4.0
-                                                                                                                                                               ]
-                                                                                                                                                             ) ;
-                                                                                                                                          rdf:type owl:Class
-            ]
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:height ;
-        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasUnit ;
-                    owl:hasValue om:millimetre
-                    ]
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasNumericalValue ;
-                    owl:hasValue "20.1"^^xsd:float
-                    ]
-                ) ;
-            rdf:type owl:Class
-            ]
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:length ;
-        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasUnit ;
-                    owl:hasValue om:millimetre
-                    ]
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasNumericalValue ;
-                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                        owl:onDatatype xsd:float ;
-                        owl:withRestrictions ( [ xsd:minInclusive "127.26"^^xsd:float
-                                ]
-                            [ xsd:maxInclusive "128.26"^^xsd:float
-                                ]
-                            )
-                        ]
-                    ]
-                ) ;
-            rdf:type owl:Class
-            ]
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:plateHeight ;
-        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasUnit ;
-                    owl:hasValue om:millimetre
-                    ]
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasNumericalValue ;
-                    owl:hasValue 7.50
-                    ]
-                ) ;
-            rdf:type owl:Class
-            ]
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:wellDepth ;
-        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasUnit ;
-                    owl:hasValue om:millimetre
-                    ]
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty cont:measureType ;
-                    owl:hasValue om:Depth
-                    ]
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasNumericalValue ;
-                    owl:hasValue "20.1"^^xsd:float
-                    ]
-                ) ;
-            rdf:type owl:Class
-            ]
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:width ;
-        owl:someValuesFrom [ owl:intersectionOf ( om:Measure
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasUnit ;
-                    owl:hasValue om:millimetre
-                    ]
-                [ rdf:type owl:Restriction ;
-                    owl:onProperty om:hasNumericalValue ;
-                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                        owl:onDatatype xsd:float ;
-                        owl:withRestrictions ( [ xsd:minInclusive "84.98"^^xsd:float
-                                ]
-                            [ xsd:maxInclusive "85.98"^^xsd:float
-                                ]
-                            )
-                        ]
-                    ]
-                ) ;
-            rdf:type owl:Class
-            ]
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:equipmentVendor ;
-        owl:hasValue cont:ThermoFisher
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:hasWellBottomShape ;
-        owl:hasValue cont:veeBottom
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:equipmentVendor ;
-        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onClass cont:VendorFirm
-        ] ,
-        [ rdf:type owl:Restriction ;
-        owl:onProperty cont:wellCount ;
-        owl:hasValue 96
-        ] .
-
-
 #################################################################
 #    Individuals
 #################################################################
@@ -1041,57 +1046,57 @@ cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
 om:Depth rdf:type owl:NamedIndividual .
 
 
-###  URL_PREFIX/container-ontology.ttl#Centrifuge
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Centrifuge
 cont:Centrifuge rdf:type owl:NamedIndividual .
 
 
-###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Blue
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Blue
 cont:EnduraPlate_96Well_Blue rdf:type owl:NamedIndividual ,
                                       cont:OpaquePlate ,
-                                      <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                      cont:ThermoFisher_EnduraPlate_96Well ;
                              cont:hasCatalogEntry cont:tf4483343 ;
                              cont:hasColor cont:blue .
 
 
-###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Clear
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Clear
 cont:EnduraPlate_96Well_Clear rdf:type owl:NamedIndividual ,
                                        cont:ClearPlate ,
-                                       <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                       cont:ThermoFisher_EnduraPlate_96Well ;
                               cont:hasCatalogEntry cont:tf4483352 ,
                                                    cont:tf4483354 ;
                               cont:hasColor cont:clear .
 
 
-###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Multicolor
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Multicolor
 cont:EnduraPlate_96Well_Multicolor rdf:type owl:NamedIndividual ,
                                             cont:OpaquePlate ,
-                                            <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                            cont:ThermoFisher_EnduraPlate_96Well ;
                                    cont:hasCatalogEntry cont:tf4483355 ,
                                                         cont:tf4483356 ;
                                    cont:hasColor cont:multicolor .
 
 
-###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Red
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Red
 cont:EnduraPlate_96Well_Red rdf:type owl:NamedIndividual ,
                                      cont:OpaquePlate ,
-                                     <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                     cont:ThermoFisher_EnduraPlate_96Well ;
                             cont:hasCatalogEntry cont:tf4483350 ;
                             cont:hasColor cont:red .
 
 
-###  URL_PREFIX/container-ontology.ttl#EnduraPlate_96Well_Yellow
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Yellow
 cont:EnduraPlate_96Well_Yellow rdf:type owl:NamedIndividual ,
                                         cont:OpaquePlate ,
-                                        <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well> ;
+                                        cont:ThermoFisher_EnduraPlate_96Well ;
                                cont:hasCatalogEntry cont:tf4483395 ;
                                cont:hasColor cont:yellow .
 
 
-###  URL_PREFIX/container-ontology.ttl#PlateReader
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#PlateReader
 cont:PlateReader rdf:type owl:NamedIndividual .
 
 
-###  URL_PREFIX/container-ontology.ttl#TFEPWD
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#TFEPWD
 cont:TFEPWD rdf:type owl:NamedIndividual ,
                      om:Measure ;
             om:hasUnit om:millimetre ;
@@ -1100,122 +1105,122 @@ cont:TFEPWD rdf:type owl:NamedIndividual ,
             rdfs:comment "The measure corresponding to the well height of the ThermoFisher EnduraPlate 96 well" .
 
 
-###  URL_PREFIX/container-ontology.ttl#ThermoFisher
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher
 cont:ThermoFisher rdf:type owl:NamedIndividual ,
                            cont:VendorFirm ;
                   cont:vendorName "ThermoFisher"^^xsd:string .
 
 
-###  URL_PREFIX/container-ontology.ttl#black
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#black
 cont:black rdf:type owl:NamedIndividual ,
                     cont:Color ,
                     cont:Opaque ;
            cont:colorName "black" .
 
 
-###  URL_PREFIX/container-ontology.ttl#blue
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#blue
 cont:blue rdf:type owl:NamedIndividual ,
                    cont:Opaque ;
           cont:colorName "blue" .
 
 
-###  URL_PREFIX/container-ontology.ttl#clear
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#clear
 cont:clear rdf:type owl:NamedIndividual ,
                     cont:Clear ,
                     cont:Color ;
            cont:colorName "clear" .
 
 
-###  URL_PREFIX/container-ontology.ttl#flatBottom
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#flatBottom
 cont:flatBottom rdf:type owl:NamedIndividual ,
                          cont:WellShape .
 
 
-###  URL_PREFIX/container-ontology.ttl#green
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#green
 cont:green rdf:type owl:NamedIndividual ,
                     cont:Opaque ;
            cont:colorName "green" .
 
 
-###  URL_PREFIX/container-ontology.ttl#multicolor
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#multicolor
 cont:multicolor rdf:type owl:NamedIndividual ,
                          cont:Opaque ;
                 cont:colorName "multicolor" .
 
 
-###  URL_PREFIX/container-ontology.ttl#red
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#red
 cont:red rdf:type owl:NamedIndividual ,
                   cont:Opaque ;
          cont:colorName "red" .
 
 
-###  URL_PREFIX/container-ontology.ttl#roundBottom
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#roundBottom
 cont:roundBottom rdf:type owl:NamedIndividual ,
                           cont:WellShape .
 
 
-###  URL_PREFIX/container-ontology.ttl#tf4483343
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483343
 cont:tf4483343 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483343" .
 
 
-###  URL_PREFIX/container-ontology.ttl#tf4483350
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483350
 cont:tf4483350 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483350" .
 
 
-###  URL_PREFIX/container-ontology.ttl#tf4483352
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483352
 cont:tf4483352 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483352" .
 
 
-###  URL_PREFIX/container-ontology.ttl#tf4483354
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483354
 cont:tf4483354 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483354" .
 
 
-###  URL_PREFIX/container-ontology.ttl#tf4483355
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483355
 cont:tf4483355 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483355" .
 
 
-###  URL_PREFIX/container-ontology.ttl#tf4483356
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483356
 cont:tf4483356 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483356" .
 
 
-###  URL_PREFIX/container-ontology.ttl#tf4483395
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483395
 cont:tf4483395 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483395" .
 
 
-###  URL_PREFIX/container-ontology.ttl#veeBottom
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#veeBottom
 cont:veeBottom rdf:type owl:NamedIndividual ,
                         cont:WellShape .
 
 
-###  URL_PREFIX/container-ontology.ttl#white
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#white
 cont:white rdf:type owl:NamedIndividual ,
                     cont:Color ,
                     cont:Opaque ;
            cont:colorName "white" .
 
 
-###  URL_PREFIX/container-ontology.ttl#yellow
+###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#yellow
 cont:yellow rdf:type owl:NamedIndividual ,
                      cont:Opaque ;
             cont:colorName "yellow" .
@@ -1225,12 +1230,12 @@ cont:yellow rdf:type owl:NamedIndividual ,
 #    Annotations
 #################################################################
 
-cont:Centrifuge rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
-                rdfs:label "Centrifuge" .
+cont:Centrifuge rdfs:label "Centrifuge" ;
+                rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
 
 
-cont:PlateReader rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
-                 rdfs:label "PlateReader" .
+cont:PlateReader rdfs:label "PlateReader" ;
+                 rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
 
 
 #################################################################
@@ -1265,7 +1270,3 @@ cont:PlateReader rdfs:comment "Likely this should actually be imported from anot
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
-
-# Local Variables:
-# mode: ttl
-# End:

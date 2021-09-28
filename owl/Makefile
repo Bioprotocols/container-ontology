@@ -12,9 +12,11 @@ HOST_PORT ?= 8080
 
 GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
-URL_PREFIX = https://raw.githubusercontent.com/rpgoldman/container-ontology/${GIT_BRANCH}/owl
+# Previously, this was based on git branch, but that was not tenable
+URL_PREFIX = https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl
+FILE_PREFIX = /srv/owl
 
-turtle_files = container-ontology.ttl om-subset.ttl strateos-catalog-individuals.ttl bbn-plate-catalog.ttl
+turtle_files = container-ontology.ttl om-subset.ttl strateos-catalog.ttl bbn-plate-catalog.ttl all-catalogs.ttl
 
 catalog_file = catalog-v001.xml
 
@@ -27,18 +29,17 @@ JAVA_ARGS := '-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlogback.configura
 
 .PHONY: server
 
-all: $(turtle_files) $(catalog_file)
+# all: $(turtle_files) $(catalog_file)
 
-$(turtle_files): %.ttl: %.m4
-	$(M4) -D URL_PREFIX=$(URL_PREFIX) -D OUTNAME=$(@F) $< > $@
+# $(turtle_files): %.ttl: %.m4
+# 	$(M4) -D URL_PREFIX=$(URL_PREFIX) -D OUTNAME=$(@F) $< > $@
 
-$(catalog_file): %.xml: %.m4
-	$(M4) -D URL_PREFIX=$(URL_PREFIX) -D OUTNAME=$(@F) $< > $@
-
-
-server:
+server: ${server_catalog_file}
 	mkdir -p $(makeFileDir)server-files
 	cp $(turtle_files) $(makeFileDir)server-files
 	cp $(server_catalog_file) $(makeFileDir)server-files
 	rm -f $(makeFileDir)server-files/.DS_Store
-	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf rpgoldman/owlery:latest | tee server.log
+	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf rpgoldman/owlery:latest 2>&1 | tee server.log
+
+$(server_catalog_file): %.xml: %.m4
+	$(M4) -D URL_PREFIX=$(URL_PREFIX) -D FILE_PREFIX=$(FILE_PREFIX) -D OUTNAME=$(@F) $< > $@
