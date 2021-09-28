@@ -1,0 +1,5 @@
+name: Container Ontology Regression tests
+on: [push]
+jobs:
+  owlery-regression-tests:
+    runs-on: ubuntu-latest

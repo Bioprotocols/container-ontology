@@ -1,0 +1,8 @@
+# owlery-action.yml
+name: 'Owlery server'
+description: 'Start up Owlery Server'
+runs:
+  using: 'docker'
+  image: rpgoldman/owlery:latest
+  args:
+    - ${{ inputs.who-to-greet }}
