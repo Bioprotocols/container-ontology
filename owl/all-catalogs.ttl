@@ -1,6 +1,6 @@
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/all-catalogs> rdf:type owl:Ontology ;
-                                                                      owl:imports <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog>, 
-                                                                                  <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/strateos-catalog.ttl> , 
-                                                                                  <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> ,
-                                                                                  <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl> ;
+<https://sift.net/container-ontology/all-catalogs> rdf:type owl:Ontology ;
+                                                                      owl:imports <https://sift.net/container-ontology/bbn-plate-catalog>, 
+                                                                                  <https://sift.net/container-ontology/strateos-catalog> , 
+                                                                                  <https://sift.net/container-ontology/container-ontology> ,
+                                                                                  <https://sift.net/container-ontology/om-subset> ;
                                                                       rdfs:label "Set of plate catalogs"@en .
