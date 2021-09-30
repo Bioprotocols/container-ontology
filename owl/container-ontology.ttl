@@ -1,18 +1,17 @@
-@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#> .
+@prefix : <https://sift.net/container-ontology/container-ontology#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#> .
+@prefix cont: <https://sift.net/container-ontology/container-ontology#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sbol: <http://sbols.org/v3#> .
-@base <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> .
 
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> rdf:type owl:Ontology ;
-                                                                                                  owl:versionIRI <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> ;
+<https://sift.net/container-ontology/container-ontology> rdf:type owl:Ontology ;
+                                                                                                  owl:versionIRI <https://sift.net/container-ontology/container-ontology> ;
                                                                                                   owl:imports <http://sbols.org/v3> ,
-                                                                                                              <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl> ;
+                                                                                                              <https://sift.net/container-ontology/om-subset> ;
                                                                                                   om:abbreviation "cont:" ;
                                                                                                   rdfs:label "Container Ontology"@en .
 
@@ -32,20 +31,20 @@ om:abbreviation rdf:type owl:AnnotationProperty .
 om:hasQuantity rdf:type owl:ObjectProperty .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#availableAt
+###  https://sift.net/container-ontology/container-ontology#availableAt
 cont:availableAt rdf:type owl:ObjectProperty ;
                  rdfs:domain cont:LabEquipment ;
                  rdfs:range cont:Lab .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#catalogEntryOf
+###  https://sift.net/container-ontology/container-ontology#catalogEntryOf
 cont:catalogEntryOf rdf:type owl:ObjectProperty ;
                     owl:inverseOf cont:hasCatalogEntry ;
                     rdfs:domain cont:CatalogEntry ;
                     rdfs:range cont:LabEquipment .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#centrifugeResistance
+###  https://sift.net/container-ontology/container-ontology#centrifugeResistance
 cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                           rdfs:domain cont:Container ;
                           rdfs:range [ owl:intersectionOf ( om:Measure
@@ -60,14 +59,14 @@ cont:centrifugeResistance rdf:type owl:ObjectProperty ;
                           rdfs:label "centrifugeResistance" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#clearanceToPlateBottom
+###  https://sift.net/container-ontology/container-ontology#clearanceToPlateBottom
 cont:clearanceToPlateBottom rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf cont:height ;
                             rdfs:comment "The minimum clearance from the resting plane to the plane of the bottom external surface of the wells."@en ;
                             rdfs:label "clearanceToPlateBottom" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#coating
+###  https://sift.net/container-ontology/container-ontology#coating
 cont:coating rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              rdfs:domain cont:Container ;
@@ -75,7 +74,7 @@ cont:coating rdf:type owl:ObjectProperty ;
              rdfs:label "coating" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#columnLabels
+###  https://sift.net/container-ontology/container-ontology#columnLabels
 cont:columnLabels rdf:type owl:ObjectProperty ,
                            owl:FunctionalProperty ;
                   rdfs:domain cont:Plate ;
@@ -83,7 +82,7 @@ cont:columnLabels rdf:type owl:ObjectProperty ,
                   rdfs:label "column labels"@en .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#compatibleCentrifuges
+###  https://sift.net/container-ontology/container-ontology#compatibleCentrifuges
 cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf cont:compatibleLabEquipment ;
                            rdfs:domain cont:Container ;
@@ -91,24 +90,24 @@ cont:compatibleCentrifuges rdf:type owl:ObjectProperty ;
                            rdfs:label "compatibleCentrifuges" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#compatibleLabEquipment
+###  https://sift.net/container-ontology/container-ontology#compatibleLabEquipment
 cont:compatibleLabEquipment rdf:type owl:ObjectProperty ;
                             rdfs:label "compatibleLabEquipment" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#compatiblePlateReaders
+###  https://sift.net/container-ontology/container-ontology#compatiblePlateReaders
 cont:compatiblePlateReaders rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf cont:compatibleLabEquipment ;
                             rdfs:label "compatiblePlateReaders" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#cornerRadius
+###  https://sift.net/container-ontology/container-ontology#cornerRadius
 cont:cornerRadius rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf cont:geometricProperty ;
                   rdfs:label "cornerRadius" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#diameter
+###  https://sift.net/container-ontology/container-ontology#diameter
 cont:diameter rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cont:geometricProperty ;
               rdfs:range om:Measure ,
@@ -119,20 +118,20 @@ cont:diameter rdf:type owl:ObjectProperty ;
               rdfs:label "diameter" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#equipmentVendor
+###  https://sift.net/container-ontology/container-ontology#equipmentVendor
 cont:equipmentVendor rdf:type owl:ObjectProperty ;
                      rdfs:domain cont:LabEquipment ;
                      rdfs:range cont:VendorFirm .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#geometricProperty
+###  https://sift.net/container-ontology/container-ontology#geometricProperty
 cont:geometricProperty rdf:type owl:ObjectProperty ;
                        rdfs:domain cont:Container ;
                        rdfs:range om:Measure ;
                        rdfs:label "geometricProperty" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasCatalogEntry
+###  https://sift.net/container-ontology/container-ontology#hasCatalogEntry
 cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain cont:LabEquipment ;
@@ -140,13 +139,13 @@ cont:hasCatalogEntry rdf:type owl:ObjectProperty ;
                      rdfs:label "hasCatalogEntry" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasColor
+###  https://sift.net/container-ontology/container-ontology#hasColor
 cont:hasColor rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf cont:qualitativeProperty ;
               rdfs:range cont:Color .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasVendorFirm
+###  https://sift.net/container-ontology/container-ontology#hasVendorFirm
 cont:hasVendorFirm rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain cont:CatalogEntry ;
@@ -154,13 +153,13 @@ cont:hasVendorFirm rdf:type owl:ObjectProperty ;
                    rdfs:label "hasVendorFirm" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#hasWellBottomShape
+###  https://sift.net/container-ontology/container-ontology#hasWellBottomShape
 cont:hasWellBottomShape rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf cont:qualitativeProperty ;
                         rdfs:label "hasWellBottomShape"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#height
+###  https://sift.net/container-ontology/container-ontology#height
 cont:height rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cont:geometricProperty ;
             rdfs:range [ owl:intersectionOf ( om:Measure
@@ -174,13 +173,13 @@ cont:height rdf:type owl:ObjectProperty ;
             rdfs:label "height" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#length
+###  https://sift.net/container-ontology/container-ontology#length
 cont:length rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf cont:geometricProperty ;
             rdfs:label "length" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#lengthAtEdge
+###  https://sift.net/container-ontology/container-ontology#lengthAtEdge
 cont:lengthAtEdge rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf cont:length ;
                   rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
@@ -189,7 +188,7 @@ This property is for the length within 12.7 mm of the edge; the other property i
                   rdfs:label "lengthAtEdge" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#lengthOverall
+###  https://sift.net/container-ontology/container-ontology#lengthOverall
 cont:lengthOverall rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf cont:length ;
                    rdfs:comment """ANSI SLAS spec 1.2004 (plate footprint spec) specifies different tolerances for the length within 12.7mm of the edge and in general, the former being tighter than the latter.
@@ -198,14 +197,14 @@ This property is for the length anywhere on the plate (the more permissive const
                    rdfs:label "lengthOverall" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#measureType
+###  https://sift.net/container-ontology/container-ontology#measureType
 cont:measureType rdf:type owl:ObjectProperty ;
                  rdfs:domain om:Measure ;
                  rdfs:range om:Quantity ;
                  rdfs:label "measureType" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#overallPlateHeight
+###  https://sift.net/container-ontology/container-ontology#overallPlateHeight
 cont:overallPlateHeight rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf cont:height ;
                         owl:propertyDisjointWith cont:plateHeight ;
@@ -213,7 +212,7 @@ cont:overallPlateHeight rdf:type owl:ObjectProperty ;
                         rdfs:label "overallPlateHeight" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#plateHeight
+###  https://sift.net/container-ontology/container-ontology#plateHeight
 cont:plateHeight rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf cont:height ;
                  rdfs:domain cont:Plate ;
@@ -221,12 +220,12 @@ cont:plateHeight rdf:type owl:ObjectProperty ;
                  rdfs:label "plateHeight" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#qualitativeProperty
+###  https://sift.net/container-ontology/container-ontology#qualitativeProperty
 cont:qualitativeProperty rdf:type owl:ObjectProperty ;
                          rdfs:domain cont:Container .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#rowLabels
+###  https://sift.net/container-ontology/container-ontology#rowLabels
 cont:rowLabels rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ;
                rdfs:domain cont:Plate ;
@@ -234,7 +233,7 @@ cont:rowLabels rdf:type owl:ObjectProperty ,
                rdfs:label "row labels"@en .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellDepth
+###  https://sift.net/container-ontology/container-ontology#wellDepth
 cont:wellDepth rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf cont:geometricProperty ;
                rdf:type owl:FunctionalProperty ;
@@ -250,13 +249,13 @@ cont:wellDepth rdf:type owl:ObjectProperty ;
                rdfs:label "wellDepth" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellVolume
+###  https://sift.net/container-ontology/container-ontology#wellVolume
 cont:wellVolume rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf cont:geometricProperty ;
                 rdfs:label "wellVolume" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#width
+###  https://sift.net/container-ontology/container-ontology#width
 cont:width rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf cont:geometricProperty ;
            rdfs:label "width" .
@@ -266,7 +265,7 @@ cont:width rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#catalogNumber
+###  https://sift.net/container-ontology/container-ontology#catalogNumber
 cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain cont:CatalogEntry ;
@@ -274,13 +273,13 @@ cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:label "catalogNumber" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#colorName
+###  https://sift.net/container-ontology/container-ontology#colorName
 cont:colorName rdf:type owl:DatatypeProperty ;
                rdfs:domain cont:Color ;
                rdfs:range xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#columnCount
+###  https://sift.net/container-ontology/container-ontology#columnCount
 cont:columnCount rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
                  rdf:type owl:FunctionalProperty ;
@@ -289,13 +288,13 @@ cont:columnCount rdf:type owl:DatatypeProperty ;
                  rdfs:label "columnCount" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#containerDataProperty
+###  https://sift.net/container-ontology/container-ontology#containerDataProperty
 cont:containerDataProperty rdf:type owl:DatatypeProperty ;
                            rdfs:domain cont:Container ;
                            rdfs:label "containerDataProperty" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#isOpticallyTransparent
+###  https://sift.net/container-ontology/container-ontology#isOpticallyTransparent
 cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf cont:containerDataProperty ;
                             rdfs:domain cont:Container ;
@@ -303,27 +302,27 @@ cont:isOpticallyTransparent rdf:type owl:DatatypeProperty ;
                             rdfs:label "isOpticallyTransparent" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#isSLAS1-2004compliant
+###  https://sift.net/container-ontology/container-ontology#isSLAS1-2004compliant
 cont:isSLAS1-2004compliant rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf cont:containerDataProperty ;
                            rdfs:range xsd:boolean ;
                            rdfs:label "isSLAS1-2004compliant" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#isStackable
+###  https://sift.net/container-ontology/container-ontology#isStackable
 cont:isStackable rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf cont:containerDataProperty ;
                  rdfs:range xsd:boolean .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#labName
+###  https://sift.net/container-ontology/container-ontology#labName
 cont:labName rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain cont:Lab ;
              rdfs:range xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#rowCount
+###  https://sift.net/container-ontology/container-ontology#rowCount
 cont:rowCount rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf cont:containerDataProperty ;
               rdf:type owl:FunctionalProperty ;
@@ -331,7 +330,7 @@ cont:rowCount rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:positiveInteger .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#vendorName
+###  https://sift.net/container-ontology/container-ontology#vendorName
 cont:vendorName rdf:type owl:DatatypeProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( cont:LabEquipment
@@ -341,7 +340,7 @@ cont:vendorName rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellCount
+###  https://sift.net/container-ontology/container-ontology#wellCount
 cont:wellCount rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf cont:containerDataProperty ;
                rdf:type owl:FunctionalProperty ;
@@ -379,23 +378,23 @@ om:Measure rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                            ] .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#CatalogEntry
+###  https://sift.net/container-ontology/container-ontology#CatalogEntry
 cont:CatalogEntry rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
                   rdfs:label "CatalogEntry" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Centrifuge
+###  https://sift.net/container-ontology/container-ontology#Centrifuge
 cont:Centrifuge rdf:type owl:Class ;
                 rdfs:subClassOf cont:LabMachinery .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Clear
+###  https://sift.net/container-ontology/container-ontology#Clear
 cont:Clear rdf:type owl:Class ;
            rdfs:subClassOf cont:Color .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ClearPlate
+###  https://sift.net/container-ontology/container-ontology#ClearPlate
 cont:ClearPlate rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                            [ rdf:type owl:Restriction ;
@@ -408,33 +407,33 @@ cont:ClearPlate rdf:type owl:Class ;
                 rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#CoatingMaterial
+###  https://sift.net/container-ontology/container-ontology#CoatingMaterial
 cont:CoatingMaterial rdf:type owl:Class ;
                      rdfs:subClassOf cont:ContainerRoot ;
                      rdfs:label "CoatingMaterial" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Color
+###  https://sift.net/container-ontology/container-ontology#Color
 cont:Color rdf:type owl:Class ;
            rdfs:subClassOf cont:ContainerRoot ;
            rdfs:comment "Enumeration class of optical properties for well plates." ;
            rdfs:label "OpticalProperty" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Container
+###  https://sift.net/container-ontology/container-ontology#Container
 cont:Container rdf:type owl:Class ;
                rdfs:subClassOf cont:LabEquipment ;
                rdfs:label "Container" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ContainerRoot
+###  https://sift.net/container-ontology/container-ontology#ContainerRoot
 cont:ContainerRoot rdf:type owl:Class ;
                    rdfs:subClassOf sbol:Identified ;
                    rdfs:comment "This is the root class for the classes defined in the Container Ontology. It is introduced to be the bridge between the container ontology and the SBOL Ontology. In turn, this connects to the sbol:Identified class, in order to make it possible for the container ontology classes to be translated into Python classes by the SBOL factory." ;
                    rdfs:label "ContainerRoot" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Lab
+###  https://sift.net/container-ontology/container-ontology#Lab
 cont:Lab rdf:type owl:Class ;
          rdfs:subClassOf cont:ContainerRoot ,
                          [ rdf:type owl:Restriction ;
@@ -445,25 +444,25 @@ cont:Lab rdf:type owl:Class ;
          rdfs:label "Lab" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#LabEquipment
+###  https://sift.net/container-ontology/container-ontology#LabEquipment
 cont:LabEquipment rdf:type owl:Class ;
                   rdfs:subClassOf cont:ContainerRoot ;
                   rdfs:label "LabEquipment" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#LabMachinery
+###  https://sift.net/container-ontology/container-ontology#LabMachinery
 cont:LabMachinery rdf:type owl:Class ;
                   rdfs:subClassOf cont:LabEquipment ;
                   rdfs:comment "This is likely a poor name, but it is intended to refer to items of equipment that act upon containers and/or their contents." ;
                   rdfs:label "LabMachinery" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Opaque
+###  https://sift.net/container-ontology/container-ontology#Opaque
 cont:Opaque rdf:type owl:Class ;
             rdfs:subClassOf cont:Color .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#OpaquePlate
+###  https://sift.net/container-ontology/container-ontology#OpaquePlate
 cont:OpaquePlate rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                             [ rdf:type owl:Restriction ;
@@ -476,14 +475,14 @@ cont:OpaquePlate rdf:type owl:Class ;
                  rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate
+###  https://sift.net/container-ontology/container-ontology#Plate
 cont:Plate rdf:type owl:Class ;
            rdfs:subClassOf cont:Container ;
            owl:disjointWith cont:Well ;
            rdfs:label "Plate" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate1536Well
+###  https://sift.net/container-ontology/container-ontology#Plate1536Well
 cont:Plate1536Well rdf:type owl:Class ;
                    owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                               [ rdf:type owl:Restriction ;
@@ -496,7 +495,7 @@ cont:Plate1536Well rdf:type owl:Class ;
                    rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate384Well
+###  https://sift.net/container-ontology/container-ontology#Plate384Well
 cont:Plate384Well rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                              [ rdf:type owl:Restriction ;
@@ -509,7 +508,7 @@ cont:Plate384Well rdf:type owl:Class ;
                   rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Plate96Well
+###  https://sift.net/container-ontology/container-ontology#Plate96Well
 cont:Plate96Well rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                             [ rdf:type owl:Restriction ;
@@ -522,12 +521,12 @@ cont:Plate96Well rdf:type owl:Class ;
                  rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#PlateReader
+###  https://sift.net/container-ontology/container-ontology#PlateReader
 cont:PlateReader rdf:type owl:Class ;
                  rdfs:subClassOf cont:LabMachinery .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-1-2004
+###  https://sift.net/container-ontology/container-ontology#SLAS-1-2004
 cont:SLAS-1-2004 rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                               owl:onProperty cont:cornerRadius ;
@@ -603,7 +602,7 @@ cont:SLAS-1-2004 rdf:type owl:Class ;
                  rdfs:label "SLAS-1-2004" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-2-2004-4
+###  https://sift.net/container-ontology/container-ontology#SLAS-2-2004-4
 cont:SLAS-2-2004-4 rdf:type owl:Class ;
                    owl:equivalentClass [ owl:intersectionOf ( cont:SLAS-2-2004-4-1
                                                               cont:SLAS-2-2004-4-2
@@ -613,7 +612,7 @@ cont:SLAS-2-2004-4 rdf:type owl:Class ;
                    rdfs:subClassOf cont:Plate .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-2-2004-4-1
+###  https://sift.net/container-ontology/container-ontology#SLAS-2-2004-4-1
 cont:SLAS-2-2004-4-1 rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( cont:SLAS-2-2004-4-2
                                                                 [ rdf:type owl:Restriction ;
@@ -644,7 +643,7 @@ cont:SLAS-2-2004-4-1 rdf:type owl:Class ;
                      rdfs:label "SLAS 2-2004 Typical Height with Clearance"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-2-2004-4-2
+###  https://sift.net/container-ontology/container-ontology#SLAS-2-2004-4-2
 cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                                 [ rdf:type owl:Class ;
@@ -714,7 +713,7 @@ cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                      rdfs:label "SLAS 2-2004 Typical Height with Clearance"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS-4-2004
+###  https://sift.net/container-ontology/container-ontology#SLAS-4-2004
 cont:SLAS-4-2004 rdf:type owl:Class ;
                  rdfs:subClassOf cont:Plate ;
                  owl:disjointUnionOf ( cont:SLAS_4-2004_1536_Well_Plate
@@ -725,7 +724,7 @@ cont:SLAS-4-2004 rdf:type owl:Class ;
                  rdfs:label "SLAS 4-2004 Well Placement standard"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS_4-2004_1536_Well_Plate
+###  https://sift.net/container-ontology/container-ontology#SLAS_4-2004_1536_Well_Plate
 cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
                                  owl:equivalentClass cont:Standard1536WellPlate ,
                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -746,7 +745,7 @@ cont:SLAS_4-2004_1536_Well_Plate rdf:type owl:Class ;
                                  rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS_4-2004_384_Well_Plate
+###  https://sift.net/container-ontology/container-ontology#SLAS_4-2004_384_Well_Plate
 cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
                                 owl:equivalentClass cont:Standard384WellPlate ,
                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -767,7 +766,7 @@ cont:SLAS_4-2004_384_Well_Plate rdf:type owl:Class ;
                                 rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#SLAS_4-2004_96_Well_Plate
+###  https://sift.net/container-ontology/container-ontology#SLAS_4-2004_96_Well_Plate
 cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
                                owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                                           [ rdf:type owl:Restriction ;
@@ -788,17 +787,17 @@ cont:SLAS_4-2004_96_Well_Plate rdf:type owl:Class ;
                                rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Standard1536WellPlate
+###  https://sift.net/container-ontology/container-ontology#Standard1536WellPlate
 cont:Standard1536WellPlate rdf:type owl:Class ;
                            rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Standard384WellPlate
+###  https://sift.net/container-ontology/container-ontology#Standard384WellPlate
 cont:Standard384WellPlate rdf:type owl:Class ;
                           rdfs:subClassOf cont:SLAS-4-2004 .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Standard96WellPlate
+###  https://sift.net/container-ontology/container-ontology#Standard96WellPlate
 cont:Standard96WellPlate rdf:type owl:Class ;
                          owl:equivalentClass [ owl:intersectionOf ( cont:Plate
                                                                     cont:SLAS_4-2004_96_Well_Plate
@@ -830,7 +829,7 @@ cont:Standard96WellPlate rdf:type owl:Class ;
                          rdfs:label "Standard 96 Well Plate" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisherCatalogEntry
+###  https://sift.net/container-ontology/container-ontology#ThermoFisherCatalogEntry
 cont:ThermoFisherCatalogEntry rdf:type owl:Class ;
                               owl:equivalentClass [ owl:intersectionOf ( cont:CatalogEntry
                                                                          [ rdf:type owl:Restriction ;
@@ -843,7 +842,7 @@ cont:ThermoFisherCatalogEntry rdf:type owl:Class ;
                               rdfs:subClassOf cont:CatalogEntry .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher_EnduraPlate_96Well
+###  https://sift.net/container-ontology/container-ontology#ThermoFisher_EnduraPlate_96Well
 cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
                                      rdfs:subClassOf cont:Plate ,
                                                      cont:SLAS_4-2004_96_Well_Plate ,
@@ -985,7 +984,7 @@ cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
                                                      ] .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#VWRCentrifugePCRPlateSpec
+###  https://sift.net/container-ontology/container-ontology#VWRCentrifugePCRPlateSpec
 cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                      owl:onProperty cont:wellDepth ;
@@ -1009,7 +1008,7 @@ cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
                                rdfs:label "VWRCentrifugePCRPlateSpec" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#VendorFirm
+###  https://sift.net/container-ontology/container-ontology#VendorFirm
 cont:VendorFirm rdf:type owl:Class ;
                 rdfs:subClassOf cont:ContainerRoot ,
                                 [ rdf:type owl:Restriction ;
@@ -1019,13 +1018,13 @@ cont:VendorFirm rdf:type owl:Class ;
                 rdfs:label "VendorFirm" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Well
+###  https://sift.net/container-ontology/container-ontology#Well
 cont:Well rdf:type owl:Class ;
           rdfs:subClassOf cont:Container ;
           rdfs:label "Well" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#WellShape
+###  https://sift.net/container-ontology/container-ontology#WellShape
 cont:WellShape rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Class ;
                                      owl:oneOf ( cont:flatBottom
@@ -1046,11 +1045,11 @@ cont:WellShape rdf:type owl:Class ;
 om:Depth rdf:type owl:NamedIndividual .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#Centrifuge
+###  https://sift.net/container-ontology/container-ontology#Centrifuge
 cont:Centrifuge rdf:type owl:NamedIndividual .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Blue
+###  https://sift.net/container-ontology/container-ontology#EnduraPlate_96Well_Blue
 cont:EnduraPlate_96Well_Blue rdf:type owl:NamedIndividual ,
                                       cont:OpaquePlate ,
                                       cont:ThermoFisher_EnduraPlate_96Well ;
@@ -1058,7 +1057,7 @@ cont:EnduraPlate_96Well_Blue rdf:type owl:NamedIndividual ,
                              cont:hasColor cont:blue .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Clear
+###  https://sift.net/container-ontology/container-ontology#EnduraPlate_96Well_Clear
 cont:EnduraPlate_96Well_Clear rdf:type owl:NamedIndividual ,
                                        cont:ClearPlate ,
                                        cont:ThermoFisher_EnduraPlate_96Well ;
@@ -1067,7 +1066,7 @@ cont:EnduraPlate_96Well_Clear rdf:type owl:NamedIndividual ,
                               cont:hasColor cont:clear .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Multicolor
+###  https://sift.net/container-ontology/container-ontology#EnduraPlate_96Well_Multicolor
 cont:EnduraPlate_96Well_Multicolor rdf:type owl:NamedIndividual ,
                                             cont:OpaquePlate ,
                                             cont:ThermoFisher_EnduraPlate_96Well ;
@@ -1076,7 +1075,7 @@ cont:EnduraPlate_96Well_Multicolor rdf:type owl:NamedIndividual ,
                                    cont:hasColor cont:multicolor .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Red
+###  https://sift.net/container-ontology/container-ontology#EnduraPlate_96Well_Red
 cont:EnduraPlate_96Well_Red rdf:type owl:NamedIndividual ,
                                      cont:OpaquePlate ,
                                      cont:ThermoFisher_EnduraPlate_96Well ;
@@ -1084,7 +1083,7 @@ cont:EnduraPlate_96Well_Red rdf:type owl:NamedIndividual ,
                             cont:hasColor cont:red .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#EnduraPlate_96Well_Yellow
+###  https://sift.net/container-ontology/container-ontology#EnduraPlate_96Well_Yellow
 cont:EnduraPlate_96Well_Yellow rdf:type owl:NamedIndividual ,
                                         cont:OpaquePlate ,
                                         cont:ThermoFisher_EnduraPlate_96Well ;
@@ -1092,11 +1091,11 @@ cont:EnduraPlate_96Well_Yellow rdf:type owl:NamedIndividual ,
                                cont:hasColor cont:yellow .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#PlateReader
+###  https://sift.net/container-ontology/container-ontology#PlateReader
 cont:PlateReader rdf:type owl:NamedIndividual .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#TFEPWD
+###  https://sift.net/container-ontology/container-ontology#TFEPWD
 cont:TFEPWD rdf:type owl:NamedIndividual ,
                      om:Measure ;
             om:hasUnit om:millimetre ;
@@ -1105,122 +1104,122 @@ cont:TFEPWD rdf:type owl:NamedIndividual ,
             rdfs:comment "The measure corresponding to the well height of the ThermoFisher EnduraPlate 96 well" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#ThermoFisher
+###  https://sift.net/container-ontology/container-ontology#ThermoFisher
 cont:ThermoFisher rdf:type owl:NamedIndividual ,
                            cont:VendorFirm ;
                   cont:vendorName "ThermoFisher"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#black
+###  https://sift.net/container-ontology/container-ontology#black
 cont:black rdf:type owl:NamedIndividual ,
                     cont:Color ,
                     cont:Opaque ;
            cont:colorName "black" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#blue
+###  https://sift.net/container-ontology/container-ontology#blue
 cont:blue rdf:type owl:NamedIndividual ,
                    cont:Opaque ;
           cont:colorName "blue" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#clear
+###  https://sift.net/container-ontology/container-ontology#clear
 cont:clear rdf:type owl:NamedIndividual ,
                     cont:Clear ,
                     cont:Color ;
            cont:colorName "clear" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#flatBottom
+###  https://sift.net/container-ontology/container-ontology#flatBottom
 cont:flatBottom rdf:type owl:NamedIndividual ,
                          cont:WellShape .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#green
+###  https://sift.net/container-ontology/container-ontology#green
 cont:green rdf:type owl:NamedIndividual ,
                     cont:Opaque ;
            cont:colorName "green" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#multicolor
+###  https://sift.net/container-ontology/container-ontology#multicolor
 cont:multicolor rdf:type owl:NamedIndividual ,
                          cont:Opaque ;
                 cont:colorName "multicolor" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#red
+###  https://sift.net/container-ontology/container-ontology#red
 cont:red rdf:type owl:NamedIndividual ,
                   cont:Opaque ;
          cont:colorName "red" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#roundBottom
+###  https://sift.net/container-ontology/container-ontology#roundBottom
 cont:roundBottom rdf:type owl:NamedIndividual ,
                           cont:WellShape .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483343
+###  https://sift.net/container-ontology/container-ontology#tf4483343
 cont:tf4483343 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483343" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483350
+###  https://sift.net/container-ontology/container-ontology#tf4483350
 cont:tf4483350 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483350" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483352
+###  https://sift.net/container-ontology/container-ontology#tf4483352
 cont:tf4483352 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483352" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483354
+###  https://sift.net/container-ontology/container-ontology#tf4483354
 cont:tf4483354 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483354" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483355
+###  https://sift.net/container-ontology/container-ontology#tf4483355
 cont:tf4483355 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483355" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483356
+###  https://sift.net/container-ontology/container-ontology#tf4483356
 cont:tf4483356 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483356" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#tf4483395
+###  https://sift.net/container-ontology/container-ontology#tf4483395
 cont:tf4483395 rdf:type owl:NamedIndividual ,
                         cont:CatalogEntry ;
                cont:hasVendorFirm cont:ThermoFisher ;
                cont:catalogNumber "tf4483395" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#veeBottom
+###  https://sift.net/container-ontology/container-ontology#veeBottom
 cont:veeBottom rdf:type owl:NamedIndividual ,
                         cont:WellShape .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#white
+###  https://sift.net/container-ontology/container-ontology#white
 cont:white rdf:type owl:NamedIndividual ,
                     cont:Color ,
                     cont:Opaque ;
            cont:colorName "white" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#yellow
+###  https://sift.net/container-ontology/container-ontology#yellow
 cont:yellow rdf:type owl:NamedIndividual ,
                      cont:Opaque ;
             cont:colorName "yellow" .

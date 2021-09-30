@@ -1,23 +1,23 @@
-@prefix : <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#> .
+@prefix : <https://sift.net/container-ontology/bbn-plate-catalog#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cont: <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#> .
+@prefix cont: <https://sift.net/container-ontology/container-ontology#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog> .
+@base <https://sift.net/container-ontology/bbn-plate-catalog> .
 
-<https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog> rdf:type owl:Ontology ;
-                                                                                             owl:imports <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl> ,
-                                                                                                         <https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/om-subset.ttl> ;
+<https://sift.net/container-ontology/bbn-plate-catalog> rdf:type owl:Ontology ;
+                                                                                             owl:imports <https://sift.net/container-ontology/container-ontology> ,
+                                                                                                         <https://sift.net/container-ontology/om-subset> ;
                                                                                              rdfs:label "BBN Plate catalog"@en .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/container-ontology.ttl#wellVolume
+###  https://sift.net/container-ontology/container-ontology.ttl#wellVolume
 cont:wellVolume rdfs:domain cont:Container .
 
 
@@ -25,7 +25,7 @@ cont:wellVolume rdfs:domain cont:Container .
 #    Classes
 #################################################################
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#CorningCatalogEntry
+###  https://sift.net/container-ontology/bbn-plate-catalog#CorningCatalogEntry
 :CorningCatalogEntry rdf:type owl:Class ;
                      rdfs:subClassOf cont:CatalogEntry ,
                                      [ rdf:type owl:Restriction ;
@@ -34,7 +34,7 @@ cont:wellVolume rdfs:domain cont:Container .
                                      ] .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#MRLabPlate
+###  https://sift.net/container-ontology/bbn-plate-catalog#MRLabPlate
 :MRLabPlate rdf:type owl:Class ;
             rdfs:subClassOf cont:Plate ,
                             [ rdf:type owl:Restriction ;
@@ -43,7 +43,7 @@ cont:wellVolume rdfs:domain cont:Container .
                             ] .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#NESTCatalogEntry
+###  https://sift.net/container-ontology/bbn-plate-catalog#NESTCatalogEntry
 :NESTCatalogEntry rdf:type owl:Class ;
                   rdfs:subClassOf cont:CatalogEntry ,
                                   [ rdf:type owl:Restriction ;
@@ -56,13 +56,13 @@ cont:wellVolume rdfs:domain cont:Container .
 #    Individuals
 #################################################################
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#Corning
+###  https://sift.net/container-ontology/bbn-plate-catalog#Corning
 :Corning rdf:type owl:NamedIndividual ,
                   cont:VendorFirm ;
          cont:vendorName "Corning" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#Corning_96_well_black_clear_bottom_plates
+###  https://sift.net/container-ontology/bbn-plate-catalog#Corning_96_well_black_clear_bottom_plates
 :Corning_96_well_black_clear_bottom_plates rdf:type owl:NamedIndividual ,
                                                     :MRLabPlate ,
                                                     cont:ClearPlate ,
@@ -73,7 +73,7 @@ cont:wellVolume rdfs:domain cont:Container .
                                            cont:wellVolume :corning-3340-well-volume .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#Corning_96_well_clear_plates
+###  https://sift.net/container-ontology/bbn-plate-catalog#Corning_96_well_clear_plates
 :Corning_96_well_clear_plates rdf:type owl:NamedIndividual ,
                                        :MRLabPlate ,
                                        cont:ClearPlate ,
@@ -83,14 +83,14 @@ cont:wellVolume rdfs:domain cont:Container .
                               cont:height :corning-33xx-height .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#NEST
+###  https://sift.net/container-ontology/bbn-plate-catalog#NEST
 :NEST rdf:type owl:NamedIndividual ,
                cont:VendorFirm ;
       cont:vendorName "NEST Scientific" ;
       rdfs:label "NEST Scientific" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#NEST_0.1_mL_96-Well_PCR_Plate_Full_Skirt
+###  https://sift.net/container-ontology/bbn-plate-catalog#NEST_0.1_mL_96-Well_PCR_Plate_Full_Skirt
 :NEST_0.1_mL_96-Well_PCR_Plate_Full_Skirt rdf:type owl:NamedIndividual ,
                                                    :MRLabPlate ,
                                                    cont:ClearPlate ,
@@ -102,25 +102,25 @@ cont:wellVolume rdfs:domain cont:Container .
                                           rdfs:label "NEST 0.1 mL 96-Well PCR Plate Full Skirt" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#ce-corning-3300
+###  https://sift.net/container-ontology/bbn-plate-catalog#ce-corning-3300
 :ce-corning-3300 rdf:type owl:NamedIndividual ,
                           :CorningCatalogEntry ;
                  cont:catalogNumber "3300" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#ce-corning-3340
+###  https://sift.net/container-ontology/bbn-plate-catalog#ce-corning-3340
 :ce-corning-3340 rdf:type owl:NamedIndividual ,
                           :CorningCatalogEntry ;
                  cont:catalogNumber "3340" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#ce-nest-402501
+###  https://sift.net/container-ontology/bbn-plate-catalog#ce-nest-402501
 :ce-nest-402501 rdf:type owl:NamedIndividual ,
                          :NESTCatalogEntry ;
                 cont:catalogNumber "402501" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#corning-3340-well-volume
+###  https://sift.net/container-ontology/bbn-plate-catalog#corning-3340-well-volume
 :corning-3340-well-volume rdf:type owl:NamedIndividual ,
                                    om:Volume ;
                           om:hasUnit om:microlitre ;
@@ -128,27 +128,27 @@ cont:wellVolume rdfs:domain cont:Container .
                           om:hasNumericalValue "360"^^xsd:int .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#corning-33xx-height
+###  https://sift.net/container-ontology/bbn-plate-catalog#corning-33xx-height
 :corning-33xx-height rdf:type owl:NamedIndividual ,
                               om:Height ;
                      om:hasUnit om:millimetre ;
                      om:hasNumericalValue "16.51"^^xsd:float .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#miles-rogers-lab-bbn
+###  https://sift.net/container-ontology/bbn-plate-catalog#miles-rogers-lab-bbn
 :miles-rogers-lab-bbn rdf:type owl:NamedIndividual ,
                                cont:Lab ;
                       rdfs:label "Miles Rogers's lab at BBN" .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#nest-505102-well-volume
+###  https://sift.net/container-ontology/bbn-plate-catalog#nest-505102-well-volume
 :nest-505102-well-volume rdf:type owl:NamedIndividual ,
                                   om:Measure ;
                          om:hasUnit om:microlitre ;
                          om:hasNumericalValue "200"^^xsd:int .
 
 
-###  https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl/bbn-plate-catalog#nest-pcr-plate-height
+###  https://sift.net/container-ontology/bbn-plate-catalog#nest-pcr-plate-height
 :nest-pcr-plate-height rdf:type owl:NamedIndividual ,
                                 om:Measure ;
                        om:hasUnit om:millimetre ;
