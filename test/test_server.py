@@ -9,7 +9,7 @@ from requests import HTTPError
 OWL_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../owl'))
 
 
-def test_server_start(reg=None, tag='latest', log_file="/logs/composition.log"):
+def test_server_start(reg=None, tag='latest'):
 
     print("REG: " + str(reg))
     print("TAG: " + str(tag))
@@ -124,6 +124,9 @@ def test_server_start(reg=None, tag='latest', log_file="/logs/composition.log"):
             #     subprocess.run(['python', plan_file.name], check=True)
 
     finally:
+        logs = container.logs()
+        with open(os.path.abspath(os.path.join(OWL_DIR, 'owlery-conf/owlery-container.log')), 'w') as file:
+            print(logs, file=file)
         try:
             container.stop()
         except HTTPError:

@@ -19,11 +19,12 @@ jobs:
       - name: do_pytest
         shell: bash
         run: python -m pytest
-      - name: save_server_logs
-        if:  ${{ failure() }}
+      - name: save_logs
+        if: ${{ failure() }}
         uses: actions/upload-artifact@v2
         with:
-          name: server-log
-          path: owl/owlery-conf/owlery.log
+          name: logs
+          path: owl/owlery-conf/*.log
+
 
             
