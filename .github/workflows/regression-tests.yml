@@ -15,6 +15,13 @@ jobs:
         run: python3 -m pip install pytest docker requests
       - name: do_pytest
         shell: bash
+        working-directory: ./container-ontology
         run: python -m pytest
+      - name: save_server_logs
+        if:  ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: server-log
+          path: container-ontology/owl/owlery-conf/owlery.log
 
             
