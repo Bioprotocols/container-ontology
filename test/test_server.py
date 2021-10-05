@@ -1,15 +1,10 @@
-import docker
 import os
-import glob
-import requests
-from requests import HTTPError 
-import json
 import time
-import sys
-import pytest
-import tempfile
-import subprocess
 from typing import Dict
+
+import docker
+import requests
+from requests import HTTPError
 
 OWL_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../owl'))
 
