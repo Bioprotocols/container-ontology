@@ -75,6 +75,7 @@ def test_server_start(reg=None, tag='latest', log_file="/logs/composition.log"):
                 time.sleep(5)
 
         assert success, "Timed out after 30 attempts to test the status and version endpoints against our container."
+        assert kb_list.json() == ['sd2e-container-catalogs']
         print("Successful test!!!")
         #assert status_response.status_code == 200, f"Testing status endpoint, got HTTP status code {status_response.status_code} with message {status_response.text}"
         #assert version_response.status_code == 200, f"Testing version endpoint, got HTTP status code {version_response.status_code} with message {version_response.text}"
