@@ -6,11 +6,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix cont: <https://sift.net/container-ontology/container-ontology#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://sift.net/container-ontology/strateos-catalog> .
 
 <https://sift.net/container-ontology/strateos-catalog> rdf:type owl:Ontology ;
-                                                                                                                     owl:imports <https://sift.net/container-ontology/container-ontology> ,
-                                                                                                                                 <https://sift.net/container-ontology/om-subset> ;
-                                                                                                                     rdfs:label "Strateos Plate Catalog"@en .
+                                                        owl:imports <https://sift.net/container-ontology/container-ontology> ,
+                                                                    <https://sift.net/container-ontology/om-subset> ;
+                                                        rdfs:label "Strateos Plate Catalog"@en .
 
 #################################################################
 #    Annotation properties
@@ -48,7 +49,7 @@ om:Depth rdf:type owl:Class .
 om:Volume rdf:type owl:Class .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#StrateosEquipment
+###  https://sift.net/container-ontology/strateos-catalog.ttl#StrateosEquipment
 :StrateosEquipment rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Restriction ;
                                          owl:onProperty cont:availableAt ;
@@ -142,24 +143,59 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
 
 ###  https://sift.net/container-ontology/container-ontology#E%26K%20Scientific
 <https://sift.net/container-ontology/container-ontology#E%26K%20Scientific> rdf:type owl:NamedIndividual ,
-                                                                                                                                      cont:VendorFirm ;
-                                                                                                                             cont:vendorName "E&K Scientific" ;
-                                                                                                                             rdfs:label "E&K Scientific" .
+                                                                                     cont:VendorFirm ;
+                                                                            cont:vendorName "E&K Scientific" ;
+                                                                            rdfs:label "E&K Scientific" .
 
 
 ###  https://sift.net/container-ontology/container-ontology#Sumitomo%20Bakelite%20Co.
 <https://sift.net/container-ontology/container-ontology#Sumitomo%20Bakelite%20Co.> rdf:type owl:NamedIndividual ,
-                                                                                                                                             cont:VendorFirm ;
-                                                                                                                                    cont:vendorName "Sumitomo Bakelite Co." ;
-                                                                                                                                    rdfs:label "Sumitomo Bakelite Co." .
+                                                                                            cont:VendorFirm ;
+                                                                                   cont:vendorName "Sumitomo Bakelite Co." ;
+                                                                                   rdfs:label "Sumitomo Bakelite Co." .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Axygenres-mw12-hp
+###  https://sift.net/container-ontology/strateos-catalog#E%26K%20Scientific24-deep
+<https://sift.net/container-ontology/strateos-catalog#E%26K%20Scientific24-deep> rdf:type owl:NamedIndividual ,
+                                                                                          cont:Plate ;
+                                                                                 cont:availableAt :Strateos ;
+                                                                                 cont:equipmentVendor <https://sift.net/container-ontology/container-ontology#E%26K%20Scientific> ;
+                                                                                 cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#E%26K%20ScientificEK-2053-S> ;
+                                                                                 cont:hasColor cont:white ;
+                                                                                 cont:height :height33 ;
+                                                                                 cont:wellDepth :wellDepth33 ;
+                                                                                 cont:wellVolume :wellvolume33 ;
+                                                                                 cont:columnCount 6 ;
+                                                                                 cont:rowCount 4 ;
+                                                                                 cont:wellCount 24 ;
+                                                                                 rdfs:comment "E&K Scientific 24-Well Pyramid Bottom Plate" ;
+                                                                                 rdfs:label "24-deep" .
+
+
+###  https://sift.net/container-ontology/strateos-catalog#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc
+<https://sift.net/container-ontology/strateos-catalog#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc> rdf:type owl:NamedIndividual ,
+                                                                                                              cont:Plate ;
+                                                                                                     cont:availableAt :Strateos ;
+                                                                                                     cont:equipmentVendor <https://sift.net/container-ontology/container-ontology#Sumitomo%20Bakelite%20Co.> ;
+                                                                                                     cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ> ;
+                                                                                                     cont:hasColor cont:white ;
+                                                                                                     cont:height :height40 ;
+                                                                                                     cont:wellDepth :wellDepth40 ;
+                                                                                                     cont:wellVolume :wellvolume40 ;
+                                                                                                     cont:columnCount 24 ;
+                                                                                                     cont:rowCount 16 ;
+                                                                                                     cont:wellCount 384 ;
+                                                                                                     rdfs:comment "Sumitomo Bakelite Co. Sumitomo Bakelite Co. PrimeSurface384U White Plate 3-D Cell Culture Plate" ;
+                                                                                                     rdfs:label "384-ubottom-white-tc" .
+
+
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Axygenres-mw12-hp
 :Axygenres-mw12-hp rdf:type owl:NamedIndividual ,
                             cont:Plate ;
                    cont:availableAt :Strateos ;
                    cont:equipmentVendor cont:Axygen ;
                    cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Axygenres-mw12-hp> ;
+                   cont:hasColor cont:white ;
                    cont:height :height39 ;
                    cont:wellDepth :wellDepth39 ;
                    cont:wellVolume :wellvolume39 ;
@@ -170,12 +206,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                    rdfs:label "res-mw12-hp" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Axygenres-mw8-hp
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Axygenres-mw8-hp
 :Axygenres-mw8-hp rdf:type owl:NamedIndividual ,
                            cont:Plate ;
                   cont:availableAt :Strateos ;
                   cont:equipmentVendor cont:Axygen ;
                   cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Axygenres-mw8-hp> ;
+                  cont:hasColor cont:white ;
                   cont:height :height26 ;
                   cont:wellDepth :wellDepth26 ;
                   cont:wellVolume :wellvolume26 ;
@@ -186,12 +223,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                   rdfs:label "res-mw8-hp" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Chemspeedchemspeed-96-sealed-pin-rack
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Chemspeedchemspeed-96-sealed-pin-rack
 :Chemspeedchemspeed-96-sealed-pin-rack rdf:type owl:NamedIndividual ,
                                                 cont:Plate ;
                                        cont:availableAt :Strateos ;
                                        cont:equipmentVendor cont:Chemspeed ;
                                        cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Chemspeedunknown> ;
+                                       cont:hasColor cont:white ;
                                        cont:height :height5 ;
                                        cont:wellDepth :wellDepth5 ;
                                        cont:wellVolume :wellvolume5 ;
@@ -202,12 +240,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                        rdfs:label "chemspeed-96-sealed-pin-rack" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning1536-tc-white-corning-3727
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning1536-tc-white-corning-3727
 :Corning1536-tc-white-corning-3727 rdf:type owl:NamedIndividual ,
                                             cont:Plate ;
                                    cont:availableAt :Strateos ;
                                    cont:equipmentVendor cont:Corning ;
                                    cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3727> ;
+                                   cont:hasColor cont:white ;
                                    cont:height :height36 ;
                                    cont:wellDepth :wellDepth36 ;
                                    cont:wellVolume :wellvolume36 ;
@@ -218,12 +257,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                    rdfs:label "1536-tc-white-corning-3727" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-flat
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-flat
 :Corning384-flat rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Corning ;
                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3706> ;
+                 cont:hasColor cont:white ;
+                 cont:hasWellBottomShape cont:flatBottom ;
                  cont:height :height32 ;
                  cont:wellDepth :wellDepth32 ;
                  cont:wellVolume :wellvolume32 ;
@@ -234,12 +275,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "384-flat" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-flat-clear-clear
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-flat-clear-clear
 :Corning384-flat-clear-clear rdf:type owl:NamedIndividual ,
                                       cont:Plate ;
                              cont:availableAt :Strateos ;
                              cont:equipmentVendor cont:Corning ;
                              cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3700> ;
+                             cont:hasColor cont:clear ;
+                             cont:hasWellBottomShape cont:flatBottom ;
                              cont:height :height34 ;
                              cont:wellDepth :wellDepth34 ;
                              cont:wellVolume :wellvolume34 ;
@@ -250,12 +293,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                              rdfs:label "384-flat-clear-clear" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-flat-white-clear
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-flat-white-clear
 :Corning384-flat-white-clear rdf:type owl:NamedIndividual ,
                                       cont:Plate ;
                              cont:availableAt :Strateos ;
                              cont:equipmentVendor cont:Corning ;
                              cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3763> ;
+                             cont:hasColor cont:clear ;
+                             cont:hasWellBottomShape cont:flatBottom ;
                              cont:height :height24 ;
                              cont:wellDepth :wellDepth24 ;
                              cont:wellVolume :wellvolume24 ;
@@ -266,12 +311,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                              rdfs:label "384-flat-white-clear" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-flat-white-white-lv
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-flat-white-white-lv
 :Corning384-flat-white-white-lv rdf:type owl:NamedIndividual ,
                                          cont:Plate ;
                                 cont:availableAt :Strateos ;
                                 cont:equipmentVendor cont:Corning ;
                                 cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3824> ;
+                                cont:hasColor cont:white ;
+                                cont:hasWellBottomShape cont:flatBottom ;
                                 cont:height :height11 ;
                                 cont:wellDepth :wellDepth11 ;
                                 cont:wellVolume :wellvolume11 ;
@@ -282,12 +329,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                 rdfs:label "384-flat-white-white-lv" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-flat-white-white-nbs
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-flat-white-white-nbs
 :Corning384-flat-white-white-nbs rdf:type owl:NamedIndividual ,
                                           cont:Plate ;
                                  cont:availableAt :Strateos ;
                                  cont:equipmentVendor cont:Corning ;
                                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3574> ;
+                                 cont:hasColor cont:white ;
+                                 cont:hasWellBottomShape cont:flatBottom ;
                                  cont:height :height2 ;
                                  cont:wellDepth :wellDepth2 ;
                                  cont:wellVolume :wellvolume2 ;
@@ -298,12 +347,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                  rdfs:label "384-flat-white-white-nbs" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-flat-white-white-tc
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-flat-white-white-tc
 :Corning384-flat-white-white-tc rdf:type owl:NamedIndividual ,
                                          cont:Plate ;
                                 cont:availableAt :Strateos ;
                                 cont:equipmentVendor cont:Corning ;
                                 cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3570> ;
+                                cont:hasColor cont:white ;
+                                cont:hasWellBottomShape cont:flatBottom ;
                                 cont:height :height18 ;
                                 cont:wellDepth :wellDepth18 ;
                                 cont:wellVolume :wellvolume18 ;
@@ -314,12 +365,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                 rdfs:label "384-flat-white-white-tc" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-round-black-black-lv-nbs
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-round-black-black-lv-nbs
 :Corning384-round-black-black-lv-nbs rdf:type owl:NamedIndividual ,
                                               cont:Plate ;
                                      cont:availableAt :Strateos ;
                                      cont:equipmentVendor cont:Corning ;
                                      cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning4514> ;
+                                     cont:hasColor cont:black ;
+                                     cont:hasWellBottomShape cont:roundBottom ;
                                      cont:height :height29 ;
                                      cont:wellDepth :wellDepth29 ;
                                      cont:wellVolume :wellvolume29 ;
@@ -330,12 +383,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                      rdfs:label "384-round-black-black-lv-nbs" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning384-round-clear-clear
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning384-round-clear-clear
 :Corning384-round-clear-clear rdf:type owl:NamedIndividual ,
                                        cont:Plate ;
                               cont:availableAt :Strateos ;
                               cont:equipmentVendor cont:Corning ;
                               cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3657> ;
+                              cont:hasColor cont:clear ;
+                              cont:hasWellBottomShape cont:roundBottom ;
                               cont:height :height20 ;
                               cont:wellDepth :wellDepth20 ;
                               cont:wellVolume :wellvolume20 ;
@@ -346,12 +401,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                               rdfs:label "384-round-clear-clear" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning96-deep
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning96-deep
 :Corning96-deep rdf:type owl:NamedIndividual ,
                          cont:Plate ;
                 cont:availableAt :Strateos ;
                 cont:equipmentVendor cont:Corning ;
                 cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3961> ;
+                cont:hasColor cont:white ;
                 cont:height :height38 ;
                 cont:wellDepth :wellDepth38 ;
                 cont:wellVolume :wellvolume38 ;
@@ -362,12 +418,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                 rdfs:label "96-deep" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning96-flat
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning96-flat
 :Corning96-flat rdf:type owl:NamedIndividual ,
                          cont:Plate ;
                 cont:availableAt :Strateos ;
                 cont:equipmentVendor cont:Corning ;
                 cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3632> ;
+                cont:hasColor cont:white ;
+                cont:hasWellBottomShape cont:flatBottom ;
                 cont:height :height13 ;
                 cont:wellDepth :wellDepth13 ;
                 cont:wellVolume :wellvolume13 ;
@@ -378,12 +436,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                 rdfs:label "96-flat" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning96-flat-uv
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning96-flat-uv
 :Corning96-flat-uv rdf:type owl:NamedIndividual ,
                             cont:Plate ;
                    cont:availableAt :Strateos ;
                    cont:equipmentVendor cont:Corning ;
                    cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3635> ;
+                   cont:hasWellBottomShape cont:flatBottom ;
                    cont:height :height8 ;
                    cont:wellDepth :wellDepth8 ;
                    cont:wellVolume :wellvolume8 ;
@@ -394,12 +453,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                    rdfs:label "96-flat-uv" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning96-ubottom-clear-tc
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning96-ubottom-clear-tc
 :Corning96-ubottom-clear-tc rdf:type owl:NamedIndividual ,
                                      cont:Plate ;
                             cont:availableAt :Strateos ;
                             cont:equipmentVendor cont:Corning ;
                             cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning353077> ;
+                            cont:hasColor cont:clear ;
+                            cont:hasWellBottomShape cont:uBottom ;
                             cont:height :height16 ;
                             cont:wellDepth :wellDepth16 ;
                             cont:wellVolume :wellvolume16 ;
@@ -410,12 +471,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                             rdfs:label "96-ubottom-clear-tc" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Corning96-well-v-bottom
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Corning96-well-v-bottom
 :Corning96-well-v-bottom rdf:type owl:NamedIndividual ,
                                   cont:Plate ;
                          cont:availableAt :Strateos ;
                          cont:equipmentVendor cont:Corning ;
                          cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3894> ;
+                         cont:hasColor cont:white ;
+                         cont:hasWellBottomShape cont:veeBottom ;
                          cont:height :height23 ;
                          cont:wellDepth :wellDepth23 ;
                          cont:wellVolume :wellvolume23 ;
@@ -426,12 +489,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                          rdfs:label "96-well-v-bottom" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Costar96-flat-clear-costar-3590
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Costar96-flat-clear-costar-3590
 :Costar96-flat-clear-costar-3590 rdf:type owl:NamedIndividual ,
                                           cont:Plate ;
                                  cont:availableAt :Strateos ;
                                  cont:equipmentVendor cont:Costar ;
                                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Costar3590> ;
+                                 cont:hasColor cont:clear ;
+                                 cont:hasWellBottomShape cont:flatBottom ;
                                  cont:height :height7 ;
                                  cont:wellDepth :wellDepth7 ;
                                  cont:wellVolume :wellvolume7 ;
@@ -442,12 +507,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                  rdfs:label "96-flat-clear-costar-3590" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Eppendorf384-pcr
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Eppendorf384-pcr
 :Eppendorf384-pcr rdf:type owl:NamedIndividual ,
                            cont:Plate ;
                   cont:availableAt :Strateos ;
                   cont:equipmentVendor cont:Eppendorf ;
                   cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf951020539> ;
+                  cont:hasColor cont:white ;
                   cont:height :height0 ;
                   cont:wellDepth :wellDepth0 ;
                   cont:wellVolume :wellvolume0 ;
@@ -458,12 +524,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                   rdfs:label "384-pcr" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Eppendorf6-flat
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Eppendorf6-flat
 :Eppendorf6-flat rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Eppendorf ;
                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30720016> ;
+                 cont:hasColor cont:white ;
+                 cont:hasWellBottomShape cont:flatBottom ;
                  cont:height :height21 ;
                  cont:wellDepth :wellDepth21 ;
                  cont:wellVolume :wellvolume21 ;
@@ -474,12 +542,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "6-flat" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Eppendorf6-flat-tc
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Eppendorf6-flat-tc
 :Eppendorf6-flat-tc rdf:type owl:NamedIndividual ,
                              cont:Plate ;
                     cont:availableAt :Strateos ;
                     cont:equipmentVendor cont:Eppendorf ;
                     cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30720113> ;
+                    cont:hasColor cont:white ;
+                    cont:hasWellBottomShape cont:flatBottom ;
                     cont:height :height15 ;
                     cont:wellDepth :wellDepth15 ;
                     cont:wellVolume :wellvolume15 ;
@@ -490,12 +560,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                     rdfs:label "6-flat-tc" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Eppendorf96-flat-clear-clear-tc
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Eppendorf96-flat-clear-clear-tc
 :Eppendorf96-flat-clear-clear-tc rdf:type owl:NamedIndividual ,
                                           cont:Plate ;
                                  cont:availableAt :Strateos ;
                                  cont:equipmentVendor cont:Eppendorf ;
                                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30730119> ;
+                                 cont:hasColor cont:clear ;
+                                 cont:hasWellBottomShape cont:flatBottom ;
                                  cont:height :height25 ;
                                  cont:wellDepth :wellDepth25 ;
                                  cont:wellVolume :wellvolume25 ;
@@ -506,12 +578,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                  rdfs:label "96-flat-clear-clear-tc" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Eppendorf96-pcr
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Eppendorf96-pcr
 :Eppendorf96-pcr rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Eppendorf ;
                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf951020619> ;
+                 cont:hasColor cont:white ;
                  cont:height :height19 ;
                  cont:wellDepth :wellDepth19 ;
                  cont:wellVolume :wellvolume19 ;
@@ -522,12 +595,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "96-pcr" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Fisher96-deep-kf
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Fisher96-deep-kf
 :Fisher96-deep-kf rdf:type owl:NamedIndividual ,
                            cont:Plate ;
                   cont:availableAt :Strateos ;
                   cont:equipmentVendor cont:Fisher ;
                   cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher22-387-031> ;
+                  cont:hasColor cont:white ;
                   cont:height :height17 ;
                   cont:wellDepth :wellDepth17 ;
                   cont:wellVolume :wellvolume17 ;
@@ -538,12 +612,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                   rdfs:label "96-deep-kf" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Fisher96-v-kf
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Fisher96-v-kf
 :Fisher96-v-kf rdf:type owl:NamedIndividual ,
                         cont:Plate ;
                cont:availableAt :Strateos ;
                cont:equipmentVendor cont:Fisher ;
                cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher22-387-030> ;
+               cont:hasColor cont:white ;
+               cont:hasWellBottomShape cont:veeBottom ;
                cont:height :height4 ;
                cont:wellDepth :wellDepth4 ;
                cont:wellVolume :wellvolume4 ;
@@ -554,12 +630,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                rdfs:label "96-v-kf" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Fisher96-vbottom-microwell
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Fisher96-vbottom-microwell
 :Fisher96-vbottom-microwell rdf:type owl:NamedIndividual ,
                                      cont:Plate ;
                             cont:availableAt :Strateos ;
                             cont:equipmentVendor cont:Fisher ;
                             cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher249944> ;
+                            cont:hasColor cont:white ;
+                            cont:hasWellBottomShape cont:veeBottom ;
                             cont:height :height30 ;
                             cont:wellDepth :wellDepth30 ;
                             cont:wellVolume :wellvolume30 ;
@@ -570,12 +648,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                             rdfs:label "96-vbottom-microwell" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Greiner1536-white-tc
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Greiner1536-white-tc
 :Greiner1536-white-tc rdf:type owl:NamedIndividual ,
                                cont:Plate ;
                       cont:availableAt :Strateos ;
                       cont:equipmentVendor cont:Greiner ;
                       cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner782073> ;
+                      cont:hasColor cont:white ;
                       cont:height :height37 ;
                       cont:wellDepth :wellDepth37 ;
                       cont:wellVolume :wellvolume37 ;
@@ -586,12 +665,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                       rdfs:label "1536-white-tc" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Greiner384-v-clear-clear
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Greiner384-v-clear-clear
 :Greiner384-v-clear-clear rdf:type owl:NamedIndividual ,
                                    cont:Plate ;
                           cont:availableAt :Strateos ;
                           cont:equipmentVendor cont:Greiner ;
                           cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner781280> ;
+                          cont:hasColor cont:clear ;
+                          cont:hasWellBottomShape cont:veeBottom ;
                           cont:height :height35 ;
                           cont:wellDepth :wellDepth35 ;
                           cont:wellVolume :wellvolume35 ;
@@ -602,12 +683,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                           rdfs:label "384-v-clear-clear" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Greiner96-flat-black-black-fluotrac-600
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Greiner96-flat-black-black-fluotrac-600
 :Greiner96-flat-black-black-fluotrac-600 rdf:type owl:NamedIndividual ,
                                                   cont:Plate ;
                                          cont:availableAt :Strateos ;
                                          cont:equipmentVendor cont:Greiner ;
                                          cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner655077> ;
+                                         cont:hasColor cont:black ;
+                                         cont:hasWellBottomShape cont:flatBottom ;
                                          cont:height :height14 ;
                                          cont:wellDepth :wellDepth14 ;
                                          cont:wellVolume :wellvolume14 ;
@@ -618,12 +701,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                          rdfs:label "96-flat-black-black-fluotrac-600" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Labcyte384-echo
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Labcyte384-echo
 :Labcyte384-echo rdf:type owl:NamedIndividual ,
                           cont:Plate ;
                  cont:availableAt :Strateos ;
                  cont:equipmentVendor cont:Labcyte ;
                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#LabcytePP-0200> ;
+                 cont:hasColor cont:white ;
                  cont:height :height6 ;
                  cont:wellDepth :wellDepth6 ;
                  cont:wellVolume :wellvolume6 ;
@@ -634,12 +718,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                  rdfs:label "384-echo" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Labcyte384-echo-ldv
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Labcyte384-echo-ldv
 :Labcyte384-echo-ldv rdf:type owl:NamedIndividual ,
                               cont:Plate ;
                      cont:availableAt :Strateos ;
                      cont:equipmentVendor cont:Labcyte ;
                      cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#LabcyteLP-0200> ;
+                     cont:hasColor cont:white ;
                      cont:height :height28 ;
                      cont:wellDepth :wellDepth28 ;
                      cont:wellVolume :wellvolume28 ;
@@ -650,12 +735,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                      rdfs:label "384-echo-ldv" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Mesoscale96-10-spot-uplex-MSD
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Mesoscale96-10-spot-uplex-MSD
 :Mesoscale96-10-spot-uplex-MSD rdf:type owl:NamedIndividual ,
                                         cont:Plate ;
                                cont:availableAt :Strateos ;
                                cont:equipmentVendor cont:Mesoscale ;
                                cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK15069L> ;
+                               cont:hasColor cont:white ;
                                cont:height :height12 ;
                                cont:wellDepth :wellDepth12 ;
                                cont:wellVolume :wellvolume12 ;
@@ -666,12 +752,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                rdfs:label "96-10-spot-uplex-MSD" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD
 :Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD rdf:type owl:NamedIndividual ,
                                                        cont:Plate ;
                                               cont:availableAt :Strateos ;
                                               cont:equipmentVendor cont:Mesoscale ;
                                               cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK15048G> ;
+                                              cont:hasColor cont:white ;
                                               cont:height :height1 ;
                                               cont:wellDepth :wellDepth1 ;
                                               cont:wellVolume :wellvolume1 ;
@@ -682,12 +769,13 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                               rdfs:label "96-10-spot-vplex-m-pro-inflamm1-MSD" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Mesoscale96-4-spot-mMIP3a-MSD
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Mesoscale96-4-spot-mMIP3a-MSD
 :Mesoscale96-4-spot-mMIP3a-MSD rdf:type owl:NamedIndividual ,
                                         cont:Plate ;
                                cont:availableAt :Strateos ;
                                cont:equipmentVendor cont:Mesoscale ;
                                cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK152MSD> ;
+                               cont:hasColor cont:white ;
                                cont:height :height10 ;
                                cont:wellDepth :wellDepth10 ;
                                cont:wellVolume :wellvolume10 ;
@@ -698,12 +786,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                rdfs:label "96-4-spot-mMIP3a-MSD" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#PerkinElmer384-flat-black-black-proxiplate-plus-f
+###  https://sift.net/container-ontology/strateos-catalog.ttl#PerkinElmer384-flat-black-black-proxiplate-plus-f
 :PerkinElmer384-flat-black-black-proxiplate-plus-f rdf:type owl:NamedIndividual ,
                                                             cont:Plate ;
                                                    cont:availableAt :Strateos ;
                                                    cont:equipmentVendor cont:PerkinElmer ;
                                                    cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6008260> ;
+                                                   cont:hasColor cont:black ;
+                                                   cont:hasWellBottomShape cont:flatBottom ;
                                                    cont:height :height31 ;
                                                    cont:wellDepth :wellDepth31 ;
                                                    cont:wellVolume :wellvolume31 ;
@@ -714,12 +804,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                    rdfs:label "384-flat-black-black-proxiplate-plus-f" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#PerkinElmer384-flat-white-white-optiplate
+###  https://sift.net/container-ontology/strateos-catalog.ttl#PerkinElmer384-flat-white-white-optiplate
 :PerkinElmer384-flat-white-white-optiplate rdf:type owl:NamedIndividual ,
                                                     cont:Plate ;
                                            cont:availableAt :Strateos ;
                                            cont:equipmentVendor cont:PerkinElmer ;
                                            cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6007290> ;
+                                           cont:hasColor cont:white ;
+                                           cont:hasWellBottomShape cont:flatBottom ;
                                            cont:height :height3 ;
                                            cont:wellDepth :wellDepth3 ;
                                            cont:wellVolume :wellvolume3 ;
@@ -730,12 +822,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                            rdfs:label "384-flat-white-white-optiplate" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#PerkinElmer384-flat-white-white-proxiplate-plus
+###  https://sift.net/container-ontology/strateos-catalog.ttl#PerkinElmer384-flat-white-white-proxiplate-plus
 :PerkinElmer384-flat-white-white-proxiplate-plus rdf:type owl:NamedIndividual ,
                                                           cont:Plate ;
                                                  cont:availableAt :Strateos ;
                                                  cont:equipmentVendor cont:PerkinElmer ;
                                                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6008280> ;
+                                                 cont:hasColor cont:white ;
+                                                 cont:hasWellBottomShape cont:flatBottom ;
                                                  cont:height :height22 ;
                                                  cont:wellDepth :wellDepth22 ;
                                                  cont:wellVolume :wellvolume22 ;
@@ -746,18 +840,20 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                  rdfs:label "384-flat-white-white-proxiplate-plus" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#Strateos
+###  https://sift.net/container-ontology/strateos-catalog.ttl#Strateos
 :Strateos rdf:type owl:NamedIndividual ,
                    cont:Lab ;
           cont:labName "Strateos" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#ThermoFisher384-ubottom-clear-polypropylene-nunc-264573
+###  https://sift.net/container-ontology/strateos-catalog.ttl#ThermoFisher384-ubottom-clear-polypropylene-nunc-264573
 :ThermoFisher384-ubottom-clear-polypropylene-nunc-264573 rdf:type owl:NamedIndividual ,
                                                                   cont:Plate ;
                                                          cont:availableAt :Strateos ;
                                                          cont:equipmentVendor cont:ThermoFisher ;
                                                          cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#ThermoFisher264573> ;
+                                                         cont:hasColor cont:clear ;
+                                                         cont:hasWellBottomShape cont:uBottom ;
                                                          cont:height :height27 ;
                                                          cont:wellDepth :wellDepth27 ;
                                                          cont:wellVolume :wellvolume27 ;
@@ -768,12 +864,14 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                                                          rdfs:label "384-ubottom-clear-polypropylene-nunc-264573" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#ThermoFisher96-flat-white-dc
+###  https://sift.net/container-ontology/strateos-catalog.ttl#ThermoFisher96-flat-white-dc
 :ThermoFisher96-flat-white-dc rdf:type owl:NamedIndividual ,
                                        cont:Plate ;
                               cont:availableAt :Strateos ;
                               cont:equipmentVendor cont:ThermoFisher ;
                               cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#ThermoFisher136101> ;
+                              cont:hasColor cont:white ;
+                              cont:hasWellBottomShape cont:flatBottom ;
                               cont:height :height9 ;
                               cont:wellDepth :wellDepth9 ;
                               cont:wellVolume :wellvolume9 ;
@@ -784,1184 +882,1152 @@ cont:ThermoFisher rdf:type cont:VendorFirm ;
                               rdfs:label "96-flat-white-dc" .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height0
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height0
 :height0 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "10.6"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height1
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height1
 :height1 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height10
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height10
 :height10 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height11
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height11
 :height11 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "12.19"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height12
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height12
 :height12 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height13
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height13
 :height13 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height14
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height14
 :height14 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height15
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height15
 :height15 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "19.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height16
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height16
 :height16 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.6"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height17
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height17
 :height17 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "44.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height18
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height18
 :height18 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height19
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height19
 :height19 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "15.9"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height2
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height2
 :height2 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height20
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height20
 :height20 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height21
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height21
 :height21 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "19.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height22
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height22
 :height22 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height23
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height23
 :height23 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "3.25"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height24
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height24
 :height24 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height25
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height25
 :height25 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height26
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height26
 :height26 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "43.8"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height27
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height27
 :height27 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height28
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height28
 :height28 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "10.48"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height29
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height29
 :height29 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height3
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height3
 :height3 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height30
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height30
 :height30 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.7"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height31
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height31
 :height31 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.35"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height32
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height32
 :height32 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height33
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height33
 :height33 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "44.04"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height34
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height34
 :height34 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.2"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height35
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height35
 :height35 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height36
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height36
 :height36 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "10.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height37
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height37
 :height37 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "10.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height38
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height38
 :height38 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "43.8"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height39
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height39
 :height39 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "44.04"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height4
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height4
 :height4 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.5"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height40
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height40
 :height40 rdf:type owl:NamedIndividual ,
                    om:Height ;
           om:hasDimension om:millimetre ;
           om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height5
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height5
 :height5 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "36.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height6
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height6
 :height6 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.4"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height7
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height7
 :height7 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height8
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height8
 :height8 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.22"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#height9
+###  https://sift.net/container-ontology/strateos-catalog.ttl#height9
 :height9 rdf:type owl:NamedIndividual ,
                   om:Height ;
          om:hasDimension om:millimetre ;
          om:hasNumericalValue "14.6"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth0
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth0
 :wellDepth0 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "9.6"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth1
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth1
 :wellDepth1 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.68"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth10
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth10
 :wellDepth10 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.68"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth11
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth11
 :wellDepth11 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "9.39"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth12
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth12
 :wellDepth12 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.68"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth13
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth13
 :wellDepth13 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.67"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth14
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth14
 :wellDepth14 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.9"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth15
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth15
 :wellDepth15 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "16.5"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth16
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth16
 :wellDepth16 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.59"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth17
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth17
 :wellDepth17 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "42.3"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth18
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth18
 :wellDepth18 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth19
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth19
 :wellDepth19 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "14.6"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth2
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth2
 :wellDepth2 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth20
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth20
 :wellDepth20 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.57"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth21
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth21
 :wellDepth21 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "16.5"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth22
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth22
 :wellDepth22 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.3"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth23
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth23
 :wellDepth23 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.668"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth24
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth24
 :wellDepth24 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.56"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth25
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth25
 :wellDepth25 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.3"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth26
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth26
 :wellDepth26 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "39.1"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth27
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth27
 :wellDepth27 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.7"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth28
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth28
 :wellDepth28 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.1"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth29
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth29
 :wellDepth29 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "6.58"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth3
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth3
 :wellDepth3 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "10.45"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth30
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth30
 :wellDepth30 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "10.5"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth31
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth31
 :wellDepth31 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.3"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth32
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth32
 :wellDepth32 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth33
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth33
 :wellDepth33 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "42.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth34
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth34
 :wellDepth34 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.43"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth35
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth35
 :wellDepth35 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "11.5"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth36
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth36
 :wellDepth36 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "4.8"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth37
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth37
 :wellDepth37 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "5.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth38
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth38
 :wellDepth38 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "42.03"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth39
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth39
 :wellDepth39 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "39.3"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth4
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth4
 :wellDepth4 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "12.9"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth40
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth40
 :wellDepth40 rdf:type owl:NamedIndividual ,
                       om:Depth ;
              om:hasDimension om:millimetre ;
              om:hasNumericalValue "12.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth5
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth5
 :wellDepth5 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "36.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth6
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth6
 :wellDepth6 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.5"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth7
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth7
 :wellDepth7 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "10.67"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth8
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth8
 :wellDepth8 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "10.67"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellDepth9
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellDepth9
 :wellDepth9 rdf:type owl:NamedIndividual ,
                      om:Depth ;
             om:hasDimension om:millimetre ;
             om:hasNumericalValue "11.2"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume0
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume0
 :wellvolume0 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "40.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume1
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume1
 :wellvolume1 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "410.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume10
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume10
 :wellvolume10 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "410.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume11
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume11
 :wellvolume11 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "40.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume12
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume12
 :wellvolume12 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "410.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume13
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume13
 :wellvolume13 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume14
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume14
 :wellvolume14 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume15
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume15
 :wellvolume15 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "5000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume16
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume16
 :wellvolume16 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "320.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume17
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume17
 :wellvolume17 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "1000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume18
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume18
 :wellvolume18 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "80.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume19
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume19
 :wellvolume19 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "160.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume2
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume2
 :wellvolume2 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "80.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume20
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume20
 :wellvolume20 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "70.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume21
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume21
 :wellvolume21 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "5000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume22
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume22
 :wellvolume22 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "28.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume23
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume23
 :wellvolume23 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "200.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume24
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume24
 :wellvolume24 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "90.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume25
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume25
 :wellvolume25 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume26
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume26
 :wellvolume26 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "32000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume27
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume27
 :wellvolume27 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "120.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume28
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume28
 :wellvolume28 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "14.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume29
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume29
 :wellvolume29 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "35.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume3
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume3
 :wellvolume3 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "105.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume30
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume30
 :wellvolume30 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "400.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume31
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume31
 :wellvolume31 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "28.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume32
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume32
 :wellvolume32 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "90.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume33
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume33
 :wellvolume33 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "10000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume34
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume34
 :wellvolume34 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "80.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume35
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume35
 :wellvolume35 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "120.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume36
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume36
 :wellvolume36 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "12.5"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume37
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume37
 :wellvolume37 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "10.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume38
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume38
 :wellvolume38 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "2000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume39
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume39
 :wellvolume39 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "21000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume4
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume4
 :wellvolume4 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "200.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume40
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume40
 :wellvolume40 rdf:type owl:NamedIndividual ,
                        om:Volume ;
               om:hasDimension om:microlitre ;
               om:hasNumericalValue "100.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume5
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume5
 :wellvolume5 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "9000.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume6
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume6
 :wellvolume6 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "135.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume7
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume7
 :wellvolume7 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "360.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume8
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume8
 :wellvolume8 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "340.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#wellvolume9
+###  https://sift.net/container-ontology/strateos-catalog.ttl#wellvolume9
 :wellvolume9 rdf:type owl:NamedIndividual ,
                       om:Volume ;
              om:hasDimension om:microlitre ;
              om:hasNumericalValue "320.0"^^xsd:float .
 
 
-###  https://sift.net/container-ontology/strateos-catalog#E%26K%20Scientific24-deep
-<https://sift.net/container-ontology/strateos-catalog#E%26K%20Scientific24-deep> rdf:type owl:NamedIndividual ,
-                                                                                                                                                       cont:Plate ;
-                                                                                                                                              cont:availableAt :Strateos ;
-                                                                                                                                              cont:equipmentVendor <https://sift.net/container-ontology/container-ontology#E%26K%20Scientific> ;
-                                                                                                                                              cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#E%26K%20ScientificEK-2053-S> ;
-                                                                                                                                              cont:height :height33 ;
-                                                                                                                                              cont:wellDepth :wellDepth33 ;
-                                                                                                                                              cont:wellVolume :wellvolume33 ;
-                                                                                                                                              cont:columnCount 6 ;
-                                                                                                                                              cont:rowCount 4 ;
-                                                                                                                                              cont:wellCount 24 ;
-                                                                                                                                              rdfs:comment "E&K Scientific 24-Well Pyramid Bottom Plate" ;
-                                                                                                                                              rdfs:label "24-deep" .
-
-
-###  https://sift.net/container-ontology/strateos-catalog#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc
-<https://sift.net/container-ontology/strateos-catalog#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                           cont:Plate ;
-                                                                                                                                                                  cont:availableAt :Strateos ;
-                                                                                                                                                                  cont:equipmentVendor <https://sift.net/container-ontology/container-ontology#Sumitomo%20Bakelite%20Co.> ;
-                                                                                                                                                                  cont:hasCatalogEntry <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ> ;
-                                                                                                                                                                  cont:height :height40 ;
-                                                                                                                                                                  cont:wellDepth :wellDepth40 ;
-                                                                                                                                                                  cont:wellVolume :wellvolume40 ;
-                                                                                                                                                                  cont:columnCount 24 ;
-                                                                                                                                                                  cont:rowCount 16 ;
-                                                                                                                                                                  cont:wellCount 384 ;
-                                                                                                                                                                  rdfs:comment "Sumitomo Bakelite Co. Sumitomo Bakelite Co. PrimeSurface384U White Plate 3-D Cell Culture Plate" ;
-                                                                                                                                                                  rdfs:label "384-ubottom-white-tc" .
-
-
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Axygenres-mw12-hp
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Axygenres-mw12-hp> rdf:type owl:NamedIndividual ,
-                                                                                                                                                               cont:CatalogEntry ;
-                                                                                                                                                      cont:catalogNumber "res-mw12-hp" ;
-                                                                                                                                                      cont:hasVendor cont:Axygen .
+                                                                                                  cont:CatalogEntry ;
+                                                                                         cont:catalogNumber "res-mw12-hp" ;
+                                                                                         cont:hasVendor cont:Axygen .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Axygenres-mw8-hp
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Axygenres-mw8-hp> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              cont:CatalogEntry ;
-                                                                                                                                                     cont:catalogNumber "res-mw8-hp" ;
-                                                                                                                                                     cont:hasVendor cont:Axygen .
+                                                                                                 cont:CatalogEntry ;
+                                                                                        cont:catalogNumber "res-mw8-hp" ;
+                                                                                        cont:hasVendor cont:Axygen .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Chemspeedunknown
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Chemspeedunknown> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              cont:CatalogEntry ;
-                                                                                                                                                     cont:catalogNumber "unknown" ;
-                                                                                                                                                     cont:hasVendor cont:Chemspeed .
+                                                                                                 cont:CatalogEntry ;
+                                                                                        cont:catalogNumber "unknown" ;
+                                                                                        cont:hasVendor cont:Chemspeed .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning353077
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning353077> rdf:type owl:NamedIndividual ,
-                                                                                                                                                           cont:CatalogEntry ;
-                                                                                                                                                  cont:catalogNumber "353077" ;
-                                                                                                                                                  cont:hasVendor cont:Corning .
+                                                                                              cont:CatalogEntry ;
+                                                                                     cont:catalogNumber "353077" ;
+                                                                                     cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3570
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3570> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3570" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3570" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3574
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3574> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3574" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3574" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3632
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3632> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3632" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3632" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3635
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3635> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3635" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3635" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3657
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3657> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3657" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3657" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3700
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3700> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3700" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3700" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3706
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3706> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3706" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3706" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3727
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3727> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3727" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3727" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3763
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3763> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3763" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3763" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3824
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3824> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3824" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3824" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3894
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3894> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3894" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3894" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3961
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning3961> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "3961" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "3961" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning4514
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Corning4514> rdf:type owl:NamedIndividual ,
-                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                cont:catalogNumber "4514" ;
-                                                                                                                                                cont:hasVendor cont:Corning .
+                                                                                            cont:CatalogEntry ;
+                                                                                   cont:catalogNumber "4514" ;
+                                                                                   cont:hasVendor cont:Corning .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Costar3590
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Costar3590> rdf:type owl:NamedIndividual ,
-                                                                                                                                                        cont:CatalogEntry ;
-                                                                                                                                               cont:catalogNumber "3590" ;
-                                                                                                                                               cont:hasVendor cont:Costar .
+                                                                                           cont:CatalogEntry ;
+                                                                                  cont:catalogNumber "3590" ;
+                                                                                  cont:hasVendor cont:Costar .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30720016
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30720016> rdf:type owl:NamedIndividual ,
-                                                                                                                                                               cont:CatalogEntry ;
-                                                                                                                                                      cont:catalogNumber "30720016" ;
-                                                                                                                                                      cont:hasVendor cont:Eppendorf .
+                                                                                                  cont:CatalogEntry ;
+                                                                                         cont:catalogNumber "30720016" ;
+                                                                                         cont:hasVendor cont:Eppendorf .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30720113
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30720113> rdf:type owl:NamedIndividual ,
-                                                                                                                                                               cont:CatalogEntry ;
-                                                                                                                                                      cont:catalogNumber "30720113" ;
-                                                                                                                                                      cont:hasVendor cont:Eppendorf .
+                                                                                                  cont:CatalogEntry ;
+                                                                                         cont:catalogNumber "30720113" ;
+                                                                                         cont:hasVendor cont:Eppendorf .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30730119
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf30730119> rdf:type owl:NamedIndividual ,
-                                                                                                                                                               cont:CatalogEntry ;
-                                                                                                                                                      cont:catalogNumber "30730119" ;
-                                                                                                                                                      cont:hasVendor cont:Eppendorf .
+                                                                                                  cont:CatalogEntry ;
+                                                                                         cont:catalogNumber "30730119" ;
+                                                                                         cont:hasVendor cont:Eppendorf .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf951020539
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf951020539> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                       cont:catalogNumber "951020539" ;
-                                                                                                                                                       cont:hasVendor cont:Eppendorf .
+                                                                                                   cont:CatalogEntry ;
+                                                                                          cont:catalogNumber "951020539" ;
+                                                                                          cont:hasVendor cont:Eppendorf .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf951020619
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Eppendorf951020619> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                       cont:catalogNumber "951020619" ;
-                                                                                                                                                       cont:hasVendor cont:Eppendorf .
+                                                                                                   cont:CatalogEntry ;
+                                                                                          cont:catalogNumber "951020619" ;
+                                                                                          cont:hasVendor cont:Eppendorf .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher22-387-030
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher22-387-030> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              cont:CatalogEntry ;
-                                                                                                                                                     cont:catalogNumber "22-387-030" ;
-                                                                                                                                                     cont:hasVendor cont:Fisher .
+                                                                                                 cont:CatalogEntry ;
+                                                                                        cont:catalogNumber "22-387-030" ;
+                                                                                        cont:hasVendor cont:Fisher .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher22-387-031
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher22-387-031> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              cont:CatalogEntry ;
-                                                                                                                                                     cont:catalogNumber "22-387-031" ;
-                                                                                                                                                     cont:hasVendor cont:Fisher .
+                                                                                                 cont:CatalogEntry ;
+                                                                                        cont:catalogNumber "22-387-031" ;
+                                                                                        cont:hasVendor cont:Fisher .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher249944
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Fisher249944> rdf:type owl:NamedIndividual ,
-                                                                                                                                                          cont:CatalogEntry ;
-                                                                                                                                                 cont:catalogNumber "249944" ;
-                                                                                                                                                 cont:hasVendor cont:Fisher .
+                                                                                             cont:CatalogEntry ;
+                                                                                    cont:catalogNumber "249944" ;
+                                                                                    cont:hasVendor cont:Fisher .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner655077
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner655077> rdf:type owl:NamedIndividual ,
-                                                                                                                                                           cont:CatalogEntry ;
-                                                                                                                                                  cont:catalogNumber "655077" ;
-                                                                                                                                                  cont:hasVendor cont:Greiner .
+                                                                                              cont:CatalogEntry ;
+                                                                                     cont:catalogNumber "655077" ;
+                                                                                     cont:hasVendor cont:Greiner .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner781280
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner781280> rdf:type owl:NamedIndividual ,
-                                                                                                                                                           cont:CatalogEntry ;
-                                                                                                                                                  cont:catalogNumber "781280" ;
-                                                                                                                                                  cont:hasVendor cont:Greiner .
+                                                                                              cont:CatalogEntry ;
+                                                                                     cont:catalogNumber "781280" ;
+                                                                                     cont:hasVendor cont:Greiner .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner782073
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Greiner782073> rdf:type owl:NamedIndividual ,
-                                                                                                                                                           cont:CatalogEntry ;
-                                                                                                                                                  cont:catalogNumber "782073" ;
-                                                                                                                                                  cont:hasVendor cont:Greiner .
+                                                                                              cont:CatalogEntry ;
+                                                                                     cont:catalogNumber "782073" ;
+                                                                                     cont:hasVendor cont:Greiner .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#LabcyteLP-0200
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#LabcyteLP-0200> rdf:type owl:NamedIndividual ,
-                                                                                                                                                            cont:CatalogEntry ;
-                                                                                                                                                   cont:catalogNumber "LP-0200" ;
-                                                                                                                                                   cont:hasVendor cont:Labcyte .
+                                                                                               cont:CatalogEntry ;
+                                                                                      cont:catalogNumber "LP-0200" ;
+                                                                                      cont:hasVendor cont:Labcyte .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#LabcytePP-0200
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#LabcytePP-0200> rdf:type owl:NamedIndividual ,
-                                                                                                                                                            cont:CatalogEntry ;
-                                                                                                                                                   cont:catalogNumber "PP-0200" ;
-                                                                                                                                                   cont:hasVendor cont:Labcyte .
+                                                                                               cont:CatalogEntry ;
+                                                                                      cont:catalogNumber "PP-0200" ;
+                                                                                      cont:hasVendor cont:Labcyte .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK15048G
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK15048G> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              cont:CatalogEntry ;
-                                                                                                                                                     cont:catalogNumber "K15048G" ;
-                                                                                                                                                     cont:hasVendor cont:Mesoscale .
+                                                                                                 cont:CatalogEntry ;
+                                                                                        cont:catalogNumber "K15048G" ;
+                                                                                        cont:hasVendor cont:Mesoscale .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK15069L
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK15069L> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              cont:CatalogEntry ;
-                                                                                                                                                     cont:catalogNumber "K15069L" ;
-                                                                                                                                                     cont:hasVendor cont:Mesoscale .
+                                                                                                 cont:CatalogEntry ;
+                                                                                        cont:catalogNumber "K15069L" ;
+                                                                                        cont:hasVendor cont:Mesoscale .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK152MSD
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#MesoscaleK152MSD> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              cont:CatalogEntry ;
-                                                                                                                                                     cont:catalogNumber "K152MSD" ;
-                                                                                                                                                     cont:hasVendor cont:Mesoscale .
+                                                                                                 cont:CatalogEntry ;
+                                                                                        cont:catalogNumber "K152MSD" ;
+                                                                                        cont:hasVendor cont:Mesoscale .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6007290
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6007290> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                       cont:catalogNumber "6007290" ;
-                                                                                                                                                       cont:hasVendor cont:PerkinElmer .
+                                                                                                   cont:CatalogEntry ;
+                                                                                          cont:catalogNumber "6007290" ;
+                                                                                          cont:hasVendor cont:PerkinElmer .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6008260
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6008260> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                       cont:catalogNumber "6008260" ;
-                                                                                                                                                       cont:hasVendor cont:PerkinElmer .
+                                                                                                   cont:CatalogEntry ;
+                                                                                          cont:catalogNumber "6008260" ;
+                                                                                          cont:hasVendor cont:PerkinElmer .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6008280
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#PerkinElmer6008280> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                       cont:catalogNumber "6008280" ;
-                                                                                                                                                       cont:hasVendor cont:PerkinElmer .
+                                                                                                   cont:CatalogEntry ;
+                                                                                          cont:catalogNumber "6008280" ;
+                                                                                          cont:hasVendor cont:PerkinElmer .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#ThermoFisher136101
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#ThermoFisher136101> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                       cont:catalogNumber "136101" ;
-                                                                                                                                                       cont:hasVendor cont:ThermoFisher .
+                                                                                                   cont:CatalogEntry ;
+                                                                                          cont:catalogNumber "136101" ;
+                                                                                          cont:hasVendor cont:ThermoFisher .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#ThermoFisher264573
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#ThermoFisher264573> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                       cont:catalogNumber "264573" ;
-                                                                                                                                                       cont:hasVendor cont:ThermoFisher .
+                                                                                                   cont:CatalogEntry ;
+                                                                                          cont:catalogNumber "264573" ;
+                                                                                          cont:hasVendor cont:ThermoFisher .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#E%26K%20ScientificEK-2053-S
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#E%26K%20ScientificEK-2053-S> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                         cont:CatalogEntry ;
-                                                                                                                                                                cont:catalogNumber "EK-2053-S" ;
-                                                                                                                                                                cont:hasVendor <https://sift.net/container-ontology/container-ontology#E%26K%20Scientific> .
+                                                                                                            cont:CatalogEntry ;
+                                                                                                   cont:catalogNumber "EK-2053-S" ;
+                                                                                                   cont:hasVendor <https://sift.net/container-ontology/container-ontology#E%26K%20Scientific> .
 
 
 ###  https://sift.net/container-ontology/strateos-catalog/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ
 <https://sift.net/container-ontology/strateos-catalog/catalog-entries#Sumitomo%20Bakelite%20Co.MS-9384WZ> rdf:type owl:NamedIndividual ,
-                                                                                                                                                                                cont:CatalogEntry ;
-                                                                                                                                                                       cont:catalogNumber "MS-9384WZ" ;
-                                                                                                                                                                       cont:hasVendor <https://sift.net/container-ontology/container-ontology#Sumitomo%20Bakelite%20Co.> .
+                                                                                                                   cont:CatalogEntry ;
+                                                                                                          cont:catalogNumber "MS-9384WZ" ;
+                                                                                                          cont:hasVendor <https://sift.net/container-ontology/container-ontology#Sumitomo%20Bakelite%20Co.> .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
