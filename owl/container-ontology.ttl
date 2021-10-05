@@ -7,13 +7,13 @@
 @prefix cont: <https://sift.net/container-ontology/container-ontology#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sbol: <http://sbols.org/v3#> .
+@base <https://sift.net/container-ontology/container-ontology> .
 
 <https://sift.net/container-ontology/container-ontology> rdf:type owl:Ontology ;
-                                                                                                  owl:versionIRI <https://sift.net/container-ontology/container-ontology> ;
-                                                                                                  owl:imports <http://sbols.org/v3> ,
-                                                                                                              <https://sift.net/container-ontology/om-subset> ;
-                                                                                                  om:abbreviation "cont:" ;
-                                                                                                  rdfs:label "Container Ontology"@en .
+                                                          owl:imports <http://sbols.org/v3> ,
+                                                                      <https://sift.net/container-ontology/om-subset> ;
+                                                          om:abbreviation "cont:" ;
+                                                          rdfs:label "Container Ontology"@en .
 
 #################################################################
 #    Annotation properties
@@ -352,6 +352,18 @@ cont:wellCount rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://purl.obolibrary.org/obo/NCIT_C96142
+<http://purl.obolibrary.org/obo/NCIT_C96142> rdf:type owl:Class ;
+                                             owl:equivalentClass cont:Plate ;
+                                             rdfs:subClassOf <https://identifiers.org/http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/NCIT_C43377> ;
+                                             rdfs:comment """Microwell plate.
+
+A flat dish type device with multiple wells for testing cellular material.
+
+Small volume multi-chambered plate (e.g. 96 well).""" ;
+                                             rdfs:label "Microwell plate" .
+
+
 ###  http://www.ontology-of-units-of-measure.org/resource/om-2/Force
 om:Force rdf:type owl:Class .
 
@@ -376,6 +388,10 @@ om:Measure rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                              owl:onProperty om:hasNumericalValue ;
                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
                            ] .
+
+
+###  https://identifiers.org/http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/NCIT_C43377
+<https://identifiers.org/http://purl.obolibrary.org/obo/http://purl.obolibrary.org/obo/NCIT_C43377> rdf:type owl:Class .
 
 
 ###  https://sift.net/container-ontology/container-ontology#CatalogEntry
@@ -455,6 +471,18 @@ cont:LabMachinery rdf:type owl:Class ;
                   rdfs:subClassOf cont:LabEquipment ;
                   rdfs:comment "This is likely a poor name, but it is intended to refer to items of equipment that act upon containers and/or their contents." ;
                   rdfs:label "LabMachinery" .
+
+
+###  https://sift.net/container-ontology/container-ontology#NotFlatWellBottom
+cont:NotFlatWellBottom rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( cont:roundBottom
+                                                         cont:uBottom
+                                                         cont:veeBottom
+                                                       )
+                                           ] ;
+                       rdfs:subClassOf cont:ContainerRoot ;
+                       rdfs:comment "For certain operations, it's nice to have a well whose bottom does not have corners." .
 
 
 ###  https://sift.net/container-ontology/container-ontology#Opaque
@@ -1029,6 +1057,7 @@ cont:WellShape rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Class ;
                                      owl:oneOf ( cont:flatBottom
                                                  cont:roundBottom
+                                                 cont:uBottom
                                                  cont:veeBottom
                                                )
                                    ] ;
@@ -1207,6 +1236,11 @@ cont:tf4483395 rdf:type owl:NamedIndividual ,
                cont:catalogNumber "tf4483395" .
 
 
+###  https://sift.net/container-ontology/container-ontology#uBottom
+cont:uBottom rdf:type owl:NamedIndividual ,
+                      cont:WellShape .
+
+
 ###  https://sift.net/container-ontology/container-ontology#veeBottom
 cont:veeBottom rdf:type owl:NamedIndividual ,
                         cont:WellShape .
@@ -1233,8 +1267,8 @@ cont:Centrifuge rdfs:label "Centrifuge" ;
                 rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
 
 
-cont:PlateReader rdfs:label "PlateReader" ;
-                 rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." .
+cont:PlateReader rdfs:comment "Likely this should actually be imported from another ontology of lab equipment, if one is available." ;
+                 rdfs:label "PlateReader" .
 
 
 #################################################################
