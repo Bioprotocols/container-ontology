@@ -6,6 +6,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2.3.4
+      - name: Where the heck am I?
+        shell: bash
+        run: pwd ; ls
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
