@@ -265,6 +265,10 @@ cont:width rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue
+om:hasNumericalValue rdfs:range xsd:decimal .
+
+
 ###  https://sift.net/container-ontology/container-ontology#catalogNumber
 cont:catalogNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
@@ -566,10 +570,10 @@ cont:SLAS-1-2004 rdf:type owl:Class ;
                                                                                                         [ rdf:type owl:Restriction ;
                                                                                                           owl:onProperty om:hasNumericalValue ;
                                                                                                           owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                              owl:onDatatype xsd:float ;
-                                                                                                                              owl:withRestrictions ( [ xsd:minInclusive "1.58"^^xsd:float
+                                                                                                                              owl:onDatatype xsd:decimal ;
+                                                                                                                              owl:withRestrictions ( [ xsd:minInclusive 1.58
                                                                                                                                                      ]
-                                                                                                                                                     [ xsd:maxInclusive "4.78"^^xsd:float
+                                                                                                                                                     [ xsd:maxInclusive 4.78
                                                                                                                                                      ]
                                                                                                                                                    )
                                                                                                                             ]
@@ -588,10 +592,10 @@ cont:SLAS-1-2004 rdf:type owl:Class ;
                                                                                                         [ rdf:type owl:Restriction ;
                                                                                                           owl:onProperty om:hasNumericalValue ;
                                                                                                           owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                              owl:onDatatype xsd:float ;
-                                                                                                                              owl:withRestrictions ( [ xsd:minInclusive "127.51"^^xsd:float
+                                                                                                                              owl:onDatatype xsd:decimal ;
+                                                                                                                              owl:withRestrictions ( [ xsd:minInclusive 127.51
                                                                                                                                                      ]
-                                                                                                                                                     [ xsd:maxInclusive "128.01"^^xsd:float
+                                                                                                                                                     [ xsd:maxInclusive 128.01
                                                                                                                                                      ]
                                                                                                                                                    )
                                                                                                                             ]
@@ -610,10 +614,10 @@ cont:SLAS-1-2004 rdf:type owl:Class ;
                                                                                                         [ rdf:type owl:Restriction ;
                                                                                                           owl:onProperty om:hasNumericalValue ;
                                                                                                           owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                              owl:onDatatype xsd:float ;
-                                                                                                                              owl:withRestrictions ( [ xsd:minInclusive "85.23"^^xsd:float
+                                                                                                                              owl:onDatatype xsd:decimal ;
+                                                                                                                              owl:withRestrictions ( [ xsd:minInclusive 85.23
                                                                                                                                                      ]
-                                                                                                                                                     [ xsd:maxInclusive "85.73"^^xsd:float
+                                                                                                                                                     [ xsd:maxInclusive 85.73
                                                                                                                                                      ]
                                                                                                                                                    )
                                                                                                                             ]
@@ -653,8 +657,8 @@ cont:SLAS-2-2004-4-1 rdf:type owl:Class ;
                                                                                                             [ rdf:type owl:Restriction ;
                                                                                                               owl:onProperty om:hasNumericalValue ;
                                                                                                               owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                  owl:onDatatype xsd:float ;
-                                                                                                                                  owl:withRestrictions ( [ xsd:maxInclusive "1.0"^^xsd:float
+                                                                                                                                  owl:onDatatype xsd:decimal ;
+                                                                                                                                  owl:withRestrictions ( [ xsd:maxInclusive 1.0
                                                                                                                                                          ]
                                                                                                                                                        )
                                                                                                                                 ]
@@ -699,10 +703,10 @@ cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                                                                                                             [ rdf:type owl:Restriction ;
                                                                                                               owl:onProperty om:hasNumericalValue ;
                                                                                                               owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                  owl:onDatatype xsd:float ;
-                                                                                                                                  owl:withRestrictions ( [ xsd:minInclusive "13.59"^^xsd:float
+                                                                                                                                  owl:onDatatype xsd:decimal ;
+                                                                                                                                  owl:withRestrictions ( [ xsd:minInclusive 13.59
                                                                                                                                                          ]
-                                                                                                                                                         [ xsd:maxInclusive "15.11"^^xsd:float
+                                                                                                                                                         [ xsd:maxInclusive 15.11
                                                                                                                                                          ]
                                                                                                                                                        )
                                                                                                                                 ]
@@ -721,10 +725,10 @@ cont:SLAS-2-2004-4-2 rdf:type owl:Class ;
                                                                                                             [ rdf:type owl:Restriction ;
                                                                                                               owl:onProperty om:hasNumericalValue ;
                                                                                                               owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                  owl:onDatatype xsd:float ;
-                                                                                                                                  owl:withRestrictions ( [ xsd:minInclusive "14.1"^^xsd:float
+                                                                                                                                  owl:onDatatype xsd:decimal ;
+                                                                                                                                  owl:withRestrictions ( [ xsd:minInclusive 14.1
                                                                                                                                                          ]
-                                                                                                                                                         [ xsd:maxInclusive "14.6"^^xsd:float
+                                                                                                                                                         [ xsd:maxInclusive 14.6
                                                                                                                                                          ]
                                                                                                                                                        )
                                                                                                                                 ]
@@ -838,10 +842,10 @@ cont:Standard96WellPlate rdf:type owl:Class ;
                                                                                                                 [ rdf:type owl:Restriction ;
                                                                                                                   owl:onProperty om:hasNumericalValue ;
                                                                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                       owl:onDatatype xsd:float ;
-                                                                                                                                       owl:withRestrictions ( [ xsd:minInclusive "13.5"^^xsd:float
+                                                                                                                                       owl:onDatatype xsd:decimal ;
+                                                                                                                                       owl:withRestrictions ( [ xsd:minInclusive 13.5
                                                                                                                                                               ]
-                                                                                                                                                              [ xsd:maxInclusive "15.25"^^xsd:float
+                                                                                                                                                              [ xsd:maxInclusive 15.25
                                                                                                                                                               ]
                                                                                                                                                             )
                                                                                                                                      ]
@@ -909,7 +913,7 @@ cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
                                                                                                  ]
                                                                                                  [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty om:hasNumericalValue ;
-                                                                                                   owl:hasValue "20.1"^^xsd:float
+                                                                                                   owl:hasValue 20.1
                                                                                                  ]
                                                                                                ) ;
                                                                             rdf:type owl:Class
@@ -925,10 +929,10 @@ cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
                                                                                                  [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty om:hasNumericalValue ;
                                                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                        owl:onDatatype xsd:float ;
-                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive "127.26"^^xsd:float
+                                                                                                                        owl:onDatatype xsd:decimal ;
+                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive 127.26
                                                                                                                                                ]
-                                                                                                                                               [ xsd:maxInclusive "128.26"^^xsd:float
+                                                                                                                                               [ xsd:maxInclusive 128.26
                                                                                                                                                ]
                                                                                                                                              )
                                                                                                                       ]
@@ -965,7 +969,7 @@ cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
                                                                                                  ]
                                                                                                  [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty om:hasNumericalValue ;
-                                                                                                   owl:hasValue "20.1"^^xsd:float
+                                                                                                   owl:hasValue 20.1
                                                                                                  ]
                                                                                                ) ;
                                                                             rdf:type owl:Class
@@ -981,10 +985,10 @@ cont:ThermoFisher_EnduraPlate_96Well rdf:type owl:Class ;
                                                                                                  [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty om:hasNumericalValue ;
                                                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                        owl:onDatatype xsd:float ;
-                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive "84.98"^^xsd:float
+                                                                                                                        owl:onDatatype xsd:decimal ;
+                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive 84.98
                                                                                                                                                ]
-                                                                                                                                               [ xsd:maxInclusive "85.98"^^xsd:float
+                                                                                                                                               [ xsd:maxInclusive 85.98
                                                                                                                                                ]
                                                                                                                                              )
                                                                                                                       ]
@@ -1027,7 +1031,7 @@ cont:VWRCentrifugePCRPlateSpec rdf:type owl:Class ;
                                                                                                ]
                                                                                                [ rdf:type owl:Restriction ;
                                                                                                  owl:onProperty om:hasNumericalValue ;
-                                                                                                 owl:hasValue "20.1"^^xsd:float
+                                                                                                 owl:hasValue 20.1
                                                                                                ]
                                                                                              ) ;
                                                                           rdf:type owl:Class
@@ -1129,7 +1133,7 @@ cont:TFEPWD rdf:type owl:NamedIndividual ,
                      om:Measure ;
             om:hasUnit om:millimetre ;
             cont:measureType om:Depth ;
-            om:hasNumericalValue "20.1"^^xsd:float ;
+            om:hasNumericalValue 20.1 ;
             rdfs:comment "The measure corresponding to the well height of the ThermoFisher EnduraPlate 96 well" .
 
 
