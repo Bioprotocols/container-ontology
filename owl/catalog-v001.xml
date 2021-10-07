@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://sift.net/container-ontology/bbn-plate-catalog" uri="bbn-plate-catalog.ttl"/>
     <uri id="User Edited Redirect" name="https://sift.net/container-ontology/container-ontology" uri="container-ontology.ttl"/>
     <uri id="User Entered Import Resolution" name="https://sift.net/container-ontology/strateos-catalog" uri="strateos-catalog.ttl"/>
-    <uri id="User Entered Import Resolution" name="https://sift.net/container-ontology/bbn-catalog" uri="bbn-catalog.ttl"/>
     <uri id="Imports Wizard Entry" name="https://sift.net/container-ontology/om-subset" uri="om-subset.ttl"/>
     <uri id="Imports Wizard Entry" name="http://www.ontology-of-units-of-measure.org/resource/om-2" uri="om-2.0.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
