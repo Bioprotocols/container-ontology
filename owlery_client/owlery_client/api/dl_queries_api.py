@@ -22,6 +22,7 @@ from owlery_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
+from owlery_client.model.inline_response200 import InlineResponse200
 
 
 class DLQueriesApi(object):
@@ -225,7 +226,7 @@ class DLQueriesApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                None
+                InlineResponse200
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -256,7 +257,7 @@ class DLQueriesApi(object):
 
         self.kbs_kb_instances_get = _Endpoint(
             settings={
-                'response_type': None,
+                'response_type': (InlineResponse200,),
                 'auth': [],
                 'endpoint_path': '/kbs/{kb}/instances',
                 'operation_id': 'kbs_kb_instances_get',

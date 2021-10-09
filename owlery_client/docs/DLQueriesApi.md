@@ -92,7 +92,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **kbs_kb_instances_get**
-> kbs_kb_instances_get(kb, object)
+> InlineResponse200 kbs_kb_instances_get(kb, object)
 
 Instances
 
@@ -104,6 +104,7 @@ Get instances of a named class or class expression
 import time
 import owlery_client
 from owlery_client.api import dl_queries_api
+from owlery_client.model.inline_response200 import InlineResponse200
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -125,7 +126,8 @@ with owlery_client.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Instances
-        api_instance.kbs_kb_instances_get(kb, object)
+        api_response = api_instance.kbs_kb_instances_get(kb, object)
+        pprint(api_response)
     except owlery_client.ApiException as e:
         print("Exception when calling DLQueriesApi->kbs_kb_instances_get: %s\n" % e)
 
@@ -133,7 +135,8 @@ with owlery_client.ApiClient() as api_client:
     # and optional values
     try:
         # Instances
-        api_instance.kbs_kb_instances_get(kb, object, prefixes=prefixes, direct=direct, include_deprecated=include_deprecated)
+        api_response = api_instance.kbs_kb_instances_get(kb, object, prefixes=prefixes, direct=direct, include_deprecated=include_deprecated)
+        pprint(api_response)
     except owlery_client.ApiException as e:
         print("Exception when calling DLQueriesApi->kbs_kb_instances_get: %s\n" % e)
 ```
@@ -151,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 

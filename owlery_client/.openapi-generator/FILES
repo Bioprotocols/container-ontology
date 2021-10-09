@@ -1,9 +1,9 @@
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/DLQueriesApi.md
+docs/InlineResponse200.md
 docs/KnowledgebasesApi.md
 docs/SPARQLApi.md
 git_push.sh
@@ -17,6 +17,7 @@ owlery_client/apis/__init__.py
 owlery_client/configuration.py
 owlery_client/exceptions.py
 owlery_client/model/__init__.py
+owlery_client/model/inline_response200.py
 owlery_client/model_utils.py
 owlery_client/models/__init__.py
 owlery_client/rest.py
@@ -25,7 +26,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_dl_queries_api.py
-test/test_knowledgebases_api.py
-test/test_sparql_api.py
+test/test_inline_response200.py
 tox.ini

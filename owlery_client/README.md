@@ -50,6 +50,7 @@ import time
 import owlery_client
 from pprint import pprint
 from owlery_client.api import dl_queries_api
+from owlery_client.model.inline_response200 import InlineResponse200
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = owlery_client.Configuration(
@@ -97,6 +98,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [InlineResponse200](docs/InlineResponse200.md)
 
 
 ## Documentation For Authorization
