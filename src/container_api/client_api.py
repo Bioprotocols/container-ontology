@@ -4,12 +4,15 @@ specification -- an OWL (anonymous) class definition in Manchester syntax -- by
 consulting a server (implemented using Owlery).
 """
 
-__all__ = ['matching_containers']
+__all__ = ["matching_containers", "strateos_id"]
 
+import html
 import logging
+import re
 
 import owlery_client
 
+from os.path import basename
 from typing import List
 
 from owlery_client.api import dl_queries_api
@@ -29,6 +32,40 @@ def matching_containers(
         base_url=base_url,
         kb_name=kb_name,
     )
+
+
+PREFIX_SPLITER = re.compile(".*#(.*)")
+VENDOR_STRINGS = [
+    html.escape(x).replace(" ", "%20")
+    for x in [
+        "Fisher",
+        "ThermoFisher",
+        "Eppendorf",
+        "Costar",
+        "USA Scientific",
+        "Mesoscale",
+        "Chemspeed",
+        "E&K Scientific",
+        "Sumitomo Bakelite Co.",
+        "PerkinElmer",
+        "Labcyte",
+        "Greiner",
+        "Corning",
+        "Axygen",
+        "Tradewinds",
+    ]
+]
+
+
+def strateos_id(uri: str) -> str:
+    suffix = basename(uri)
+    vendor_and_id = re.match(PREFIX_SPLITER, suffix).group(1)
+    x: str
+    for x in VENDOR_STRINGS:
+        trimmed = vendor_and_id.removeprefix(x)
+        if trimmed != vendor_and_id:
+            return trimmed
+    raise ValueError(f"Unable to extract a strateos ID from {uri}")
 
 
 def _mc_helper(
@@ -56,10 +93,12 @@ def _mc_helper(
                 include_deprecated=include_deprecated,
             )
         except owlery_client.ApiException as e:
-            logger.error("Exception when calling DLQueriesApi->kbs_kb_instances_get: %s\n" % e)
+            logger.error(
+                "Exception when calling DLQueriesApi->kbs_kb_instances_get: %s\n" % e
+            )
     logger.debug("Instances are %s", instances)
-    logger.debug("Returning %s", instances['has_instance'])
-    return instances['has_instance']
+    logger.debug("Returning %s", instances["has_instance"])
+    return instances["has_instance"]
 
 
 if __name__ == "__main__":
@@ -69,7 +108,7 @@ if __name__ == "__main__":
     sub_logger = logging.getLogger("owlery_client.api_client")
     sub_logger.setLevel(logging.DEBUG)
     # the following urllib settings don't seem to do anything at all.
-    request_logger = logging.getLogger('urllib3')
+    request_logger = logging.getLogger("urllib3")
     request_logger.setLevel(logging.DEBUG)
     logger.setLevel(logging.DEBUG)
     logging.basicConfig(level=logging.DEBUG)
@@ -87,4 +126,4 @@ if __name__ == "__main__":
     insts = _mc_helper(container_spec=plate_spec, prefix_map=prefix_map)
     print("List of matching instances is:")
     for inst in insts:
-        print('\t' + inst)
+        print("\t" + inst)
