@@ -11,9 +11,22 @@ VERSION = "1.0.0"
 
 REQUIRES = [
     "rdflib",
-  "urllib3 >= 1.25.3",
-  "python-dateutil",
+    "urllib3 >= 1.25.3",
+    "python-dateutil",
 ]
+
+packages = find_packages(
+    where="owlery_client", exclude=["test", "tests"]
+) + find_packages(where="src", exclude=["catalog_translator", "test", "tests"])
+
+package_dir = {
+    "owlery_client": "owlery_client/owlery_client",
+    "owlery_client.apis": "owlery_client/owlery_client/apis",
+    "owlery_client.api": "owlery_client/owlery_client/api",
+    "owlery_client.models": "owlery_client/owlery_client/models",
+    "owlery_client.model": "owlery_client/owlery_client/model",
+    "container_api": "src/container_api",
+}
 
 setup(
     name=NAME,
@@ -24,7 +37,8 @@ setup(
     url="https://github.com/rpgoldman/container-ontology",
     python_requires=">=3.6",
     install_requires=REQUIRES,
-    packages=find_packages(["src", "owlery_client"], exclude=["test", "tests"]),
+    packages=packages,
+    package_dir=package_dir,
     include_package_data=True,
     license="MIT",
     # long_description="""\
