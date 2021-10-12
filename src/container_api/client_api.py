@@ -13,7 +13,7 @@ import re
 import owlery_client
 
 from os.path import basename
-from typing import List
+from typing import List, Optional
 
 from owlery_client.api import dl_queries_api
 
@@ -24,11 +24,15 @@ logger = logging.getLogger("container_ontology.client_api")
 
 
 def matching_containers(
-    container_spec, base_url="http://localhost:8080", kb_name="sd2e-container-catalogs"
+    container_spec,
+    base_url="http://localhost:8080",
+    kb_name="sd2e-container-catalogs",
+    addl_conditions: Optional[str] = None,
 ) -> List[URL]:
     return _mc_helper(
         container_spec=container_spec.queryString,
         prefix_map=container_spec.prefixMap,
+        addl_conditions=addl_conditions,
         base_url=base_url,
         kb_name=kb_name,
     )
@@ -72,14 +76,20 @@ def _mc_helper(
     *,
     container_spec,
     prefix_map,
+    addl_conditions: Optional[str] = None,
     base_url="http://localhost:8080",
-    kb_name="sd2e-container-catalogs"
+    kb_name="sd2e-container-catalogs",
 ) -> List[URL]:
     configuration = owlery_client.Configuration(host=base_url)
+    instances: Optional[List[str]] = None
     with owlery_client.ApiClient(configuration) as api_client:
         api_instance = dl_queries_api.DLQueriesApi(api_client)
         kb = kb_name  # str | label for a knowledgebase in this Owlery
-        object = container_spec  # str | Manchester-syntax OWL class expression
+        object = container_spec
+        if addl_conditions is not None:
+            object += (
+                " and " + addl_conditions
+            )  # str | Manchester-syntax OWL class expression
         prefixes = prefix_map  # str | JSON format prefix map (optional)
         direct = False  # bool |  (optional) if omitted the server will use the default value of True
         include_deprecated = True  # bool | Include `owl:deprecated` terms in the result (optional) if omitted the server will use the default value of True
@@ -120,10 +130,21 @@ if __name__ == "__main__":
      cont:SLAS-4-2004 and
      (cont:wellVolume some
             ((om:hasUnit value om:microlitre) and
-             (om:hasNumericalValue only xsd:decimal[>= "200"^^xsd:decimal])))"""
+             (om:hasNumericalValue only xsd:decimal[>= "200"^^xsd:decimal])))
+     and (cont:hasWellBottomShape only cont:NotFlatWellBottom)"""
 
     prefix_map = dumps({"cont": CONT_NS, "om": OM_NS})
     insts = _mc_helper(container_spec=plate_spec, prefix_map=prefix_map)
     print("List of matching instances is:")
     for inst in insts:
         print("\t" + inst)
+
+    print("Checking matching plates that are also available at Strateos.")
+    insts = _mc_helper(
+        container_spec=plate_spec
+        + " and (cont:availableAt value <https://sift.net/container-ontology/strateos-catalog#Strateos>)",
+        prefix_map=prefix_map,
+    )
+    print("List of matching instances AT STRATEOS is:")
+    for inst in insts:
+        print(f"\t{inst} short name: {strateos_id(inst)}")
