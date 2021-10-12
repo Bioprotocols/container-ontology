@@ -1,6 +1,10 @@
 # Container ontology
 Container ontology for use with [PAML (Protocol Activity Markup Language)](https://github.com/SD2E/PAML-specification).
 
+We first describe the server, which is build on Owlery, and then we discuss how to use the Python library that provides query servicing for the server.
+
+# The Container Server
+
 ## Start Queryable Server
 
 To retrieve entities (for now, this really only works for Plates), you may do the following:
@@ -18,7 +22,7 @@ A rudimentary UI is provided,based on the Swagger/OpenAPI spec on the resulting 
 
 From here, you should be able to execute queries such as the following:
 
-    curl -G --location --request GET 'http://localhost:8080/kbs/strateos-catalog/instances' --data "kb=strateos-catalog" --data-urlencode "object=cont:Plate"   --data 'direct=false' --data-urlencode 'prefixes={ "owl" :  "http://www.w3.org/2002/07/owl#", "cont": "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#"}'
+    curl -G --location --request GET 'http://localhost:8080/kbs/sd2e-container-catalogs/instances' --data "kb=sd2e-container-catalogs" --data-urlencode "object=cont:Plate"   --data 'direct=false' --data-urlencode 'prefixes={ "owl" :  "http://www.w3.org/2002/07/owl#", "cont": "https://sift.net/container-ontology/container-ontology#"}'
 
 Some explanation:
 
@@ -47,52 +51,52 @@ For example:
         "@id": "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#Plate",
 
         "hasInstance": [
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Mesoscale96-10-spot-uplex-MSD",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-clear",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf6-flat-tc",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-tc",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf6-flat",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf96-pcr",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-deep",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-round-clear-clear",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-nbs",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-flat-uv",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Mesoscale96-4-spot-mMIP3a-MSD",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf384-pcr",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Fisher96-vbottom-microwell",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-white-white-optiplate",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Eppendorf96-flat-clear-clear-tc",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Mesoscale96-10-spot-uplex-MSD",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-flat-white-clear",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Eppendorf6-flat-tc",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Mesoscale96-10-spot-vplex-m-pro-inflamm1-MSD",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-flat-white-white-tc",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Eppendorf6-flat",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Eppendorf96-pcr",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Sumitomo%20Bakelite%20Co.384-ubottom-white-tc",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning96-deep",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-round-clear-clear",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-flat-white-white-nbs",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning96-flat-uv",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Mesoscale96-4-spot-mMIP3a-MSD",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Eppendorf384-pcr",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Fisher96-vbottom-microwell",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#PerkinElmer384-flat-white-white-optiplate",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Eppendorf96-flat-clear-clear-tc",
             "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#EnduraPlate_96Well_Red",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#ThermoFisher96-flat-white-dc",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Fisher96-v-kf",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-black-black-proxiplate-plus-f",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Costar96-flat-clear-costar-3590",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#ThermoFisher384-ubottom-clear-polypropylene-nunc-264573",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Axygenres-mw8-hp",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#ThermoFisher96-flat-white-dc",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Fisher96-v-kf",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#PerkinElmer384-flat-black-black-proxiplate-plus-f",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Costar96-flat-clear-costar-3590",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#ThermoFisher384-ubottom-clear-polypropylene-nunc-264573",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Axygenres-mw8-hp",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-flat",
             "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#EnduraPlate_96Well_Yellow",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Chemspeedchemspeed-96-sealed-pin-rack",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning1536-tc-white-corning-3727",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Greiner96-flat-black-black-fluotrac-600",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Axygenres-mw12-hp",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#PerkinElmer384-flat-white-white-proxiplate-plus",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-white-white-lv",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-flat",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-ubottom-clear-tc",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#E%26K%20Scientific24-deep",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-round-black-black-lv-nbs",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Chemspeedchemspeed-96-sealed-pin-rack",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning1536-tc-white-corning-3727",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Greiner96-flat-black-black-fluotrac-600",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Axygenres-mw12-hp",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#PerkinElmer384-flat-white-white-proxiplate-plus",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-flat-white-white-lv",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning96-flat",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning96-ubottom-clear-tc",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#E%26K%20Scientific24-deep",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-round-black-black-lv-nbs",
             "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#EnduraPlate_96Well_Blue",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning384-flat-clear-clear",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Fisher96-deep-kf",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning384-flat-clear-clear",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Fisher96-deep-kf",
             "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#EnduraPlate_96Well_Clear",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Greiner384-v-clear-clear",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Labcyte384-echo",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Greiner1536-white-tc",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Corning96-well-v-bottom",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Greiner384-v-clear-clear",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Labcyte384-echo",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Greiner1536-white-tc",
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Corning96-well-v-bottom",
             "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/container-ontology.ttl#EnduraPlate_96Well_Multicolor",
-            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog-individuals.ttl#Labcyte384-echo-ldv"
+            "https://raw.githubusercontent.com/rpgoldman/container-ontology/owlery-server/owl/strateos-catalog.ttl#Labcyte384-echo-ldv"
         ],
 
         "@context": "https://owlery.phenoscape.org/json/context.jsonld"
@@ -105,5 +109,29 @@ For a slightly more complex query, one could try:
 or
 
 `--data-urlencode "object=cont:Standard96wellplate"`
+
+# The Python API for the Container Server
+
+To install this library into python (we recommend using a dedicated virtual environment),
+assuming that your current working directory is the directory of the container-ontology git
+repo, you may simply do:
+
+```
+pip install -e .
+```
+
+This will give you access to the `container_api` Python library.  In order for this
+to run successfully, *the container server must be up and running*.  At the moment, it
+is up to the user to start the server manually.
+
+For an example of how to use the server, see the `main` procedure in [client_api.py](src/container_api/client_api.py)
+
+To try it out, you can just do:
+
+```
+python -m container_api.client_api
+```
+
+in a virtual environment with this system pip installed, as above.
 
 ## More Documentation to Follow...
