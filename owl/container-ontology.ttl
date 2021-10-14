@@ -156,6 +156,7 @@ cont:hasVendorFirm rdf:type owl:ObjectProperty ;
 ###  https://sift.net/container-ontology/container-ontology#hasWellBottomShape
 cont:hasWellBottomShape rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf cont:qualitativeProperty ;
+                        rdf:type owl:FunctionalProperty ;
                         rdfs:label "hasWellBottomShape"^^xsd:string .
 
 
