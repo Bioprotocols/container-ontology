@@ -16,7 +16,7 @@ GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 URL_PREFIX = https://raw.githubusercontent.com/rpgoldman/container-ontology/main/owl
 FILE_PREFIX = /srv/owl
 
-turtle_files = container-ontology.ttl om-subset.ttl strateos-catalog.ttl bbn-plate-catalog.ttl all-catalogs.ttl sbolowl3.rdf
+turtle_files = container-ontology.ttl om-subset.omn strateos-catalog.ttl bbn-plate-catalog.ttl all-catalogs.ttl sbolowl3.rdf
 
 catalog_file = catalog-v001.xml
 
@@ -28,11 +28,6 @@ makeFileDir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 JAVA_ARGS := '-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlogback.configurationFile=/srv/conf/logback.xml' # -Dlog4j.configurationFile=/srv/conf/log4j.xml"
 
 .PHONY: server
-
-# all: $(turtle_files) $(catalog_file)
-
-# $(turtle_files): %.ttl: %.m4
-# 	$(M4) -D URL_PREFIX=$(URL_PREFIX) -D OUTNAME=$(@F) $< > $@
 
 server: ${server_catalog_file}
 	mkdir -p $(makeFileDir)server-files
