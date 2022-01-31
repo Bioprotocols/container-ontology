@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="https://sift.net/container-ontology/om-subset" uri="/srv/owl/om-subset.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://sift.net/container-ontology/om-subset" uri="/srv/owl/om-subset.omn"/>
     <uri id="Imports Wizard Entry" name="https://sift.net/container-ontology/container-ontology" uri="/srv/owl/container-ontology.ttl"/>
     <uri id="Imports Wizard Entry" name="https://sift.net/container-ontology/strateos-catalog" uri="/srv/owl/strateos-catalog.ttl"/>
     <uri id="Imports Wizard Entry" name="https://sift.net/container-ontology/bbn-plate-catalog" uri="/srv/owl/bbn-plate-catalog.ttl"/>
