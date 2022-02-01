@@ -35,6 +35,3 @@ server: ${server_catalog_file}
 	cp $(server_catalog_file) $(makeFileDir)server-files
 	rm -f $(makeFileDir)server-files/.DS_Store
 	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf rpgoldman/owlery:latest 2>&1 | tee server.log
-
-$(server_catalog_file): %.xml: %.m4
-	$(M4) -D URL_PREFIX=$(URL_PREFIX) -D FILE_PREFIX=$(FILE_PREFIX) -D OUTNAME=$(@F) $< > $@
