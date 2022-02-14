@@ -1,4 +1,4 @@
-<img src="containers.png" alt="Container ontology slug"/>
+<img src="containers.png" alt="Container ontology slug" width="50%"/>
 
 # Container ontology
 Container ontology for use with [PAML (Protocol Activity Markup Language)](https://github.com/Bioprotocols/PAML-specification) and the [PAML library](https://github.com/Bioprotocols/paml).
