@@ -16,6 +16,12 @@ __version__ = "1.0.0"
 # import ApiClient
 from owlery_client.api_client import ApiClient
 
+import owlery_client.api
+import owlery_client.apis
+import owlery_client.model
+import owlery_client.models
+
+
 # import Configuration
 from owlery_client.configuration import Configuration
 
