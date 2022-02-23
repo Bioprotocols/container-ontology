@@ -1,13 +1,3 @@
-ifndef M4
-    ifneq (, $(shell which gm4))
-      M4 ?= gm4
-    else ifneq (, $(shell which m4))
-      M4 = m4
-    else
-      $(error "No m4 or gm4 in $(PATH), please set the M4 variable")
-    endif
-endif
-
 HOST_PORT ?= 8080
 
 GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
@@ -22,10 +12,12 @@ catalog_file = catalog-v001.xml
 
 server_catalog_file = owlery-catalog.xml
 
+DOCKER_IMAGE ?= phenoscape/owlery # was rpgoldman/owlery
+
 makeFileDir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 # -Dorg.slf4j.simpleLogger.logFile=/srv/owlery.log 
-JAVA_ARGS := '-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlogback.configurationFile=/srv/conf/logback.xml' # -Dlog4j.configurationFile=/srv/conf/log4j.xml"
+JAVA_ARGS := '-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG -Dlogback.configurationFile=/srv/conf/logback.xml -Dconfig.file=/srv/conf/application.conf' # -Dlog4j.configurationFile=/srv/conf/log4j.xml"
 
 .PHONY: server
 
@@ -34,4 +26,4 @@ server: ${server_catalog_file}
 	cp $(turtle_files) $(makeFileDir)server-files
 	cp $(server_catalog_file) $(makeFileDir)server-files
 	rm -f $(makeFileDir)server-files/.DS_Store
-	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf rpgoldman/owlery:latest 2>&1 | tee server.log
+	docker run --rm --env JAVA_OPTS=$(JAVA_ARGS) -p $(HOST_PORT):8080 -v $(makeFileDir)/server-files:/srv/owl -v $(makeFileDir)owlery-conf:/srv/conf $(DOCKER_IMAGE):latest 2>&1 | tee server.log
