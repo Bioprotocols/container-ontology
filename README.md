@@ -11,7 +11,7 @@ There are OWL classes for concepts such as `Standard96Wellplate`.  These should 
 
 The container ontology is very much in flux at the moment.  We provide a proof of concept of its utility by capturing  the contents of [Strateos](https://strateos.com)'s online catalog of containers (Strateos is a prominent cloud lab).  We also provide a server, based on a Docker container, that you can use to query the ontology, and a Python library for automating such queries.
 
-
+**If you have questions** please post them in the "Discussions" tab, and we will try to answer them, and will move them to issues if they identify bugs or feature requests.
 
 We first describe the server, which is build on Owlery, and then we discuss how to use the Python library that provides query servicing for the server.
 
