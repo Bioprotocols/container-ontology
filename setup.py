@@ -13,18 +13,12 @@ REQUIRES = [
     "rdflib",
     "urllib3 >= 1.25.3",
     "python-dateutil",
+    "owlery-client @ git+https://github.com/rpgoldman/owlery-client.git@v1.0.0#egg=owlery-client",
 ]
 
-packages = find_packages(
-    where="owlery_client", exclude=["test", "tests"]
-) + find_packages(where="src", exclude=["catalog_translator", "test", "tests"])
+packages = find_packages(where="src", exclude=["catalog_translator", "test", "tests"])
 
 package_dir = {
-    "owlery_client": "owlery_client/owlery_client",
-    "owlery_client.apis": "owlery_client/owlery_client/apis",
-    "owlery_client.api": "owlery_client/owlery_client/api",
-    "owlery_client.models": "owlery_client/owlery_client/models",
-    "owlery_client.model": "owlery_client/owlery_client/model",
     "container_api": "src/container_api",
 }
 
@@ -40,7 +34,7 @@ setup(
     packages=packages,
     package_dir=package_dir,
     include_package_data=True,
-    license="MIT",
+    license="Apache",
     # long_description="""\
     # Owlery provides a web API for an [OWL API](http://owlapi.sourceforge.net)-based reasoner containing a configurable set of ontologies (a \&quot;knowledgebase\&quot;).   # noqa: E501
     # """
