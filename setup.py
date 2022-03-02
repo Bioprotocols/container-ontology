@@ -19,7 +19,7 @@ REQUIRES = [
 packages = find_packages(where="src", exclude=["catalog_translator", "test", "tests"])
 
 package_dir = {
-    "container_api": "src/container_api",
+    '': "src",
 }
 
 setup(
