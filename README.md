@@ -140,7 +140,7 @@ This will give you access to the `container_api` Python library.  In order for t
 to run successfully, *the container server must be up and running*.  At the moment, it
 is up to the user to start the server manually.
 
-For an example of how to use the server, see the code in [__main__.py](src/container_api/__main__.py)
+For an example of how to use the server, see the code in [`__main__.py`](src/container_api/__main__.py)
 
 To try it out, you can just do:
 
