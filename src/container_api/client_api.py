@@ -4,16 +4,19 @@ specification -- an OWL (anonymous) class definition in Manchester syntax -- by
 consulting a server (implemented using Owlery).
 """
 
-__all__ = ["matching_containers", "strateos_id"]
+__all__ = ["matching_containers", "strateos_id", "ContainerSpec"]
 
 import html
 import logging
 import re
 
+from json import dumps, loads
+from rdflib import Namespace
+
 import owlery_client
 
 from os.path import basename
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 from owlery_client.api import dl_queries_api
 
@@ -22,23 +25,43 @@ URL = str  # typing alias
 
 logger = logging.getLogger("container_ontology.client_api")
 
+CONT_NS = Namespace("https://sift.net/container-ontology/container-ontology#")
+OM_NS = Namespace("http://www.ontology-of-units-of-measure.org/resource/om-2/")
+
+DEFAULT_PREFIX_MAP = {"cont": CONT_NS, "om": OM_NS}
+
+class ContainerSpec:
+    queryString: str
+    _prefixMap: Dict[str, str]
+    addl_conditions: Optional[str]
+    
+    def __init__(self, queryString: str, prefixMap: Dict[str, str] = DEFAULT_PREFIX_MAP, addl_conditions: Optional[str] = None):
+        self.queryString = queryString
+        self._prefixMap = prefixMap
+        self.addl_conditions = addl_conditions
+
+    @property
+    def prefixMap(self) -> str:
+        return dumps(self._prefixMap)
+        
+
+
 
 def matching_containers(
-    container_spec,
+    container_spec: ContainerSpec,
     base_url="http://localhost:8080",
     kb_name="sd2e-container-catalogs",
-    addl_conditions: Optional[str] = None,
 ) -> List[URL]:
     return _mc_helper(
         container_spec=container_spec.queryString,
         prefix_map=container_spec.prefixMap,
-        addl_conditions=addl_conditions,
+        addl_conditions=container_spec.addl_conditions,
         base_url=base_url,
         kb_name=kb_name,
     )
 
 
-PREFIX_SPLITER = re.compile(".*#(.*)")
+PREFIX_SPLITTER = re.compile(".*#(.*)")
 VENDOR_STRINGS = [
     html.escape(x).replace(" ", "%20")
     for x in [
@@ -60,13 +83,23 @@ VENDOR_STRINGS = [
     ]
 ]
 
+if hasattr(str, 'removeprefix'):
+    def remove_prefix(string: str, prefix: str) -> str:
+        return string.removeprefix(prefix)
+else:
+    def remove_prefix(text, prefix):
+        if text.startswith(prefix):
+            return text[len(prefix):]
+        return text  # or whatever
+
+
 
 def strateos_id(uri: str) -> str:
     suffix = basename(uri)
-    vendor_and_id = re.match(PREFIX_SPLITER, suffix).group(1)
+    vendor_and_id = re.match(PREFIX_SPLITTER, suffix).group(1)
     x: str
     for x in VENDOR_STRINGS:
-        trimmed = vendor_and_id.removeprefix(x)
+        trimmed = remove_prefix(vendor_and_id, x)
         if trimmed != vendor_and_id:
             return trimmed
     raise ValueError(f"Unable to extract a strateos ID from {uri}")
@@ -82,6 +115,14 @@ def _mc_helper(
 ) -> List[URL]:
     configuration = owlery_client.Configuration(host=base_url)
     instances: Optional[List[str]] = None
+    logger.debug("Query string is: %s", container_spec)
+    logger.debug("Prefix map string is: %s", prefix_map)
+    logger.debug("Prefix map is: %s", loads(prefix_map))
+    if addl_conditions is not None:
+        logger.debug("Additional conditions are: %s", addl_conditions)
+    else:
+        logger.debug("No additional conditions.")
+        
     with owlery_client.ApiClient(configuration) as api_client:
         api_instance = dl_queries_api.DLQueriesApi(api_client)
         kb = kb_name  # str | label for a knowledgebase in this Owlery
@@ -106,45 +147,7 @@ def _mc_helper(
             logger.error(
                 "Exception when calling DLQueriesApi->kbs_kb_instances_get: %s\n" % e
             )
+            raise e
     logger.debug("Instances are %s", instances)
     logger.debug("Returning %s", instances["has_instance"])
     return instances["has_instance"]
-
-
-if __name__ == "__main__":
-    from json import dumps
-    from rdflib import Namespace
-
-    sub_logger = logging.getLogger("owlery_client.api_client")
-    sub_logger.setLevel(logging.DEBUG)
-    # the following urllib settings don't seem to do anything at all.
-    request_logger = logging.getLogger("urllib3")
-    request_logger.setLevel(logging.DEBUG)
-    logger.setLevel(logging.DEBUG)
-    logging.basicConfig(level=logging.DEBUG)
-
-    CONT_NS = Namespace("https://sift.net/container-ontology/container-ontology#")
-    OM_NS = Namespace("http://www.ontology-of-units-of-measure.org/resource/om-2/")
-    # should also have a not flat well bottom condition.
-    plate_spec = """cont:ClearPlate and 
-     cont:SLAS-4-2004 and
-     (cont:wellVolume some
-            ((om:hasUnit value om:microlitre) and
-             (om:hasNumericalValue only xsd:decimal[>= "200"^^xsd:decimal])))
-     and (cont:hasWellBottomShape only cont:NotFlatWellBottom)"""
-
-    prefix_map = dumps({"cont": CONT_NS, "om": OM_NS})
-    insts = _mc_helper(container_spec=plate_spec, prefix_map=prefix_map)
-    print("List of matching instances is:")
-    for inst in insts:
-        print("\t" + inst)
-
-    print("Checking matching plates that are also available at Strateos.")
-    insts = _mc_helper(
-        container_spec=plate_spec
-        + " and (cont:availableAt value <https://sift.net/container-ontology/strateos-catalog#Strateos>)",
-        prefix_map=prefix_map,
-    )
-    print("List of matching instances AT STRATEOS is:")
-    for inst in insts:
-        print(f"\t{inst} short name: {strateos_id(inst)}")
