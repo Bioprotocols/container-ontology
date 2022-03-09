@@ -1,0 +1,51 @@
+digraph g {
+        "Identified" [label="Identified\n(from SBOL)",shape="box",style="dashed"]
+        "NCIT_C96142" [shape="box",style="dashed", label="NCIT_C96142\nMulti-well microplate\n(from OBO)"]
+        "ContainerRoot" [shape="box"]
+        "Identified" -> "ContainerRoot"
+	"Plate" -> "NCIT_C96142"
+	"NCIT_C96142" -> "Plate"
+	"Plate" -> "Plate1536Well"
+	"Container" -> "NCIT_C96142"
+	"ContainerRoot" -> "Color"
+	"LabEquipment" -> "Container"
+	"Plate" -> "Standard96WellPlate"
+//	"LabEquipment" -> "VendorFirm" [label="equipmentVendor (Domain>Range)"]
+	"Plate" -> "OpaquePlate"
+	//"Plate" -> "SLAS_4-2004_96_Well_Plate"
+	"ContainerRoot" -> "VendorFirm"
+//	"LabEquipment" -> "Lab" [label="availableAt (Domain>Range)"]
+	"ContainerRoot" -> "Lab"
+	"ContainerRoot" -> "LabEquipment"
+	"Container" -> "Plate"
+//	"Plate" -> "SLAS-1-2004"
+	"Plate" -> "SLAS_4-2004"
+//	"Container" -> "Well"
+	"Plate" -> "Plate384Well"
+	"ContainerRoot" -> "WellShape"
+	"LabEquipment" -> "LabMachinery"
+	"ContainerRoot" -> "CatalogEntry"
+//	"LabEquipment" -> "CatalogEntry" [l0abel="hasCatalogEntry (Domain>Range)"]
+//	"ContainerRoot" -> "NotFlatWellBottom"
+//	"CatalogEntry" -> "LabEquipment" [label="catalogEntryOf (Domain>Range)"]
+//	"Container" -> "CoatingMaterial" [label="coating (Domain>Range)"]
+	"ContainerRoot" -> "CoatingMaterial"
+	"Plate" -> "Plate96Well"
+
+        subgraph "cluster1" {
+                "ClearPlate"
+                "OpaquePlate"
+        }
+
+        subgraph "cluster2" {
+                "Plate96Well"
+                "Plate384Well"
+                "Plate1536Well"
+                }
+
+        subgraph "cluster3" {
+                "SLAS_4-2004" -> "SLAS_4-2004_96_Well_Plate"
+                "SLAS_4-2004" -> "SLAS_4-2004_384_Well_Plate"
+                "SLAS_4-2004" -> "SLAS_4-2004_1536_Well_Plate"
+        }
+}
