@@ -59,7 +59,7 @@ The results will come back as a JSON Object whose keys are:
 
 * `@id`: The IRI for the class whose instances are being returned.
 * `hasInstance`: A JSON array of Individual IRIs.
-* `context`: the URL containing definitions of fields in the response. For example, it defines `hasInstance` as being the reverse of `rdf:type` (which is defined as "The subject is an instance of a class").
+* `context`: the URL of a file that defines fields in the response. For example, it defines `hasInstance` as being the reverse of `rdf:type` (which is defined as "The subject is an instance of a class").
 
 For example:
 
