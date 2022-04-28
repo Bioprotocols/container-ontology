@@ -46,7 +46,7 @@ Some explanation:
 
 * The next URL component indicates the Owlery knowledge base that is available.  At the moment, only the `strateos-catalog` knowledge base is supplied on this server.
 
-* The next part of the url indicates that the query is for `instances`.  Other queries include `types` and `subclasses`.  See https://owlery.phenoscape.org/api/ for more details about the API.
+* The next part of the url indicates that the query is for `instances`.  Other queries include `types` and `subclasses`.  See https://kb.phenoscape.org/owlery/docs/ for more details about the API.
 
 * Finally, there are arguments encoded as HTTP GET parameters:
 
