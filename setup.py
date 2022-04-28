@@ -16,7 +16,7 @@ REQUIRES = [
     "owlery-client @ git+https://github.com/rpgoldman/owlery-client.git@v1.0.0#egg=owlery-client",
 ]
 
-packages = find_packages(where="src", exclude=["catalog_translator", "test", "tests"])
+packages = find_packages(where="src", exclude=["test", "tests"])
 
 package_dir = {
     '': "src",
