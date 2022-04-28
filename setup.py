@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "container-ontology"
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -13,7 +13,7 @@ REQUIRES = [
     "rdflib",
     "urllib3 >= 1.25.3",
     "python-dateutil",
-    "owlery-client @ git+https://github.com/rpgoldman/owlery-client.git@v1.0.0#egg=owlery-client",
+    "owlery-client",
 ]
 
 packages = find_packages(where="src", exclude=["catalog_translator", "test", "tests"])
@@ -25,10 +25,10 @@ package_dir = {
 setup(
     name=NAME,
     version=VERSION,
-    description="SD2E Container Ontology for PAML",
+    description="Container Ontology for PAML",
     author="Robert P. Goldman",
     author_email="rpgoldman@sift.net",
-    url="https://github.com/rpgoldman/container-ontology",
+    url="https://github.com/Bioprotocols/container-ontology",
     python_requires=">=3.6",
     install_requires=REQUIRES,
     packages=packages,

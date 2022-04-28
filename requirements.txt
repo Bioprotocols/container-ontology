@@ -1,1 +1,4 @@
 rdflib
+urllib3 >= 1.25.3
+python-dateutil
+owlery-client
