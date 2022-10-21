@@ -5,3 +5,4 @@ __pycache__
 *.out
 README.html
 build
+*.egg-info
