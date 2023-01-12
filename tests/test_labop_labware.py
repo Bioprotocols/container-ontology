@@ -3,7 +3,7 @@
 # pylint: disable=redefined-outer-name
 from labop_labware import __version__
 
-from labop_labware.labware import labop_Labware
+from labop_labware.labware_tbox import labop_Labware
 
 def test_version():
     """Sample pytest test function."""
@@ -13,11 +13,11 @@ def test_labop_labware():
     """ testing OSOMeasurement
     """
     
-    olw = labop_Labware()
+    lolw = labop_Labware()
 
-    olw.define_ontology()
+    lolw.define_ontology()
 
-    assert olw.osolw.NumWells.iri == 'http://www.oso.org/oso/labware#NumWells'    
+    assert lolw.osolw.NumWells.iri == 'http://www.oso.org/lolw/labware#NumWells'    
     
 
 

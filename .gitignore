@@ -124,3 +124,6 @@ ENV/
 # Generated files
 bin/
 .build_*
+
+# owlready
+catalog-*.xml
