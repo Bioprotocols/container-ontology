@@ -86,72 +86,114 @@ class labop_Labware:
 
         with self.osolw:
 
+            # Terminology Component (TBox) 
+
             # Basic Relations
             # ================
 
-            class hasType(self.osolw.hasConvention):
+            class hasType(self.lolw.hasConvention):
                 """Associates a type (string, number...) to a property."""
 
-            class isTypeOf(self.osolw.hasConvention):
+            class isTypeOf(self.lolw.hasConvention):
                 """Associates a property to a type (string, number...)."""
                 inverse_property = hasType
 
             # Physical Properties
-            # ==========
+            # ====================
 
-            class Length:
+            class Length(self.emmo.Length):
                 """"Labware total length """
+                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Length")
 
-            class Width:
-                """Labware total width, """
-            
-            class Height:
+                # reference SI unit
+                self.emmo.hasReferenceUnit = self.emmo.metre
+
+                                
+
+            class Width(self.emmo.Length):
+                """Labware total width """
+                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Width")
+
+                # reference SI unit
+                self.emmo.hasReferenceUnit = self.emmo.metre
+
+
+            class Height(self.emmo.Length):
                 """Labware total hight, without  any additions, like lids etc. """
+                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
 
-            class HigthLidded:
+                # reference SI unit
+                self.emmo.hasReferenceUnit = self.emmo.metre
+
+
+
+            class Volume(self.emmo.Volume):
+                """Total Labware volume """
+                physicalDimension = pl("T+1 L3 M0 I0 Θ0 N0 J0")
+
+
+            class HightLidded(self.emmo.Length):
                 """Labware total hight, with additions, like lids etc."""
+                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
 
-            class HightStacked:
+            class HightStacked(self.emmo.Length):
                 """Labware stacking height without any additions, like lids."""
+                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
 
-            class HightStackedLidded:
+            class HightStackedLidded(self.emmo.Length):
                 """Labware stacking height with additions, like lids."""
+                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
 
-            class Mass:
-                """Mass of the Labware """
 
-            class Material:
+
+            # Torque
+            # ======
+            class Torque(self.emmo.Torque):
+                """Torque of a labware, e.g. for screw caps""" 
+                # add quantity
+                physicalDimension = pl("T+1 L2 M1 I0 Θ0 N0 J0")
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Torque")
+
+
+                # dimension
+                # reference SI unit
+  
+
+            class Material(self.emmo.Material):
                 """polymer, properties, like solvent tolerance, transperancy, ...."""
             
-            class Color:
+            class Color(self.emmo.Color):
                 """Labware color"""
 
-            class Liddable:
+            class Liddable(self.emmo.Boolean):
                 """container is liddable"""
 
-            class Sealable:
+            class Sealable(self.emmo.Boolean):
                 """container is sealable"""
 
             # multiwell labware
 
-            class NumRows:
+            class NumRows(self.emmo.Integer):
                 """Number of rows of container"""
             
-            class NumCols :
+            class NumCols(self.emmo.Integer) :
                 """Number of columns of container"""
             
-            class NumWells:
+            class NumWells(self.emmo.Integer):
                 """Number of wells - could be auto generated"""
             
-            class WellDistRow:
+            class WellDistRow(self.emmo.Length):
                 """wWll-to-well distance in row direction"""
             
-            class WellDistCol:
+            class WellDistCol(sef.emmo.Length):
                 """"Well-to-well distance in column direction"""
 
             # Well properties of labware with wells
-            class DepthWell:
+            class DepthWell(self.emmo.Length):
                 """Well total well depth=hight"""
+
             
             class ShapeWell:
                 """Well overall / top well shape,e.g. round, square, buffeled,..."""
@@ -159,16 +201,16 @@ class labop_Labware:
             class ShapeWellBottom:
                 """Well, bottom shape, flat, round, conical-"""
 
-            class TopRadiusXY:
+            class TopRadiusXY(self.emmo.Length):
                 """Well radius of a round well at the top opening in x-y plane."""
 
-            class BottomRadiusXY:
+            class BottomRadiusXY(self.emmo.Length):
                 """Radius of a round bottom in xy plane / direction."""
 
-            class BottomRadiusZ:
+            class BottomRadiusZ(self.emmo.Length):
                 """Radius of a round bottom in z (hight) direction."""
 
-            class ConeAngle:
+            class ConeAngle(self.emmo.Angle):
                 """Opening angle of cone in deg."""
 
             class ConeDepth:
@@ -215,3 +257,7 @@ class labop_Labware:
                 """Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... """
 
                 #is_a = [self.osom.hasProperty.some(self.osom.Time)]
+
+
+            # query for SI unit of a property
+            
