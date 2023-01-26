@@ -1,19 +1,13 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""_____________________________________________________________________
+# python module that defines an ontology of common labware classes that are used in a scientific lab, based on EMMOntoPy
+# it should be possible to use this ontology to automatically get the right SI units for the properties of the labware
+# and to automatically get the right EMMO classes for the labware
+# as much as possible, the ontology should be based on EMMO, but it may be necessary to add some classes and properties
+# that are not in EMMO
+# as much as possible should be inferred from EMMO, but it may be necessary to add some axioms
+# the ontology should be able to be used in a lab notebook, and should be able to be used to automatically generate
+# a labware inventory
+# the ontology should be able to be used to automatically generate a labware database
 
-:PROJECT: LabOP - Laboratory Open Protocol language or LabOP
-
-* labOP labware implementation *
-
-:details:  Main module i.
-           
-           https://en.wikipedia.org/wiki/Dimensional_analysis
-
-.. note:: -
-.. todo:: - 
-________________________________________________________________________
-"""
 
 import os
 import pathlib
@@ -75,17 +69,17 @@ class labop_Labware:
             self.emmo.base_iri = self.emmo.base_iri.rstrip('/#')
             self.catalog_mappings = {self.emmo.base_iri: self.emmo_url}
 
-        # Create new ontology
-        self.osolw = self.emmo_world.get_ontology(self.labop_labware_base_iri)
+                # Create new ontology: labOP-labware - lolw
+        self.lolw = self.emmo_world.get_ontology(self.labop_labware_base_iri)
         if emmo_world is None:
-            self.osolw.imported_ontologies.append(self.emmo)
-        self.osolw.sync_python_names()
+            self.lolw.imported_ontologies.append(self.emmo)
+        self.llw.sync_python_names()
 
+    # defining the  labOP-labware ontology
     def define_ontology(self):
         logging.debug('defining labware ontology')
 
-        with self.osolw:
-
+        with self.lolw:
             # Terminology Component (TBox) 
 
             # Basic Relations
@@ -101,163 +95,18 @@ class labop_Labware:
             # Physical Properties
             # ====================
 
+            # Length
+
             class Length(self.emmo.Length):
                 """"Labware total length """
                 physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/Length")
 
-                # reference SI unit
-                self.emmo.hasReferenceUnit = self.emmo.metre
-
-                                
-
-            class Width(self.emmo.Length):
-                """Labware total width """
-                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Width")
-
-                # reference SI unit
-                self.emmo.hasReferenceUnit = self.emmo.metre
-
-
-            class Height(self.emmo.Length):
-                """Labware total hight, without  any additions, like lids etc. """
-                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
-
-                # reference SI unit
-                self.emmo.hasReferenceUnit = self.emmo.metre
-
-
-
-            class Volume(self.emmo.Volume):
-                """Total Labware volume """
-                physicalDimension = pl("T+1 L3 M0 I0 Θ0 N0 J0")
-
-
-            class HightLidded(self.emmo.Length):
-                """Labware total hight, with additions, like lids etc."""
-                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
-
-            class HightStacked(self.emmo.Length):
-                """Labware stacking height without any additions, like lids."""
-                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
-
-            class HightStackedLidded(self.emmo.Length):
-                """Labware stacking height with additions, like lids."""
-                physicalDimension = pl("T+1 L0 M0 I0 Θ0 N0 J0")
-
-
-
-            # Torque
-            # ======
-            class Torque(self.emmo.Torque):
-                """Torque of a labware, e.g. for screw caps""" 
-                # add quantity
-                physicalDimension = pl("T+1 L2 M1 I0 Θ0 N0 J0")
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Torque")
-
-
-                # dimension
-                # reference SI unit
-  
-
-            class Material(self.emmo.Material):
-                """polymer, properties, like solvent tolerance, transperancy, ...."""
-            
-            class Color(self.emmo.Color):
-                """Labware color"""
-
-            class Liddable(self.emmo.Boolean):
-                """container is liddable"""
-
-            class Sealable(self.emmo.Boolean):
-                """container is sealable"""
-
-            # multiwell labware
-
-            class NumRows(self.emmo.Integer):
-                """Number of rows of container"""
-            
-            class NumCols(self.emmo.Integer) :
-                """Number of columns of container"""
-            
-            class NumWells(self.emmo.Integer):
-                """Number of wells - could be auto generated"""
-            
-            class WellDistRow(self.emmo.Length):
-                """wWll-to-well distance in row direction"""
-            
-            class WellDistCol(sef.emmo.Length):
-                """"Well-to-well distance in column direction"""
-
-            # Well properties of labware with wells
-            class DepthWell(self.emmo.Length):
-                """Well total well depth=hight"""
+                # associate the related SI unit
+                
 
             
-            class ShapeWell:
-                """Well overall / top well shape,e.g. round, square, buffeled,..."""
-            
-            class ShapeWellBottom:
-                """Well, bottom shape, flat, round, conical-"""
-
-            class TopRadiusXY(self.emmo.Length):
-                """Well radius of a round well at the top opening in x-y plane."""
-
-            class BottomRadiusXY(self.emmo.Length):
-                """Radius of a round bottom in xy plane / direction."""
-
-            class BottomRadiusZ(self.emmo.Length):
-                """Radius of a round bottom in z (hight) direction."""
-
-            class ConeAngle(self.emmo.Angle):
-                """Opening angle of cone in deg."""
-
-            class ConeDepth:
-                """Depth of cone from beginning of conical shape."""
-
-            class ShapePolygonXY:
-                """Generalized shape polygon for more complex well shapes, in xy plane / direction."""
-
-            class ShapePolygonZ:
-                """Generalized shape polygon for more complex well shapes, in z direction = rotation axis."""
-
-            class ShapeModel2D:
-                """2D model of Well shape"""
-
-            class ShapeModel3D:
-                """3D model of Well shape"""
-
-            # Production Properties / Metadata
-            class Manufacturer:
-                """Name of the Manufacturer """
-
-            class ProductType:
-                """Labware product Type"""
-
-            class ModelNumber:
-                """Labware model number"""
-
-            class ProductNumber:
-                """Manufacturer Product Number of the Labware"""
-
-            # class Description:
-            #     """Labware description. Possible applications/purpose for this labware could be also added here."""
 
 
-            #  Relations
-            # ===========
 
-            # Measurement Classes
-            # ====================
-
-            # Basic ------
-
-            class Labware(self.osolw.Device):
-                """Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... """
-
-                #is_a = [self.osom.hasProperty.some(self.osom.Time)]
-
-
-            # query for SI unit of a property
             
