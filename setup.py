@@ -1,41 +1,36 @@
-from setuptools import setup, find_packages  # noqa: H301
+import os
+import re
 
-NAME = "container-ontology"
-VERSION = "1.0.0"
-# To install the library, run the following
-#
-# python setup.py install
-#
-# prerequisite: setuptools
-# http://pypi.python.org/pypi/setuptools
+from setuptools import setup, find_packages
 
-REQUIRES = [
-    "rdflib",
-    "urllib3 >= 1.25.3",
-    "python-dateutil",
-    "owlery-client @ git+https://github.com/rpgoldman/owlery-client.git@v1.0.0#egg=owlery-client",
-]
 
-packages = find_packages(where="src", exclude=["catalog_translator", "test", "tests"])
+REGEX_COMMENT = re.compile(r"[\s^]#(.*)")
 
-package_dir = {
-    '': "src",
-}
+# allow setup.py to be run from any path
+os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+with open(os.path.join(dir_path, "VERSION"), "r") as version_file:
+    version = str(version_file.readline()).strip()
+
+
+def parse_requirements(filename):
+    filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
+    with open(filename, "rt") as filehandle:
+        requirements = filehandle.readlines()[2:]
+        return tuple(filter(None, (REGEX_COMMENT.sub("", line).strip() for line in requirements)))
+
 
 setup(
-    name=NAME,
-    version=VERSION,
-    description="SD2E Container Ontology for PAML",
-    author="Robert P. Goldman",
-    author_email="rpgoldman@sift.net",
-    url="https://github.com/rpgoldman/container-ontology",
-    python_requires=">=3.6",
-    install_requires=REQUIRES,
-    packages=packages,
-    package_dir=package_dir,
+    name="labop_labware",
+    version=version,
+    packages=find_packages(),
     include_package_data=True,
-    license="Apache",
-    # long_description="""\
-    # Owlery provides a web API for an [OWL API](http://owlapi.sourceforge.net)-based reasoner containing a configurable set of ontologies (a \&quot;knowledgebase\&quot;).   # noqa: E501
-    # """
+    author="mark doerr",
+    author_email="mark.doerr@uni-greifswald.de",
+    description="An ontology describing labware for scientific experiments, based on EMMO and EMMOntoPy.",
+    url="https://gitlab.com/opensourcelab/scientificdata/ontologies/openscienceontology/labware",
+    install_requires=parse_requirements("requirements.txt"),
+    extras_require={"tests": parse_requirements("requirements_dev.txt")},
 )
